@@ -6,42 +6,48 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import logo from "../../assets/main-logo.png";
 
-import { Form, Button, Image, Col, Row, Container, Alert } from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Image,
+  Col,
+  Row,
+  Container,
+  Alert,
+} from "react-bootstrap";
 import axios from "axios";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-
 const SignUpForm = () => {
-    // Collects and stores user input data from the form
-    const [signUpData, setSignUpData] = useState({
-        username: "",
-        password1: "",
-        password2: "",
-    })
-    const { username, password1, password2 } = signUpData;
-    const handleChange = (event) => {
-        setSignUpData({
-            ...signUpData,
-            [event.target.name]: event.target.value,
-        });
-    };
+  // Collects and stores user input data from the form
+  const [signUpData, setSignUpData] = useState({
+    username: "",
+    password1: "",
+    password2: "",
+  });
+  const { username, password1, password2 } = signUpData;
+  const handleChange = (event) => {
+    setSignUpData({
+      ...signUpData,
+      [event.target.name]: event.target.value,
+    });
+  };
 
-    // Collect and log any errors
-    const [errors, setErrors] = useState({});
+  // Collect and log any errors
+  const [errors, setErrors] = useState({});
 
-    // Sends user data to api DRF authorisation
-    // Stops page refresh on form submit and redirects user to Sign In page
-    const history = useHistory();
-    const handleSubmit = async (event) => {
-      event.preventDefault();
-      try {
-        await axios.post('dj-rest-auth/registration/', signUpData)
-        history.push('/signin')
-      } catch(err) {
-        setErrors(err.response?.data)
-      }
-    } 
-    
+  // Sends user data to api DRF authorisation
+  // Stops page refresh on form submit and redirects user to Sign In page
+  const history = useHistory();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("dj-rest-auth/registration/", signUpData);
+      history.push("/signin");
+    } catch (err) {
+      setErrors(err.response?.data);
+    }
+  };
 
   return (
     <Row className={styles.Row}>
@@ -63,8 +69,11 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {/* Display error message if there is an issue with the username field on submission */}
-            {errors.username?.map((message, idx) => 
-            <Alert variant="warning" key={idx}>{message}</Alert>)}
+            {errors.username?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
 
             {/* Form element for password */}
             <Form.Group controlId="password1">
@@ -79,8 +88,11 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {/* Display error message if there is an issue with the password1 field on submission */}
-            {errors.password?.map((message, idx) => 
-            <Alert variant="warning" key={idx}>{message}</Alert>)}
+            {errors.password1?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
 
             {/* Form element for confirm password */}
             <Form.Group controlId="password2">
@@ -95,16 +107,28 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {/* Display error message if there is an issue with the password2 field on submission */}
-            {errors.password2?.map((message, idx) => 
-            <Alert variant="warning" key={idx}>{message}</Alert>)}
+            {errors.password2?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
 
-            <Button className={`${btnStyles.Button} ${btnStyles.Wide}`} type="submit">
+            {/* Submit form button, and error handling for non-field-errors */}
+            <Button
+              className={`${btnStyles.Button} ${btnStyles.Wide}`}
+              type="submit"
+            >
               Sign up
             </Button>
+            {errors.non_field_errors?.map((message, idx) => (
+              <Alert key={idx} variant="warning" className="mt-3">
+                {message}
+              </Alert>
+            ))}
           </Form>
         </Container>
         <Container className={`mt-3 text-center ${styles.Form}`}>
-        <span>Already have an account?</span>
+          <span>Already have an account?</span>
           <Link className={styles.Link} to="/signin">
             <span>Sign in</span>
           </Link>
