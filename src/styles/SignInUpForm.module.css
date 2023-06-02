@@ -3,11 +3,11 @@
   }
   .Input {
     background: #ffffff;
-    border: 1px solid #f0f1f9;
-    box-sizing: border-box;
-    
-    text-align: center;
+    border: 2px solid black;
+    text-align: left;
     padding: 10px;
+    font-family: "Barlow Condensed", monospace;
+
   }
   
   .Header {
@@ -22,21 +22,33 @@
     color: black;
     text-transform: uppercase;
   }
+
+  .Form {
+    font-family: "Barlow Condensed", monospace;
+  }
   
   .Link {
     text-decoration: none;
     text-align: center;
     display: block;
     margin: auto;
-    font-family: "Barlow Condensed", monospace;
+    /* font-family: "Barlow Condensed", monospace; */
     color: black;
+    text-decoration: none !important;
   }
   
   .Link span {
     color: #ff9254;
     text-transform: uppercase;
-    font-family: "Barlow Condensed", monospace;
+    /* font-family: "Barlow Condensed", monospace; */
     font-weight: bolder;
+    
+  }
+  .Link span:hover {
+    text-decoration: underline;
+    text-decoration-color: #ff9254;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
   }
   
   .Container {
@@ -52,6 +64,6 @@
   }
 
   .FormText {
-    font-family: "Barlow Condensed", monospace;
+    /* font-family: "Barlow Condensed", monospace; */
 
   }

@@ -12,29 +12,51 @@ const SignUpForm = () => {
   return (
     <Row className={styles.Row}>
       <Col className="my-auto py-2 p-md-2" md={6}>
-        <Container className={`${appStyles.Content} p-4 `}>
+        <Container className={`${appStyles.Content} p-4`}>
           <h1 className={styles.Header}>Sign up</h1>
-          <Form className="mt-4">
+          <Form className={`${styles.Form} mt-4`}>
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
-              <Form.Control type="text" placeholder="Username" name="username" className={styles.FormText} />
+              <Form.Control
+                type="text"
+                placeholder="Username"
+                name="username"
+                className={styles.Input}
+              />
               <Form.Text className={`${styles.FormText} text-muted`}>
                 We'll never share your email with anyone else.
               </Form.Text>
             </Form.Group>
 
-            <Form.Group controlId="formBasicPassword">
+            <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" className={styles.FormText} />
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                name="password1"
+                className={styles.Input}
+              />
             </Form.Group>
+
+            <Form.Group controlId="password2">
+              <Form.Label className="d-none">Confirm Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Confirm password"
+                name="password2"
+                className={styles.Input}
+              />
+            </Form.Group>
+
             <Button variant="primary" type="submit">
               Submit
             </Button>
           </Form>
         </Container>
-        <Container className={`mt-3 ${appStyles.Content}`}>
+        <Container className={`mt-3 text-center ${styles.Form}`}>
+        <span>Already have an account?</span>
           <Link className={styles.Link} to="/signin">
-            Already have an account? <span>Sign in</span>
+            <span>Sign in</span>
           </Link>
         </Container>
       </Col>
