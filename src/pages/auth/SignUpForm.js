@@ -6,18 +6,19 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import logo from "../../assets/main-logo.png";
 
-import { Form, Button, Image, Col, Row, Container } from "react-bootstrap";
+import { Form, Button, Image, Col, Row, Container, Alert } from "react-bootstrap";
+import axios from "axios";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 
 const SignUpForm = () => {
-    // Collects user input data in the form
+    // Collects and stores user input data from the form
     const [signUpData, setSignUpData] = useState({
         username: "",
         password1: "",
         password2: "",
     })
     const { username, password1, password2 } = signUpData;
-
     const handleChange = (event) => {
         setSignUpData({
             ...signUpData,
@@ -25,13 +26,31 @@ const SignUpForm = () => {
         });
     };
 
+    // Collect and log any errors
+    const [errors, setErrors] = useState({});
+
+    // Sends user data to api DRF authorisation
+    // Stops page refresh on form submit and redirects user to Sign In page
+    const history = useHistory();
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      try {
+        await axios.post('dj-rest-auth/registration/', signUpData)
+        history.push('/signin')
+      } catch(err) {
+        setErrors(err.response?.data)
+      }
+    } 
+    
 
   return (
     <Row className={styles.Row}>
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4`}>
           <h1 className={styles.Header}>Sign up</h1>
-          <Form className={`${styles.Form} mt-4`}>
+
+          <Form onSubmit={handleSubmit} className={`${styles.Form} mt-4`}>
+            {/* Form element for username */}
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
@@ -42,11 +61,12 @@ const SignUpForm = () => {
                 value={username}
                 onChange={handleChange}
               />
-              <Form.Text className={`${styles.FormText} text-muted`}>
-                We'll never share your email with anyone else.
-              </Form.Text>
             </Form.Group>
+            {/* Display error message if there is an issue with the username field on submission */}
+            {errors.username?.map((message, idx) => 
+            <Alert variant="warning" key={idx}>{message}</Alert>)}
 
+            {/* Form element for password */}
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
@@ -58,7 +78,11 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {/* Display error message if there is an issue with the password1 field on submission */}
+            {errors.password?.map((message, idx) => 
+            <Alert variant="warning" key={idx}>{message}</Alert>)}
 
+            {/* Form element for confirm password */}
             <Form.Group controlId="password2">
               <Form.Label className="d-none">Confirm Password</Form.Label>
               <Form.Control
@@ -70,6 +94,9 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {/* Display error message if there is an issue with the password2 field on submission */}
+            {errors.password2?.map((message, idx) => 
+            <Alert variant="warning" key={idx}>{message}</Alert>)}
 
             <Button className={`${btnStyles.Button} ${btnStyles.Wide}`} type="submit">
               Sign up
