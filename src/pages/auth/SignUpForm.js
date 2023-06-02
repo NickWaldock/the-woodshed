@@ -19,7 +19,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const SignUpForm = () => {
-  // Collects and stores user input data from the form
+  {/* Collects and stores user input data from the form */}
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",
@@ -33,11 +33,12 @@ const SignUpForm = () => {
     });
   };
 
-  // Collect and log any errors
+  {/* Collect and log any errors */}
   const [errors, setErrors] = useState({});
 
-  // Sends user data to api DRF authorisation
-  // Stops page refresh on form submit and redirects user to Sign In page
+  {/* Sends user data to api DRF authorisation,
+      Stops page refresh on form submit and redirects
+      user to Sign In page */}
   const history = useHistory();
   const handleSubmit = async (event) => {
     event.preventDefault();
