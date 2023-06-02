@@ -10,46 +10,45 @@ import appStyles from "../../App.module.css";
 import logo from "../../assets/main-logo.png";
 
 import {
-    Form,
-    Button,
-    Image,
-    Col,
-    Row,
-    Container,
-    Alert,
-  } from "react-bootstrap";
-
+  Form,
+  Button,
+  Image,
+  Col,
+  Row,
+  Container,
+  Alert,
+} from "react-bootstrap";
 
 const SignInForm = () => {
-// Collects and stores user input data from the form
+  // Collects and stores user input data from the form
 
-    const [signInData, setSignInData] = useState({
-      username: "",
-      password: "",
+  const [signInData, setSignInData] = useState({
+    username: "",
+    password: "",
+  });
+  const { username, password } = signInData;
+  const handleChange = (event) => {
+    setSignInData({
+      ...signInData,
+      [event.target.name]: event.target.value,
     });
-    const { username, password } = signInData;
-    const handleChange = (event) => {
-      setSignInData({
-        ...signInData,
-        [event.target.name]: event.target.value,
-      });
-    };
-  
-    // Collect and log any errors
-    // Sends user data to api DRF authorisation,
-    // Stops page refresh on form submit and redirects
-    // user to Sign In page
-    const [errors, setErrors] = useState({});
-    const history = useHistory();
-    const handleSubmit = async (event) => {
-      event.preventDefault();
-      try {
-        await axios.post("dj-rest-auth/login/", signInData);
-        history.push("/feed");
-      } catch (err) {
-        setErrors(err.response?.data);
-      }
-    };
+  };
+
+  // Collect and log any errors
+  // Sends user data to api DRF authorisation,
+  // Stops page refresh on form submit and redirects
+  // user to Sign In page
+  const [errors, setErrors] = useState({});
+  const history = useHistory();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("dj-rest-auth/login/", signInData);
+      history.push("/feed");
+    } catch (err) {
+      setErrors(err.response?.data);
+    }
+  };
 
   return (
     <Row className={styles.Row}>
@@ -58,6 +57,7 @@ const SignInForm = () => {
           <h1 className={styles.Header}>sign in</h1>
 
           <Form onSubmit={handleSubmit} className={`${styles.Form} mt-4`}>
+            {/* Form element for username */}
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
@@ -69,7 +69,14 @@ const SignInForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {/* Display error message if there is an issue with the username field on submission */}
+            {errors.username?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                  {message}
+                </Alert>
+              ))}
 
+            {/* Form element for password */}
             <Form.Group controlId="password">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
@@ -81,13 +88,25 @@ const SignInForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {/* Display error message if there is an issue with the username field on submission */}
+            {errors.username?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
 
+            {/* Submit form button, and error handling for non-field-errors */}
             <Button
               type="submit"
               className={`${btnStyles.Button} ${btnStyles.Wide}`}
             >
               Sign in
             </Button>
+            {errors.non_field_errors?.map((message, idx) => (
+              <Alert key={idx} variant="warning" className="mt-3">
+                {message}
+              </Alert>
+            ))}
           </Form>
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
@@ -104,6 +123,6 @@ const SignInForm = () => {
       </Col>
     </Row>
   );
-}
+};
 
 export default SignInForm;

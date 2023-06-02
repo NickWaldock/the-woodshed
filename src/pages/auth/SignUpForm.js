@@ -58,6 +58,7 @@ const SignUpForm = () => {
           <h1 className={styles.Header}>Sign up</h1>
 
           <Form onSubmit={handleSubmit} className={`${styles.Form} mt-4`}>
+            
             {/* Form element for username */}
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
