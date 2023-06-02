@@ -6,3 +6,17 @@
 .Main {
     padding-top: 100px;
 }
+
+.FillerImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border: 5px solid black;
+  }
+  
+  .Image {
+    max-height: 40vh;
+    max-width: 100%;
+    object-fit: contain;
+    
+  }

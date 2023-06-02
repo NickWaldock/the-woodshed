@@ -1,0 +1,53 @@
+.Row {
+    height: 80vh;
+  }
+  .Input {
+    background: #ffffff;
+    border: 1px solid #f0f1f9;
+    box-sizing: border-box;
+    
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .Header {
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-decoration: underline overline;
+    text-decoration-line: solid;
+    text-decoration-thickness: 4px;
+    font-family: "Barlow Condensed", monospace;
+    color: black;
+  }
+  
+  .Link {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-family: "PT Mono", monospace;
+    color: black;
+  }
+  
+  .Link span {
+    color: #ff9254;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed", monospace;
+    font-weight: bolder;
+  }
+  
+  .Container {
+    padding: 30px 10px;
+  }
+  
+  .SignInCol {
+    height: 320px;
+  }
+  
+  .SignUpCol {
+    height: 375px;
+  }
+
+  
