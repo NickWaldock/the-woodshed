@@ -11,6 +11,13 @@ function App() {
           <Switch>
             <Route exact path="/" render={() => <h1>Home Page</h1>} />
             <Route exact path="/signin" render={() => <h1>Sign In</h1>} />
+            <Route exact path="/signup" render={() => <h1>Sign Up</h1>} />
+            <Route exact path="/register" render={() => <h1>Register</h1>} />
+            <Route exact path="/add-post" render={() => <h1>Add post</h1>} />
+            <Route exact path="/feed" render={() => <h1>Feed</h1>} />
+            <Route exact path="/liked" render={() => <h1>Liked</h1>} />
+            <Route exact path="/following" render={() => <h1>Following</h1>} />
+            <Route exact path="/profile" render={() => <h1>Profile</h1>} />
           </Switch>
         </Container>
     </div>
