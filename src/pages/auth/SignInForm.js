@@ -1,22 +1,55 @@
-import React from "react";
-
-import Form from "react-bootstrap/Form";
-import Alert from "react-bootstrap/Alert";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Image from "react-bootstrap/Image";
-import Container from "react-bootstrap/Container";
-
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+import axios from "axios";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import logo from "../../assets/main-logo.png";
 
-function SignInForm() {
-  //   Add your component logic here
+import {
+    Form,
+    Button,
+    Image,
+    Col,
+    Row,
+    Container,
+    Alert,
+  } from "react-bootstrap";
+
+
+const SignInForm = () => {
+// Collects and stores user input data from the form
+
+    const [signInData, setSignInData] = useState({
+      username: "",
+      password: "",
+    });
+    const { username, password } = signInData;
+    const handleChange = (event) => {
+      setSignInData({
+        ...signInData,
+        [event.target.name]: event.target.value,
+      });
+    };
+  
+    // Collect and log any errors
+    // Sends user data to api DRF authorisation,
+    // Stops page refresh on form submit and redirects
+    // user to Sign In page
+    const [errors, setErrors] = useState({});
+    const history = useHistory();
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      try {
+        await axios.post("dj-rest-auth/login/", signInData);
+        history.push("/feed");
+      } catch (err) {
+        setErrors(err.response?.data);
+      }
+    };
 
   return (
     <Row className={styles.Row}>
@@ -24,13 +57,16 @@ function SignInForm() {
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>sign in</h1>
 
-          <Form className="mt-5">
+          <Form onSubmit={handleSubmit} className={`${styles.Form} mt-4`}>
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Username"
                 name="username"
+                className={styles.Input}
+                value={username}
+                onChange={handleChange}
               />
             </Form.Group>
 
@@ -40,6 +76,9 @@ function SignInForm() {
                 type="password"
                 placeholder="Password"
                 name="password"
+                className={styles.Input}
+                value={password}
+                onChange={handleChange}
               />
             </Form.Group>
 

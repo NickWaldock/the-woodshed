@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import axios from "axios";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
@@ -15,11 +18,10 @@ import {
   Container,
   Alert,
 } from "react-bootstrap";
-import axios from "axios";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-{/* Collects and stores user input data from the form */}
+
 const SignUpForm = () => {  
+  // Collects and stores user input data from the form
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",
@@ -34,11 +36,10 @@ const SignUpForm = () => {
   };
 
   // Collect and log any errors
-  const [errors, setErrors] = useState({});
-
   // Sends user data to api DRF authorisation,
   // Stops page refresh on form submit and redirects
   // user to Sign In page
+  const [errors, setErrors] = useState({});
   const history = useHistory();
   const handleSubmit = async (event) => {
     event.preventDefault();
