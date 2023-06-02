@@ -20,6 +20,7 @@
     text-decoration-thickness: 4px;
     font-family: "Barlow Condensed", monospace;
     color: black;
+    text-transform: uppercase;
   }
   
   .Link {
@@ -27,7 +28,7 @@
     text-align: center;
     display: block;
     margin: auto;
-    font-family: "PT Mono", monospace;
+    font-family: "Barlow Condensed", monospace;
     color: black;
   }
   
@@ -50,4 +51,7 @@
     height: 375px;
   }
 
-  
+  .FormText {
+    font-family: "Barlow Condensed", monospace;
+
+  }
