@@ -1,0 +1,58 @@
+.Button {
+    align-self: center;
+    border-radius: 0px;
+    border: 3px solid black;
+    padding: 4px 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-width: 75px;
+    text-transform: uppercase;
+    font-family: "Black Ops One", monospace;
+    color: #E15D05;
+    background-color: black;
+  }
+
+  .Button:hover {
+    border-color: transparent;
+    cursor: pointer;
+    background-color: #E15D05;
+    color: black;
+    border: 3px solid black;
+  }
+
+
+  .Button:hover:active {
+    background-color: #E15D05 !important;
+    border: 3px solid black !important;
+  }
+  
+  .Button:active {
+    background-color: #E15D05 !important;
+  }
+  
+  .Button:focus {
+    background-color: #E15D05;
+  } 
+  
+  .Wide {
+    padding: 10px 50px;
+    width: 100%;
+  }
+  
+  
+  /* .Black, */
+  /* .BlackOutline:hover { */
+    /* background-color: #242a3d;
+    color: white; */
+    /* background-color: #242a3d; */
+    /* color: aliceblue; */
+  /* } */
+  
+  /* .Black:hover, */
+  /* .BlackOutline { */
+    /* background-color: #dadadf;
+    color: #242a3d;
+    border-color: #242a3d; */
+    /* background-color: aliceblue; */
+    /* color: #242a3d; */
+  /* } */
