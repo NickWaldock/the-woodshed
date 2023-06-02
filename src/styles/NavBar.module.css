@@ -12,7 +12,7 @@ a {
 
 a:hover {
     font-size: 1.4rem;
-    border: 2px solid black;
+    border-bottom: 2px solid black;
     text-decoration: none;
     cursor: pointer;
 }
