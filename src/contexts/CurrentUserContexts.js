@@ -5,6 +5,7 @@ import axios from "axios";
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
 
+// Export current user contexts for use in other js component files
 export const useCurrentUser = () => useContext(CurrentUserContext)
 export const useSetCurrentUser = () => useContext(SetCurrentUserContext)
 

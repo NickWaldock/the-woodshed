@@ -7,6 +7,7 @@ import { CurrentUserContext } from "../App";
 import { useCurrentUser } from "../contexts/CurrentUserContexts";
 
 const NavBar = () => {
+  // Get current logged-in data, display nav links conditionally
   const currentUser = useCurrentUser();
   const loggedInLinks = <>{currentUser?.username}</>
   const loggedOutLinks = (
