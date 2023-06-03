@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
+import PostCreateForm from "./pages/posts/PostCreateForm";
 
 function App() {
   return (
@@ -15,8 +16,7 @@ function App() {
           <Route exact path="/" render={() => <h1>Home Page</h1>} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route exact path="/register" render={() => <h1>Register</h1>} />
-          <Route exact path="/add-post" render={() => <h1>Add post</h1>} />
+          <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/feed" render={() => <h1>Feed</h1>} />
           <Route exact path="/liked" render={() => <h1>Liked</h1>} />
           <Route exact path="/following" render={() => <h1>Following</h1>} />
