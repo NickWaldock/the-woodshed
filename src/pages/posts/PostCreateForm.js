@@ -11,6 +11,7 @@ import Upload from "../../assets/upload.png";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import Asset from "../../components/Asset";
 
 function PostCreateForm() {
 
@@ -19,10 +20,38 @@ function PostCreateForm() {
 
   const textFields = (
     <div className="text-center">
-      {/* Add your form fields here */}
+      <Form>
+        <Form.Group controlId="title">
+          <Form.Label className="d-none">Title</Form.Label>
+          <Form.Control type="text" placeholder="Title" name="title" />
+        </Form.Group>
 
-    
-    
+        <Form.Group controlId="subtitle">
+          <Form.Label className="d-none">Subtitle</Form.Label>
+          <Form.Control type="text" placeholder="Subitle" name="subtitle"/>
+        </Form.Group>
+
+        <Form.Group controlId="description">
+          <Form.Label className="d-none">Description</Form.Label>
+          <Form.Control as="textarea" rows={6} name="description" placeholder="Description" />
+        </Form.Group>
+
+        <Form.Group controlId="instrument">
+          <Form.Label className="d-none">Instrument</Form.Label>
+          <Form.Control type="text" placeholder="Instrument" name="instrument" />
+        </Form.Group>
+
+        <Form.Group controlId="tags">
+          <Form.Label className="d-none">Tags</Form.Label>
+          <Form.Control type="text" placeholder="Tags" name="tags" />
+        </Form.Group>
+
+        {/* <Form.Group controlId="file">
+          <Form.Label className="d-none">File</Form.Label>
+          <Form.Control type="file" name="file" />
+        </Form.Group> */}
+      </Form>
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => {}}
@@ -48,7 +77,7 @@ function PostCreateForm() {
                   className="d-flex justify-content-center"
                   htmlFor="image-upload"
                 >
-                  ASSET
+                  <Asset src={Upload} message="Click or tap to upload PDF"/>
                 </Form.Label>
 
             </Form.Group>
