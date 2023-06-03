@@ -47,8 +47,7 @@ export const CurrentUserProvider = ({ children }) => {
       },
       (err) => {
         return Promise.reject(err);
-      },
-      [history]
+      }
     );
 
     // Listen for 401 errors in API response,
@@ -73,7 +72,7 @@ export const CurrentUserProvider = ({ children }) => {
         return Promise.reject(err);
       }
     );
-  });
+  }, [history]);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
