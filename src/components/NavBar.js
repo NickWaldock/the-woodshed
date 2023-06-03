@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/logo-1.png";
 import styles from "../styles/NavBar.module.css";
@@ -7,12 +7,16 @@ import { NavLink } from "react-router-dom";
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContexts";
 import { Avatar } from "./Avatar";
 import axios from "axios";
+import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 
 
 const NavBar = () => {
   // Get current logged-in data
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
+
+  // Access hook for burger menu expansion logic
+  const {expanded, setExpanded, ref} = useClickOutsideToggle();
 
   // Manage user sign out
   const handleSignOut = async () => {
@@ -23,22 +27,6 @@ const NavBar = () => {
       console.log(err);
     }
   };
-
-  // Burger Menu Logic
-  const [expanded, setExpanded] = useState(false);
-  const ref = useRef(null)
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (ref.current && !ref.current.contains(event.target)){
-        setExpanded(false)
-      }
-    }
-    document.addEventListener('mouseup', handleClickOutside)
-    return () => {
-      document.removeEventListener('mouseup', handleClickOutside)
-    }
-  }, [ref]);
-
 
   // Conditional NavBar links
   const addPostLink = (
