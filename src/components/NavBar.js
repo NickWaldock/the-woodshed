@@ -4,12 +4,25 @@ import logo from "../assets/logo-1.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 // import { CurrentUserContext } from "../App";
-import { useCurrentUser } from "../contexts/CurrentUserContexts";
+import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContexts";
 import { Avatar } from "./Avatar";
+import axios from "axios";
+
 
 const NavBar = () => {
   // Get current logged-in data
   const currentUser = useCurrentUser();
+  const setCurrentUser = useSetCurrentUser();
+
+  // Manage user sign out
+  const handleSignOut = async () => {
+    try {
+      await axios.post('dj-rest-auth/logout/');
+      setCurrentUser(null);
+    } catch(err){
+      console.log(err);
+    }
+  };
 
   // Conditional NavBar links
   const addPostLink = (
@@ -50,9 +63,9 @@ const NavBar = () => {
       </NavLink>
 
       <NavLink
-        to="/signout"
+        to="/"
         className={styles.NavLink}
-        onClick={() => {}}
+        onClick={handleSignOut}
       >
         SIGN OUT
       </NavLink>
@@ -64,7 +77,7 @@ const NavBar = () => {
         <Avatar 
           src={currentUser?.profile_image} 
           text='Profile' 
-          height={40} 
+          height={35} 
         />
       </NavLink>
     </>
