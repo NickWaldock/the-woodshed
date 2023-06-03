@@ -5,6 +5,7 @@ import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 // import { CurrentUserContext } from "../App";
 import { useCurrentUser } from "../contexts/CurrentUserContexts";
+import { Avatar } from "./Avatar";
 
 const NavBar = () => {
   // Get current logged-in data
@@ -31,6 +32,7 @@ const NavBar = () => {
       >
         FEED
       </NavLink>
+      
       <NavLink
         to="/liked"
         className={styles.NavLink}
@@ -38,6 +40,7 @@ const NavBar = () => {
       >
         LIKED
       </NavLink>
+
       <NavLink
         to="/following"
         className={styles.NavLink}
@@ -45,6 +48,7 @@ const NavBar = () => {
       >
         FOLLOWING
       </NavLink>
+
       <NavLink
         to="/signout"
         className={styles.NavLink}
@@ -52,11 +56,16 @@ const NavBar = () => {
       >
         SIGN OUT
       </NavLink>
+
       <NavLink
         to={`/profiles/${currentUser?.profile_id}`}
         className={styles.NavLink}
       >
-        <img src={currentUser?.profile_image} />
+        <Avatar 
+          src={currentUser?.profile_image} 
+          text='Profile' 
+          height={40} 
+        />
       </NavLink>
     </>
   );
