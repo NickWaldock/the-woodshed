@@ -77,7 +77,7 @@ function PostCreateForm() {
             as="textarea"
             rows={6}
             name="description"
-            placeholder="Description"
+            placeholder="Provide a description to help other users understand how to use this pdf..."
             value={description}
             onChange={handleChange}
           />
@@ -98,17 +98,12 @@ function PostCreateForm() {
           <Form.Label className="d-none">Tags</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Tags"
+            placeholder="Add some Tags - ex: Musicianship, Technique, Scales,..."
             name="tags"
             value={tags}
             onChange={handleChange}
           />
         </Form.Group>
-
-        {/* <Form.Group controlId="file">
-          <Form.Label className="d-none">File</Form.Label>
-          <Form.Control type="file" name="file" value={file} />
-        </Form.Group> */}
       </Form>
 
       <Button className={btnStyles.Button} onClick={() => {}}>
@@ -138,10 +133,10 @@ function PostCreateForm() {
                   </div>
                   <div>
                     <Form.Label
-                      className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                      className={`${btnStyles.Button} btn`}
                       htmlFor="file-upload"
                     >
-                      Change the image
+                      Change the file
                     </Form.Label>
                   </div>
                 </>
@@ -152,12 +147,13 @@ function PostCreateForm() {
                 >
                   <Asset
                     src={Upload}
-                    message="Click or tap to upload an image"
+                    message="Click or tap to upload a PDF"
                   />
                 </Form.Label>
               )}
 
               <Form.File
+                className="d-none"
                 id="file-upload"
                 accept="application/pdf"
                 onChange={handleChangeFile}
