@@ -5,18 +5,19 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-
+// import Image from "react-bootstrap/Image";
 import Upload from "../../assets/upload.png";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
-import Image from "react-bootstrap/Image";
+
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { axiosReq } from "../../api/axiosDefaults";
+import { Alert } from "react-bootstrap";
 
 function PostCreateForm() {
-  const fileInput = useRef(null);
-
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -28,7 +29,10 @@ function PostCreateForm() {
     file: "",
   });
   const { title, subtitle, description, instrument, tags, file } = postData;
+  const fileInput = useRef(null);
+  const history = useHistory();
 
+  // Function to allow the form fields to continually display inputted data
   const handleChange = (event) => {
     setPostData({
       ...postData,
@@ -36,6 +40,7 @@ function PostCreateForm() {
     });
   };
 
+  // Function to handle changing and previewing PDF files before submission
   const handleChangeFile = (event) => {
     if (event.target.files.length) {
       URL.revokeObjectURL(file);
@@ -46,10 +51,33 @@ function PostCreateForm() {
     }
   };
 
+  // Function to send dat to the API on form submit
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const formData = new FormData();
+
+    formData.append('title', title);
+    formData.append('subtitle', subtitle);
+    formData.append('description', description);
+    formData.append('instrument', instrument);
+    formData.append('tags', tags);
+    formData.append('file', fileInput.current.files[0]);
+
+    try {
+      const {data} = await axiosReq.post('/posts/', formData);
+      history.push(`/posts/${data.id}`);
+    } catch(err){
+      console.log(err);
+      if (err.response?.status !== 401){
+        setErrors(err.response?.data);
+      }
+    }
+  }
+
+  // Form text fields and messages for error handling
   const textFields = (
     <div className="text-center">
-      <Form>
-        <Form.Group controlId="title">
+        <Form.Group>
           <Form.Label className="d-none">Title</Form.Label>
           <Form.Control
             type="text"
@@ -59,8 +87,13 @@ function PostCreateForm() {
             onChange={handleChange}
           />
         </Form.Group>
+        {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
-        <Form.Group controlId="subtitle">
+        <Form.Group>
           <Form.Label className="d-none">Subtitle</Form.Label>
           <Form.Control
             type="text"
@@ -70,8 +103,13 @@ function PostCreateForm() {
             onChange={handleChange}
           />
         </Form.Group>
+        {errors?.subtitle?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
-        <Form.Group controlId="description">
+        <Form.Group>
           <Form.Label className="d-none">Description</Form.Label>
           <Form.Control
             as="textarea"
@@ -82,8 +120,13 @@ function PostCreateForm() {
             onChange={handleChange}
           />
         </Form.Group>
+        {errors?.description?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
-        <Form.Group controlId="instrument">
+        <Form.Group>
           <Form.Label className="d-none">Instrument</Form.Label>
           <Form.Control
             type="text"
@@ -93,8 +136,13 @@ function PostCreateForm() {
             onChange={handleChange}
           />
         </Form.Group>
+        {errors?.instrument?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
-        <Form.Group controlId="tags">
+        <Form.Group>
           <Form.Label className="d-none">Tags</Form.Label>
           <Form.Control
             type="text"
@@ -104,9 +152,16 @@ function PostCreateForm() {
             onChange={handleChange}
           />
         </Form.Group>
-      </Form>
-
-      <Button className={btnStyles.Button} onClick={() => {}}>
+        {errors?.tags?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+      
+      // Form buttons
+      <Button 
+        className={btnStyles.Button}
+        onClick={() => history.goBack()}>
         cancel
       </Button>
       <Button className={btnStyles.Button} type="submit">
@@ -116,7 +171,7 @@ function PostCreateForm() {
   );
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Row>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
@@ -160,6 +215,12 @@ function PostCreateForm() {
                 ref={fileInput}
               />
             </Form.Group>
+            {errors?.file?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
