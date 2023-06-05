@@ -14,9 +14,16 @@ export const Post = (props) => {
         comments_count,
         likes_count,
         like_id,
-        content,
+				title,
+				subtitle,
+				description,
+				tags,
+				instrument,
+				file,
+        // content,
         image,
-        updated_at
+        updated_at,
+				postPage,
     } = props;
 
     const currentUser = useCurrentUser();
@@ -32,9 +39,22 @@ export const Post = (props) => {
 					</Link>
 					<div className='d-flex align-items-center'>
 						<span>{updated_at}</span>
+						{is_owner && postPage && "..."}
 					</div>
 				</Media>
 			</Card.Body>
+			<Link to={`/posts/${id}`}>
+				<Card.Img src={file} alt={title} />
+			</Link>
+			<Card.Body>
+				{title && <Card.Title className="text-center">{title}</Card.Title>}
+				{subtitle && <Card.Title className="text-center">{subtitle}</Card.Title>}
+				{instrument && <Card.Text>{instrument}</Card.Text>}
+				{tags && <Card.Text>{tags}</Card.Text>}
+				{description && <Card.Text>{description}</Card.Text>}
+				
+			</Card.Body>
+			
     </Card>
   )
 }
