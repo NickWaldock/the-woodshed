@@ -14,9 +14,18 @@
     border: 5px solid black;
   }
   
-  .File {
+.File {
     max-height: 40vh;
     max-width: 100%;
     object-fit: contain;
     
   }
+
+.Content {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #dadadf;
+  }
+
+ 

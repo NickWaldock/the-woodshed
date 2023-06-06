@@ -7,8 +7,11 @@ import Container from "react-bootstrap/Container";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
+import NoResults from "../../assets/no-results.png";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
+import { Post } from "./Post";
+import Asset from "../../components/Asset";
 
 function PostsPage({message, filter=""}) {
   const [posts, setPosts] = useState({results: []});
@@ -33,7 +36,27 @@ function PostsPage({message, filter=""}) {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles mobile</p>
-        <p>List of posts here</p>
+        {hasLoaded ? (
+            <>
+            {posts.results.length ? (
+                posts.results.map(post => (
+                    <Post key={post.id} {...post} setPosts={setPosts} />
+                ))
+            ) : (
+                <Container className={appStyles.Content}>
+                    <Asset 
+                        src={NoResults} 
+                        message={message}
+                        className={appStyles.NoResults}   
+                    />
+                </Container>
+            )}
+            </>
+        ) : (
+            <Container className={appStyles.Content}>
+                <Asset spinner />
+            </Container>
+        )}
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
         <p>Popular profiles for desktop</p>
