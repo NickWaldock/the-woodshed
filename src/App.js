@@ -50,7 +50,6 @@ function App() {
               />
             )} 
           />
-          <Route exact path="/following" render={() => <h1>Following</h1>} />
           <Route exact path="/profile" render={() => <h1>Profile</h1>} />
           <Route render={() => <h1>Page not found!</h1>} />
         </Switch>

@@ -59,14 +59,6 @@ const NavBar = () => {
       </NavLink>
 
       <NavLink
-        to="/following"
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-      >
-        FOLLOWING
-      </NavLink>
-
-      <NavLink
         to="/"
         className={styles.NavLink}
         onClick={handleSignOut}
