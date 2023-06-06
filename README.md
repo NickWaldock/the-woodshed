@@ -101,7 +101,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-Refernces
+## Refernces
 Google Fonts
 - PT Mono 
     - regular 400
@@ -115,15 +115,17 @@ Google Fonts
 
 
 
-SO
+## SO
 - For adding PDF file types to the add post form
 https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-accept-only-pdf-and-xls
 
 
+## Tools
+- PNGs 
+  - https://pngtree.com/
 
 
 
-
-Technologies
+## Technologies
 Axios
 Axios interceptors
