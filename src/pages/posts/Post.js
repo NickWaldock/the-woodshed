@@ -5,6 +5,7 @@ import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Avatar } from "../../components/Avatar";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";
+import { MoreDropdown } from "../../components/MoreDropdown";
 
 export const Post = (props) => {
   const {
@@ -73,7 +74,7 @@ export const Post = (props) => {
           </Link>
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
-            {is_owner && postPage && "..."}
+            {is_owner && postPage && <MoreDropdown />}
           </div>
         </Media>
       </Card.Body>
