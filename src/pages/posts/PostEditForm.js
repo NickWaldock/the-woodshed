@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -13,7 +13,7 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { Alert } from "react-bootstrap";
 
@@ -31,6 +31,36 @@ function PostEditForm() {
   const { title, subtitle, description, instrument, tags, file } = postData;
   const fileInput = useRef(null);
   const history = useHistory();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/posts/${id}/`);
+        const {
+          title,
+          subtitle,
+          description,
+          instrument,
+          tags,
+          file,
+          is_owner,
+        } = data;
+
+        is_owner
+          ? setPostData({
+              title,
+              subtitle,
+              description,
+              instrument,
+              tags,
+              file,
+            })
+          : history.push("/");
+      } catch (err) {console.log(err)}
+    };
+		handleMount();
+  }, [history, id]);
 
   // Function to allow the form fields to continually display inputted data
   const handleChange = (event) => {
