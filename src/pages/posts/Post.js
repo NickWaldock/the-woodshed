@@ -3,7 +3,7 @@ import styles from "../../styles/Post.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContexts";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Avatar } from "../../components/Avatar";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 
@@ -31,7 +31,25 @@ export const Post = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const history = useHistory();
 
+	// Redirect user to edit page function
+  const handleEdit = () => {
+	history.push(`/posts/${id}/edit`)
+  }
+
+	// Delete a post then
+	// redirect user to previous page
+  const handleDelete = async () => {
+		try {
+			await axiosRes.delete(`/posts/${id}/`);
+			history.goBack();
+		} catch(err){
+			console.log(err);
+		}
+  }
+
+	// Add like to the post instance, increase post like count by 1
 	const handleLike = async () => {
 		try {
 			const {data} = await axiosRes.post('/likes/', {post:id});
@@ -48,6 +66,7 @@ export const Post = (props) => {
 		}
 	}
 
+	// Remove like to the post instance, decrease post like count by 1
 	const handleUnlike = async () => {
 		try {
 			await axiosRes.delete(`/likes/${like_id}`);
@@ -74,7 +93,10 @@ export const Post = (props) => {
           </Link>
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
-            {is_owner && postPage && <MoreDropdown />}
+            {
+			  			is_owner && postPage && 
+			  			<MoreDropdown handleEdit={handleEdit} handleDelete={handleDelete} />
+						}
           </div>
         </Media>
       </Card.Body>
