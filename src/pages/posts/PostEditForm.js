@@ -5,13 +5,10 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-// import Image from "react-bootstrap/Image";
-import Upload from "../../assets/upload.png";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import Asset from "../../components/Asset";
 
 import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -91,11 +88,14 @@ function PostEditForm() {
     formData.append('description', description);
     formData.append('instrument', instrument);
     formData.append('tags', tags);
-    formData.append('file', fileInput.current.files[0]);
+
+		if (fileInput?.current?.files[0]){
+			formData.append('file', fileInput.current.files[0]);
+		}
 
     try {
-      const {data} = await axiosReq.post('/posts/', formData);
-      history.push(`/posts/${data.id}`);
+      await axiosReq.put(`/posts/${id}/`, formData);
+      history.push(`/posts/${id}`);
     } catch(err){
       console.log(err);
       if (err.response?.status !== 401){
@@ -195,7 +195,7 @@ function PostEditForm() {
         cancel
       </Button>
       <Button className={btnStyles.Button} type="submit">
-        create
+        save
       </Button>
     </div>
   );
@@ -208,48 +208,34 @@ function PostEditForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <Form.Group className="text-center">
-              {file ? (
-                <>
-                  <div className="embed-responsive embed-responsive-1by1">
-                    <object
-                      className="embed-responsive-item"
-                      data={file}
-                    ></object>
-                  </div>
-                  <div>
-                    <Form.Label
-                      className={`${btnStyles.Button} btn`}
-                      htmlFor="file-upload"
-                    >
-                      Change the file
-                    </Form.Label>
-                  </div>
-                </>
-              ) : (
-                <Form.Label
-                  className="d-flex justify-content-center"
-                  htmlFor="file-upload"
-                >
-                  <Asset
-                    src={Upload}
-                    message="Click or tap to upload a PDF"
-                  />
-                </Form.Label>
-              )}
+							<div className="embed-responsive embed-responsive-1by1">
+								<object
+									className="embed-responsive-item"
+									data={file}
+								></object>
+							</div>
+							<div>
+								<Form.Label
+									className={`${btnStyles.Button} btn`}
+									htmlFor="file-upload"
+								>
+									Change the file
+								</Form.Label>
+							</div>
 
-              <Form.File
-                className="d-none"
-                id="file-upload"
-                accept="application/pdf"
-                onChange={handleChangeFile}
-                ref={fileInput}
-              />
-            </Form.Group>
-            {errors?.file?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
-                {message}
-              </Alert>
-            ))}
+						<Form.File
+							className="d-none"
+							id="file-upload"
+							accept="application/pdf"
+							onChange={handleChangeFile}
+							ref={fileInput}
+						/>
+					</Form.Group>
+					{errors?.file?.map((message, idx) => (
+						<Alert variant="warning" key={idx}>
+							{message}
+						</Alert>
+					))}
 
             <div className="d-md-none">{textFields}</div>
           </Container>
