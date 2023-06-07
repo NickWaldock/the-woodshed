@@ -1,5 +1,6 @@
 import { axiosReq } from "../api/axiosDefaults"
 
+// Pagination Function for posts and comments
 export const fetchMoreData = async (resource, setResource) => {
     try {
         const {data} = await axiosReq.get(resource.next)
