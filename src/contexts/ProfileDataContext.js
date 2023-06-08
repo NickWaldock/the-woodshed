@@ -22,7 +22,43 @@ export const ProfileDataProvider = ({ children}) => {
 			const {data} = await axiosRes.post('/followers/', {
 				followed: clickedProfile.id
 			});
-
+			// Update user profile data when user follows another user
+			setProfileData(prevState => ({
+				...prevState,
+				pageProfile: {
+					results: prevState.pageProfile.results.map(profile => {
+						return profile.id === clickedProfile.id
+						? 
+							{
+								...profile,
+								followers_count: profile.follower_count + 1,
+								following_id: data.id
+							}
+						: profile.is_owner
+						? 
+						{ ...profile, following_count: profile.following_count + 1}
+						:
+						profile;
+					}),
+				},
+				popularProfiles: {
+					...prevState.popularProfiles,
+					results: prevState.popularProfiles.results.map(profile => {
+						return profile.id === clickedProfile.id
+						? 
+							{
+								...profile,
+								followers_count: profile.follower_count + 1,
+								following_id: data.id
+							}
+						: profile.is_owner
+						? 
+						{ ...profile, following_count: profile.following_count + 1}
+						:
+						profile;
+					}),
+				},
+			}));
 		} catch(err){
 			console.log(err)
 		}
