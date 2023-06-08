@@ -129,3 +129,7 @@ https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-
 ## Technologies
 Axios
 Axios interceptors
+
+
+## Future Developments
+All liked/saved posts can be organised into self-made categories
