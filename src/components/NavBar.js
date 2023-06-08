@@ -4,7 +4,7 @@ import logo from "../assets/logo-1.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 // import { CurrentUserContext } from "../App";
-import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContexts";
+import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 import { Avatar } from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";

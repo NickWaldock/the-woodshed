@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/Profile.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContexts";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Avatar from "../../components/Avatar";
 import { Button } from "react-bootstrap";
@@ -26,7 +26,7 @@ const Profile = (props) => {
       <div className={`mx-2 ${styles.WordBreak}`}>
         <strong>{owner}</strong>
       </div>
-			
+
 			{/* Conditional display of follow or unfollow button */}
       <div className={`text-right ${!mobile && "ml-auto"}`}>
         {!mobile &&

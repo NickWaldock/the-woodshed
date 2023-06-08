@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { useCurrentUser } from "./CurrentUserContexts";
+import { useCurrentUser } from "./CurrentUserContext";
 import { axiosReq } from "../api/axiosDefaults";
 
 

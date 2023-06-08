@@ -3,7 +3,7 @@ import styles from "../../styles/Comment.module.css";
 import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Avatar from "../../components/Avatar";
-import { useCurrentUser } from "../../contexts/CurrentUserContexts";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { axiosRes } from "../../api/axiosDefaults";
 import CommentEditForm from "./CommentEditForm";
