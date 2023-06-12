@@ -27,10 +27,23 @@ const ProfileEditForm = () => {
 
   const [profileData, setProfileData] = useState({
     name: "",
-    content: "",
+    headline: "",
+    instrument: "",
+    location: "",
+    email: "",
+    description: "",
     image: "",
+
   });
-  const { name, content, image } = profileData;
+  const { 
+    name, 
+    headline, 
+    instrument, 
+    location,
+    email, 
+    description, 
+    image 
+  } = profileData;
 
   const [errors, setErrors] = useState({});
 
@@ -39,8 +52,24 @@ const ProfileEditForm = () => {
       if (currentUser?.profile_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/profiles/${id}/`);
-          const { name, content, image } = data;
-          setProfileData({ name, content, image });
+          const { 
+            name, 
+            headline,
+            instrument,
+            location,
+            email,
+            description, 
+            image
+          } = data;
+          setProfileData({ 
+            name, 
+            headline,
+            instrument,
+            location,
+            email,
+            description, 
+            image
+           });
         } catch (err) {
           console.log(err);
           history.push("/");
@@ -64,7 +93,11 @@ const ProfileEditForm = () => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("name", name);
-    formData.append("content", content);
+    formData.append("headline", headline);
+    formData.append("instrument", instrument);
+    formData.append("location", location);
+    formData.append("email", email);
+    formData.append("description", description);
 
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
@@ -86,21 +119,71 @@ const ProfileEditForm = () => {
   const textFields = (
     <>
       <Form.Group>
-        <Form.Label>Bio</Form.Label>
+        <Form.Label>Headline</Form.Label>
         <Form.Control
-          as="textarea"
-          value={content}
+          type="text"
+          value={headline}
           onChange={handleChange}
-          name="content"
-          rows={7}
+          name="headline"
+          rows={2}
+          placeholder="Add a snappy headline..."
         />
       </Form.Group>
-
-      {errors?.content?.map((message, idx) => (
+      {errors?.headline?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
       ))}
+
+      <Form.Group>
+        <Form.Label>Location</Form.Label>
+        <Form.Control
+          type="text"
+          value={location}
+          onChange={handleChange}
+          name="location"
+          placeholder="Where in the world are you?"
+        />
+      </Form.Group>
+      {errors?.location?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
+      <Form.Group>
+        <Form.Label>Instrument</Form.Label>
+        <Form.Control
+          type="text"
+          value={instrument}
+          onChange={handleChange}
+          name="instrument"
+          placeholder="What instrument(s) do you play/teach?"
+        />
+      </Form.Group>
+      {errors?.instrument?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
+      <Form.Group>
+        <Form.Label>Bio</Form.Label>
+        <Form.Control
+          as="textarea"
+          value={description}
+          onChange={handleChange}
+          name="description"
+          rows={7}
+          placeholder="Tell us a little bit about you..."
+        />
+      </Form.Group>
+      {errors?.description?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
