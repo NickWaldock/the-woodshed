@@ -184,6 +184,17 @@ const ProfileEditForm = () => {
         </Alert>
       ))}
 
+      <Form.Group>
+        <Form.Label>Email</Form.Label>
+        <Form.Control
+          type="email"
+          value={email}
+          onChange={handleChange}
+          name="email"
+          placeholder="Add contact email (Optional)"
+        />
+      </Form.Group>
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
