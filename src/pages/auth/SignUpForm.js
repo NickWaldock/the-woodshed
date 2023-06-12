@@ -18,9 +18,13 @@ import {
   Container,
   Alert,
 } from "react-bootstrap";
-
+import { useRedirect } from "../../hooks/useRedirect";
 
 const SignUpForm = () => {  
+
+  // Redirect users if already logged in
+  useRedirect('loggedIn')
+
   // Collects and stores user input data from the form
   const [signUpData, setSignUpData] = useState({
     username: "",
