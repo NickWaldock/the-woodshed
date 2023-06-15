@@ -134,10 +134,10 @@ const SignUpForm = () => {
             ))}
           </Form>
         </Container>
-        <Container className={`mt-3 text-center ${styles.Form}`}>
+        <Container className={`mt-3 text-center ${appStyles.Content}`}>
           <span>Already have an account?</span>
           <Link className={styles.Link} to="/signin">
-            <span>Sign in</span>
+            <span>Sign In</span>
           </Link>
         </Container>
       </Col>

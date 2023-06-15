@@ -6,7 +6,7 @@
     border: 2px solid black;
     text-align: left;
     padding: 10px;
-    font-family: "Odibee Sans", monospace;
+    font-family: "Roboto", monospace;
 
   }
   
@@ -34,13 +34,13 @@
   }
   
   .Link span {
-    color: #ff9254;
+    color: #CC8D37;
     font-weight: bolder;
     
   }
   .Link span:hover {
     text-decoration: underline;
-    text-decoration-color: #ff9254;
+    text-decoration-color: #CC8D37;
     text-decoration-style: solid;
     text-decoration-thickness: 2px;
   }
