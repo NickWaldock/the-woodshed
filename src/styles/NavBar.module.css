@@ -1,14 +1,14 @@
 .NavBar {
-    background-color: #E15D05;
-    font-family: "Black Ops One", monospace;
+    background-color: #FDE9A2;
+    font-family: "Odibee Sans", monospace;
     color: black;
-    font-size: 0.9rem;
+    font-size: 1.6em;
     border: 4px solid black;
 }
 
 .NavLink {
     color: black !important;
-    padding-left: 5px;
+    padding-left: 15px;
     text-align: center;
 }
 
