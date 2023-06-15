@@ -116,22 +116,22 @@ export const Post = (props) => {
 						<OverlayTrigger 
 							placement="top" 
 							overlay={<Tooltip>You can't like your own post!</Tooltip>}>
-							<i className="far fa-heart" />
+							<i className="fa-solid fa-thumbs-up fa-xl" />
 						</OverlayTrigger>
 					) : like_id ? (
 						<span onClick={handleUnlike}>
-							<i className={`fas fa-heart ${styles.Heart}`} />
+							<i className={`fa-solid fa-thumbs-up fa-xl ${styles.Thumb}`} />
 						</span>
 					) : currentUser ? (
 						<span onClick={handleLike}>
-							<i className={`far fa-heart ${styles.HeartOutline}`} />
+							<i className={`fa-solid fa-thumbs-up fa-xl ${styles.ThumbOutline}`} />
 						</span>
 					) : <OverlayTrigger placement="top" overlay={<Tooltip>Log in to like posts!</Tooltip>}>
-							<i className="far fa-heart" />
+							<i className="fa-solid fa-thumbs-up fa-xl" />
 						</OverlayTrigger>}
 						{likes_count}
 						<Link to={`/posts/${id}`}>
-							<i className="far fa-comments" />
+							<i className="fa-solid fa-message fa-xl" />
 						</Link>
 						{comments_count}
 				</div>

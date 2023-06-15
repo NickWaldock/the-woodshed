@@ -1,24 +1,37 @@
 .Post {
-    background-color: #ffffff;
-    border: 1px solid #dadadf;
-    border-radius: 2px;
+    background-color: #FDE9A2;
+    border: 2px solid black;
+    border-radius: 5px;
     margin-bottom: 16px;
     text-align: center;
+    font-family: "Roboto", sans-serif;
   }
   
   .Post figure,
   h5 {
     margin: 0 0;
   }
-  
-  .Heart {
-    color: #f85032;
+
+  .Post span {
+    color: #372E38;
   }
   
-  .Heart:hover {
-    color: #2142b2;
+  .Thumb {
+    color: #f85032;
+
   }
   
-  .HeartOutline:hover {
+  .Thumb:hover {
+    color: #372E38;
+  }
+  
+  .ThumbOutline:hover {
     color: #f85032;
+  }
+
+  .PostBar {
+    font-family: "Odibee Sans", sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    letter-spacing: 6px;
   }
