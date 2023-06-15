@@ -3,29 +3,24 @@
   }
   .Input {
     background: #ffffff;
-    border: 3px solid black;
-    border-radius: 0px;
+    border: 2px solid black;
     text-align: left;
     padding: 10px;
-    font-family: "Barlow Condensed", monospace;
+    font-family: "Odibee Sans", monospace;
 
   }
   
   .Header {
-    font-weight: bolder;
     font-size: 30px;
     text-align: center;
-    letter-spacing: 0.1em;
-    text-decoration: underline overline;
-    text-decoration-line: solid;
-    text-decoration-thickness: 4px;
-    font-family: "Barlow Condensed", monospace;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    font-family: "Odibee Sans", monospace;
     color: black;
-    text-transform: uppercase;
   }
 
   .Form {
-    font-family: "Barlow Condensed", monospace;
+    font-family: "Odibee Sans", monospace;
   }
   
   .Link {
@@ -33,15 +28,13 @@
     text-align: center;
     display: block;
     margin: auto;
-    /* font-family: "Barlow Condensed", monospace; */
+    font-family: "Roboto", monospace;
     color: black;
     text-decoration: none !important;
   }
   
   .Link span {
     color: #ff9254;
-    text-transform: uppercase;
-    /* font-family: "Barlow Condensed", monospace; */
     font-weight: bolder;
     
   }

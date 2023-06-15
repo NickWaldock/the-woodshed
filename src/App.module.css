@@ -1,5 +1,5 @@
 .App {
-    background-color: #8A4F33;
+    background-color: #AA534E;
     min-height: 100vh;
 }
 
@@ -11,7 +11,7 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
-    border: 5px solid black;
+    border: 3px solid black;
   }
   
 .File {
@@ -25,7 +25,7 @@
     background-color: #FDE9A2;
     padding: 10px;
     border-radius: 2px;
-    border: 1px solid #dadadf;
+    border: 3px solid black;
   }
 
  

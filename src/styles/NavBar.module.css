@@ -3,7 +3,7 @@
     font-family: "Odibee Sans", monospace;
     color: black;
     font-size: 1.6em;
-    border: 4px solid black;
+    border: 2px solid black;
 }
 
 .NavLink {
@@ -17,7 +17,7 @@
     text-decoration: underline overline;
     text-decoration-color: black;
     text-decoration-style: solid;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
     cursor: pointer;
 }
 
@@ -25,5 +25,5 @@
     text-decoration: underline overline;
     text-decoration-color: black;
     text-decoration-style: solid;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
 }
