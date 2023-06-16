@@ -82,7 +82,6 @@ function PostsPage({message, filter=''}) {
                     <Asset 
                         src={NoResults} 
                         message={message}
-                        className={appStyles.NoResults}   
                     />
                 </Container>
             )}
