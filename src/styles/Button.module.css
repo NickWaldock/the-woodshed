@@ -23,7 +23,7 @@
 
   .Button:hover:active {
     background-color: #AA534E !important;
-    border: 4px solid purple;
+    border: 4px solid black;
   }
   
   .Button:active {
@@ -41,20 +41,17 @@
     width: 100%;
   }
   
-  
-  /* .Black, 
-  .BlackOutline:hover {
-    background-color: #242a3d;
+ 
+  .Follow, 
+  .FollowOutline:hover {
+    background-color: #AA534E;
     color: white;
-    background-color: #242a3d;
-    color: aliceblue; 
+    background-color: #AA534E;
   }
   
-  .Black:hover,
-  .BlackOutline {
-    background-color: #dadadf;
-    color: #242a3d;
-    border-color: #242a3d;
-    background-color: aliceblue;
-    color: #242a3d;
-  } */
+  .Follow:hover,
+  .FollowOutline {
+    background-color: #372E38;
+    color: white;
+    border-color: black;
+  }
