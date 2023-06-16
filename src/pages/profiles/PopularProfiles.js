@@ -1,5 +1,6 @@
 import React from "react";
 import appStyles from "../../App.module.css";
+import styles from "../../styles/PopularProfiles.module.css"
 import { Container } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
@@ -12,12 +13,16 @@ const PopularProfiles = ({ mobile }) => {
   // Display popular profiles, or spinner when data is loading
   return (
     <Container
-      className={`${appStyles.Content} 
+      className={`${appStyles.Content} ${styles.Font}
 				${mobile && 'd-lg-none text-center mb-3'}`}
     >
       {popularProfiles.results.length ? (
         <>
-          <p>Most followed profiles</p>
+        <div className={styles.Title}>
+          <span >Most</span>
+          <span>Followed</span>
+          <span>Profiles</span>
+        </div>
 					{mobile ? (
 						<div className='d-flex justify-content-around'>
 							{popularProfiles.results.slice(0, 4).map((profile) => (
