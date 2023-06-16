@@ -3,7 +3,7 @@
     height: 120px;
     width: 120px;
     margin: 4px;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 5px;
 }
 
@@ -14,3 +14,22 @@
         border-radius: 5px;
     }
 }
+
+.Title {
+    font-family: 'Odibee Sans', sans-serif;
+    font-size: 50px;
+    letter-spacing: 0.07rem;    
+}
+
+.Counts {
+    font-family: 'Odibee Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.07rem;
+}
+
+.Body {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+}
+
