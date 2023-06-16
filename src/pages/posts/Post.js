@@ -104,9 +104,9 @@ export const Post = (props) => {
         <Card.Img src={file} alt={title} />
       </Link>
       <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
+        {title && <Card.Title className={`${styles.PostTitle} text-center`} >{title}</Card.Title>}
         {subtitle && (
-          <Card.Title className="text-center">{subtitle}</Card.Title>
+          <Card.Title className={`${styles.PostTitle} text-center`}>{subtitle}</Card.Title>
         )}
         {instrument && <Card.Text>{instrument}</Card.Text>}
         {tags && <Card.Text>{tags}</Card.Text>}

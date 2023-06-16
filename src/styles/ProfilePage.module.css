@@ -3,11 +3,14 @@
     height: 120px;
     width: 120px;
     margin: 4px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 991px){
     .ProfileImage {
         width: 150px;
-        height: 250px;
+        height: 150px;
+        border-radius: 5px;
     }
 }

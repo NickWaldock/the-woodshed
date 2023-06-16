@@ -35,3 +35,12 @@
     font-weight: bolder;
     letter-spacing: 6px;
   }
+
+  .PostTitle {
+    font-family: "Odibee Sans", sans-serif;
+
+  }
+
+  .PostBody {
+    font-family: "Roboto", sans-serif;
+  }
