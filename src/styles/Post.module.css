@@ -1,46 +1,91 @@
 .Post {
-    background-color: #FDE9A2;
-    border: 3px solid black;
-    border-radius: 5px;
-    margin-bottom: 16px;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-  }
+  background-color: #FDE9A2;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+
+}
   
-  .Post figure,
-  h5 {
-    margin: 0 0;
-  }
+.Post figure,
+h5 {
+  margin: 0 0;
+}
 
-  .Post span {
-    color: #372E38;
-  }
+.Post span {
+  color: #372E38;
+}
+
+.Thumb {
+  color: #AA534E;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+
+}
+
+.Thumb:hover {
+  color: #372E38;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #AA534E;
+}
+
+.ThumbOutline:hover {
+  color: #AA534E;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.PostBar {
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  letter-spacing: 6px;
+}
+
+.PostTitle {
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 40px;
+  text-decoration: underline solid 3px;
+
+}
+
+.PostSubtitle {
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 25px;
+}
+
+.PostBody {
+  font-family: "Roboto", sans-serif;
+}
+
+.Label {
+  font-family: "Roboto", sans-serif;
+}
+
+.Link {
+  text-decoration: none;
+  color: #372E38;
+  cursor: pointer;
+  font-family: "Odibee Sans", sans-serif;
+}
+
+.Link:hover {
+  text-decoration-color: #AA534E;
+  color: #AA534E;
+  cursor: pointer;
+}
+
+.Comment {
+  color: #AA534E;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.Comment:hover {
+  cursor: pointer;
+  color: #AA534E;
+  text-shadow: 3px 3px black;
   
-  .Thumb {
-    color: #f85032;
-
-  }
-  
-  .Thumb:hover {
-    color: #372E38;
-  }
-  
-  .ThumbOutline:hover {
-    color: #f85032;
-  }
-
-  .PostBar {
-    font-family: "Odibee Sans", sans-serif;
-    font-size: 25px;
-    font-weight: bolder;
-    letter-spacing: 6px;
-  }
-
-  .PostTitle {
-    font-family: "Odibee Sans", sans-serif;
-
-  }
-
-  .PostBody {
-    font-family: "Roboto", sans-serif;
-  }
+}

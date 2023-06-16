@@ -133,3 +133,4 @@ Axios interceptors
 
 ## Future Developments
 All liked/saved posts can be organised into self-made categories
+Post list descriptions to preview text in case the post has a larger amount of text
