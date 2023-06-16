@@ -9,3 +9,8 @@
     right: 0;
     z-index: 99;
 }
+
+.Font {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: bold;
+}

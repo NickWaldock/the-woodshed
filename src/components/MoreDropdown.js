@@ -7,7 +7,7 @@ import { useHistory } from "react-router";
 // Dropdown needs access to the DOM node in order to position the Menu
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
   <i
-    className="fa-solid fa-screwdriver-wrench fa-xl"
+    className="fa-solid fa-gear fa-2xl"
     ref={ref}
     onClick={(e) => {
       e.preventDefault();
@@ -48,28 +48,28 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
 export function ProfileEditDropdown({ id }) {
   const history = useHistory();
   return (
-    <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
+    <Dropdown className={`ml-auto px-3 ${styles.Absolute} ${styles.Font}`} drop="left">
       <Dropdown.Toggle as={ThreeDots} />
       <Dropdown.Menu>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit`)}
           aria-label="edit-profile"
         >
-          <i className="fas fa-edit" /> edit profile
+          <i className="fa-solid fa-pencil mr-2" /> Edit Profile
         </Dropdown.Item>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit/username`)}
           aria-label="edit-username"
         >
-          <i className="far fa-id-card" />
-          change username
+          <i className="fa-solid fa-signature mr-2" />
+          Change Username
         </Dropdown.Item>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit/password`)}
           aria-label="edit-password"
         >
-          <i className="fas fa-key" />
-          change password
+          <i className="fa-solid fa-lock mr-2" />
+          Change Password
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
