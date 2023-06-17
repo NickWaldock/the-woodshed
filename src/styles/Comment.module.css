@@ -1,10 +1,20 @@
 .Owner {
     font-weight: bold;
-    color: #2142b2;
+    color: black;
     margin-right: 8px;
+    font-size: 27px;
+    font-family: "Odibee Sans", sans-serif;
+
 }
 
 .Date {
     font-weight: lighter;
-    color: #c1c1c5;
+    color: rgb(74, 74, 74);
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+}
+
+.CommentBody {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 20px;
 }

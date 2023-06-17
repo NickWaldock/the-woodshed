@@ -17,7 +17,7 @@
     text-decoration: underline overline;
     text-decoration-color: black;
     text-decoration-style: solid;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 3px;
     cursor: pointer;
 }
 
@@ -25,5 +25,5 @@
     text-decoration: underline overline;
     text-decoration-color: black;
     text-decoration-style: solid;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 3px;
 }
