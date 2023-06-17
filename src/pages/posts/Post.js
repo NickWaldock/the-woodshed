@@ -88,14 +88,16 @@ export const Post = (props) => {
     <Card className={styles.Post}>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
-          <Link
-						className={styles.Link} 
-						to={`/profiles/${profile_id}`}>
-            	<Avatar src={profile_image} height={55} />
-            	{owner}
+          <Link className={styles.Link} to={`/profiles/${profile_id}`}>
+            <Avatar src={profile_image} height={55} />
+            {owner}
           </Link>
           <div className="d-flex align-items-center">
-            <span><em>Updated on:</em><br />{updated_at}</span>
+            <span>
+              <em>Updated on:</em>
+              <br />
+              {updated_at}
+            </span>
             {is_owner && postPage && (
               <MoreDropdown
                 handleEdit={handleEdit}
@@ -107,10 +109,7 @@ export const Post = (props) => {
       </Card.Body>
       <Card.Body>
         {title && (
-          <Link
-            to={`/posts/${id}`}
-            className={styles.Link}
-          >
+          <Link to={`/posts/${id}`} className={styles.Link}>
             <Card.Title className={`${styles.PostTitle} text-center`}>
               {title}
             </Card.Title>
@@ -121,21 +120,24 @@ export const Post = (props) => {
             {subtitle}
           </Card.Subtitle>
         )}
-        {instrument && <Card.Text><em>Instrument: </em>{instrument}</Card.Text>}
-        {tags && <Card.Text><em>Tags: </em>{tags}</Card.Text>}
+        {instrument && (
+          <Card.Text>
+            <em>Instrument: </em>
+            {instrument}
+          </Card.Text>
+        )}
+        {tags && (
+          <Card.Text>
+            <em>Tags: </em>
+            {tags}
+          </Card.Text>
+        )}
         {description && <Card.Text>{description}</Card.Text>}
-				<Link
-				 to={`/posts/${id}`}
-				 className={styles.Link}
-				>
-        	<Card.Img src={file} alt={title} />
-      </Link>
+        <Link to={`/posts/${id}`} className={styles.Link}>
+          <Card.Img src={file} alt={title} />
+        </Link>
 
-          <PdfPreview
-            file={{
-              url: `${file}`
-            }}
-           />
+        <PdfPreview />
 
         <div className={`${styles.PostBar} mt-4`}>
           {is_owner ? (
@@ -164,10 +166,7 @@ export const Post = (props) => {
             </OverlayTrigger>
           )}
           {likes_count}
-          <Link 
-						to={`/posts/${id}`}
-						className={styles.Comment}
-					>
+          <Link to={`/posts/${id}`} className={styles.Comment}>
             <i className="fa-solid fa-message fa-xl" />
           </Link>
           {comments_count}
