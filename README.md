@@ -103,15 +103,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Refernces
 Google Fonts
-- PT Mono 
-    - regular 400
+- Roboto
 - Barlow Condensed 
     - light 300
     - Light 300 Italic
     - Regular 400
     - Medium 500
     - Semibold 600
-- Black Ops One
+- Odibee Sans
 
 
 

@@ -67,19 +67,24 @@ function ProfilePage() {
             className={styles.ProfileImage}
             src={profile?.image}
           />
+          {profile?.location && <Col className={appStyles.BodyFont}><em>{profile.location}</em></Col>}
+          {profile?.instrument && <Col className={appStyles.BodyFont}>{profile.instrument}</Col>}
+          {profile?.email && <Col className={appStyles.BodyFont}><em>{profile.email}</em></Col>}
         </Col>
         <Col lg={6}>
-          <h3 className={`${styles.Title} m-2`}>{profile?.owner}</h3>
+          <h3 className={`${styles.Title} mt-2`}>{profile?.owner}</h3>
+          {profile?.headline && <Col className={`${appStyles.BodyFont} mb-3`}><strong>{profile.headline}</strong></Col>}
+          {profile?.description && <Col className={appStyles.BodyFont}><em>{profile.description}</em></Col>}
           <Row className="justify-content-center no-gutters">
-            <Col xs={3} className={`${styles.Counts} my-2`}>
+            <Col xs={3} className={`${styles.Counts} mt-2`}>
               <div>{profile?.posts_count}</div>
               <div>Posts</div>
             </Col>
-            <Col xs={3} className={`${styles.Counts} my-2`}>
+            <Col xs={3} className={`${styles.Counts} mt-2`}>
               <div>{profile?.followers_count}</div>
               <div>Followers</div>
             </Col>
-            <Col xs={3} className={`${styles.Counts} my-2 ml-2`}>
+            <Col xs={3} className={`${styles.Counts} mt-2 ml-2`}>
               <div>{profile?.following_count}</div>
               <div>Following</div>
             </Col>
@@ -104,7 +109,7 @@ function ProfilePage() {
               </Button>
             ))}
         </Col>
-        {profile?.content && <Col className="p-3">{profile.content}</Col>}
+        
       </Row>
     </>
   );
@@ -127,7 +132,7 @@ function ProfilePage() {
       ) : (
         <Asset
           src={NoResults}
-          message={`No results found, ${profile?.owner} hasn't posts yet.`}
+          message={`No results found, ${profile?.owner} hasn't posted yet`}
         />
       )}
     </>
