@@ -133,10 +133,10 @@ export const Post = (props) => {
           </Card.Text>
         )}
         {description && <Card.Text><em>Notes from {owner}:</em><br />{description}</Card.Text>}
-        <Link to={`/posts/${id}`} className={styles.Link}>
+        {/* <Link to={`/posts/${id}`} className={styles.Link}>
           <Card.Img src={file} alt={title} />
-        </Link>
-        
+        </Link> */}
+
         <PdfPreview data={file} postId={id} />
     
         <div className={`${styles.PostBar} mt-4`}>
