@@ -15,7 +15,6 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
-// import PdfPreview from "./PdfPreview";
 
 
 function PostPage() {
@@ -76,9 +75,9 @@ function PostPage() {
               next={() => fetchMoreData(comments, setComments)}
             />
           ) : currentUser ? (
-            <span>No comments yet, be the first to comment!</span>
+            <span className={appStyles.BodyFont}>No comments yet, be the first to comment!</span>
           ) : (
-            <span>No comments... yet</span>
+            <span className={appStyles.BodyFont}>No comments... yet</span>
           )}
         </Container>
       </Col>

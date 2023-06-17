@@ -28,4 +28,11 @@
     border: 3px solid black;
   }
 
+.BodyFont {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.TitleFont {
+  font-family: "Odibee Sans", sans-serif;
+}
  
