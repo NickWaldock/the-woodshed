@@ -106,9 +106,14 @@ export const Post = (props) => {
       </Card.Body>
       <Card.Body>
         {title && (
-          <Card.Title className={`${styles.PostTitle} text-center`}>
-            {title}
-          </Card.Title>
+          <Link
+            to={`/posts/${id}`}
+            className={styles.Link}
+          >
+            <Card.Title className={`${styles.PostTitle} text-center`}>
+              {title}
+            </Card.Title>
+          </Link>
         )}
         {subtitle && (
           <Card.Subtitle className={`${styles.PostSubtitle} my-3 text-center`}>
