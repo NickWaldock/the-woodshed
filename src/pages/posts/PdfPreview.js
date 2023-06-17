@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min
 import { axiosReq } from "../../api/axiosDefaults";
 import styles from "../../styles/PdfPreview.module.css";
 
-const PdfPreview = () => {
+const PdfPreview = ({postId}) => {
 	const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -17,7 +17,12 @@ const PdfPreview = () => {
   const { title, subtitle, description, instrument, tags, file } = postData;
   const fileInput = useRef(null);
   const history = useHistory();
-  const { id } = useParams();
+
+	// Find post id from url for component in detail view
+	// If not use destructured postId prop for list views
+  const paramId = useParams();
+	const id = paramId.id || postId;
+
 
   useEffect(() => {
     const handleMount = async () => {
@@ -33,6 +38,8 @@ const PdfPreview = () => {
           is_owner,
         } = data;
 
+				// console.log(data, "<==data")
+
         is_owner
           ? setPostData({
               title,
@@ -43,18 +50,10 @@ const PdfPreview = () => {
               file,
             })
           : history.push("/");
-      } catch (err) {console.log(err)}
+      } catch (err){console.log(err)}
     };
 		handleMount();
   }, [history, id]);
-
-  // Function to allow the form fields to continually display inputted data
-  // const handleChange = (event) => {
-  //   setPostData({
-  //     ...postData,
-  //     [event.target.name]: event.target.value,
-  //   });
-  // };
 
   // Function to handle changing and previewing PDF files before submission
   const handleChangeFile = (event) => {

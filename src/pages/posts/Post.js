@@ -132,13 +132,13 @@ export const Post = (props) => {
             {tags}
           </Card.Text>
         )}
-        {description && <Card.Text>{description}</Card.Text>}
+        {description && <Card.Text><em>Notes from {owner}:</em><br />{description}</Card.Text>}
         <Link to={`/posts/${id}`} className={styles.Link}>
           <Card.Img src={file} alt={title} />
         </Link>
-
-        <PdfPreview />
-
+        
+        <PdfPreview data={file} postId={id} />
+    
         <div className={`${styles.PostBar} mt-4`}>
           {is_owner ? (
             <OverlayTrigger
