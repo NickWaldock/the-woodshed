@@ -15,6 +15,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
+// import PdfPreview from "./PdfPreview";
 
 
 function PostPage() {
@@ -47,6 +48,7 @@ function PostPage() {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
+        
         <Container className={appStyles.Content}>
         {currentUser ? (
           <CommentCreateForm

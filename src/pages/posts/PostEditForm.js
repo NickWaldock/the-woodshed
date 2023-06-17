@@ -78,7 +78,7 @@ function PostEditForm() {
     }
   };
 
-  // Function to send dat to the API on form submit
+  // Function to send data to the API on form submit
   const handleSubmit = async (event) => {
     event.preventDefault()
     const formData = new FormData();

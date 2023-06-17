@@ -6,6 +6,7 @@ import { Avatar } from "../../components/Avatar";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
+import PdfPreview from "./PdfPreview";
 
 export const Post = (props) => {
   const {
@@ -129,6 +130,13 @@ export const Post = (props) => {
 				>
         	<Card.Img src={file} alt={title} />
       </Link>
+
+          <PdfPreview
+            file={{
+              url: `${file}`
+            }}
+           />
+
         <div className={`${styles.PostBar} mt-4`}>
           {is_owner ? (
             <OverlayTrigger
