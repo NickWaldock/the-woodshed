@@ -89,6 +89,9 @@ const ProfileEditForm = () => {
     });
   };
 
+  // Alerts
+  const [showAlert, setShowAlert] = useState(true);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -110,6 +113,17 @@ const ProfileEditForm = () => {
         profile_image: data.image,
       }));
       history.goBack();
+
+      
+      <Alert // Successful post update message
+        show={showAlert}
+        variant="success" 
+        onClose={()=>setShowAlert(false)} 
+        dismissable
+      >
+        Post updated successfully!
+      </Alert>
+
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);
