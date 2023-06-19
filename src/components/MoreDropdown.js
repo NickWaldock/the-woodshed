@@ -20,10 +20,10 @@ const Gear = React.forwardRef(({ onClick }, ref) => (
 // Render the dropdown menu for editing and deleting a post
 export const MoreDropdown = ({ handleEdit, handleDelete }) => {
   return (
-    <Dropdown className="ml-4" drop="left">
+    <Dropdown className="text-center" drop="right">
       <Dropdown.Toggle as={Gear} />
       <Dropdown.Menu
-        className="text-center"
+        className={`${styles.General} ${styles.Container} text-center`}
         popperConfig={{ strategy: "fixed" }}
       >
         <Dropdown.Item
@@ -31,14 +31,19 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
           onClick={handleEdit}
           aria-label="edit"
         >
-          <i className="fa-solid fa-wrench fa-lg"></i>
+          <div className={styles.IconBorder}>
+            <i className="fa-solid fa-pencil fa-lg"></i>
+          </div>
+          
         </Dropdown.Item>
         <Dropdown.Item
           className={styles.DropdownItem}
           onClick={handleDelete}
           aria-label="delete"
         >
-          <i className="fa-solid fa-trash-can fa-lg"></i>
+          <div className={styles.IconBorder}>
+            <i className="fa-solid fa-trash-can fa-lg"></i>
+          </div>
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

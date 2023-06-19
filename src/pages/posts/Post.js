@@ -94,8 +94,8 @@ export const Post = (props) => {
             {owner}
           </Link>
           <div className="d-flex align-items-center">
-            <span>
-              <em>Updated on:</em>
+            <span className="mr-5">
+              <em>Updated on</em>
               <br />
               {updated_at}
             </span>
