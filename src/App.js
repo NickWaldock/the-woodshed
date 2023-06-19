@@ -14,12 +14,14 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
-import { Alert } from "react-bootstrap";
 
+
+// import toastStyles from "./styles/ToastAlert.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// import "react-toastify/dist/ReactToastify.minimal.css";
 
-export const toastAlert = () => toast("Success!")
+export const toastAlert = () => toast("Success! Nice!")
 
 function App() {
   const currentUser = useCurrentUser();
@@ -31,15 +33,15 @@ function App() {
       <Container className={styles.Main}>
         <ToastContainer
         position="top-center"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick={false}
         rtl={false}
         pauseOnFocusLoss={false}
-        draggable
         pauseOnHover={false}
-        theme="light"
+        progressClassName={styles.ToastProgress}
+        bodyClassName={styles.ToastBody}
       >
       </ToastContainer>
       

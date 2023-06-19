@@ -36,3 +36,13 @@
   font-family: "Odibee Sans", sans-serif;
 }
  
+
+
+.ToastBody {
+  font-family: "Odibee Sans", sans-serif;
+  color: #10171D;
+  font-size: 1.5rem !important;
+}
+.ToastProgress {
+  background: #FDE9A2 !important;
+}
