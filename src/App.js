@@ -44,7 +44,7 @@ function App() {
       />
 
         <Switch>
-          <Route exact path="/" render={() => <LandingPage />} />
+          <Route exact path="/welcome" render={() => <LandingPage />} />
           <Route
             exact
             path="/"

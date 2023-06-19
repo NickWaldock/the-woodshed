@@ -4,28 +4,35 @@ import logo from "../assets/logo-1-nobg.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 // import { CurrentUserContext } from "../App";
-import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
+import {
+  useCurrentUser,
+  useSetCurrentUser,
+} from "../contexts/CurrentUserContext";
 import { Avatar } from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import { removeTokenTimestamp } from "../utils/utils";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 
 const NavBar = () => {
+  const history = useHistory();
+
   // Get current logged-in data
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
   // Access hook for burger menu expansion logic
-  const {expanded, setExpanded, ref} = useClickOutsideToggle();
+  const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   // Manage user sign out
   const handleSignOut = async () => {
     try {
-      await axios.post('dj-rest-auth/logout/');
+      await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
       removeTokenTimestamp();
-    } catch(err){
+      history.push("/welcome");
+    } catch (err) {
       console.log(err);
     }
   };
@@ -44,6 +51,9 @@ const NavBar = () => {
   );
   const loggedInLinks = (
     <>
+      <NavLink exact to="/" className={styles.NavLink}>
+        Home
+      </NavLink>
       <NavLink
         to="/feed"
         className={styles.NavLink}
@@ -51,7 +61,7 @@ const NavBar = () => {
       >
         Feed
       </NavLink>
-      
+
       <NavLink
         to="/liked"
         className={styles.NavLink}
@@ -60,11 +70,7 @@ const NavBar = () => {
         Liked
       </NavLink>
 
-      <NavLink
-        to="/"
-        className={styles.NavLink}
-        onClick={handleSignOut}
-      >
+      <NavLink to="/" className={styles.NavLink} onClick={handleSignOut}>
         Sign Out
       </NavLink>
 
@@ -72,11 +78,7 @@ const NavBar = () => {
         to={`/profiles/${currentUser?.profile_id}`}
         className={styles.NavLink}
       >
-        <Avatar 
-          src={currentUser?.profile_image} 
-          text='Profile' 
-          height={35} 
-        />
+        <Avatar src={currentUser?.profile_image} text="Profile" height={35} />
       </NavLink>
     </>
   );
@@ -113,18 +115,13 @@ const NavBar = () => {
           </Navbar.Brand>
         </NavLink>
         {currentUser && addPostLink}
-        <Navbar.Toggle 
+        <Navbar.Toggle
           ref={ref}
-          onClick={()=> setExpanded(!expanded)}
-          aria-controls="basic-navbar-nav" 
+          onClick={() => setExpanded(!expanded)}
+          aria-controls="basic-navbar-nav"
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
-            <NavLink exact to="/" className={styles.NavLink}>
-              Home
-            </NavLink>
-
-            
             {currentUser ? loggedInLinks : loggedOutLinks}
           </Nav>
         </Navbar.Collapse>

@@ -1,32 +1,32 @@
 .App {
-    background-color: #AA534E;
-    min-height: 100vh;
+  background-color: #aa534e;
+  min-height: 100vh;
+  width: 100%
 }
 
 .Main {
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
 .FillerImage {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    border: 3px solid black;
-  }
-  
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border: 3px solid black;
+}
+
 .File {
-    max-height: 40vh;
-    max-width: 100%;
-    object-fit: contain;
-    
-  }
+  max-height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
+}
 
 .Content {
-    background-color: #FDE9A2;
-    padding: 10px;
-    border-radius: 5px;
-    border: 3px solid black;
-  }
+  background-color: #fde9a2;
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid black;
+}
 
 .BodyFont {
   font-family: "Barlow Condensed", sans-serif;
@@ -35,14 +35,12 @@
 .TitleFont {
   font-family: "Odibee Sans", sans-serif;
 }
- 
-
 
 .ToastBody {
   font-family: "Odibee Sans", sans-serif;
-  color: #10171D;
+  color: #10171d;
   font-size: 1.5rem !important;
 }
 .ToastProgress {
-  background: #FDE9A2 !important;
+  background: #fde9a2 !important;
 }
