@@ -14,12 +14,13 @@ const Gear = React.forwardRef(({ onClick }, ref) => (
       onClick(e);
     }}
   />
+  
 ));
 
 // Render the dropdown menu for editing and deleting a post
 export const MoreDropdown = ({ handleEdit, handleDelete }) => {
   return (
-    <Dropdown className="ml-auto" drop="left">
+    <Dropdown className="ml-4" drop="left">
       <Dropdown.Toggle as={Gear} />
       <Dropdown.Menu
         className="text-center"

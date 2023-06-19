@@ -98,7 +98,7 @@ export const Post = (props) => {
               <br />
               {updated_at}
             </span>
-            {is_owner && postPage && (
+            {is_owner && (                
               <MoreDropdown
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}

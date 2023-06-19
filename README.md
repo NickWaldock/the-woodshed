@@ -128,6 +128,7 @@ https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-
 ## Technologies
 Axios
 Axios interceptors
+Toast
 
 
 ## Future Developments
