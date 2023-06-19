@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Button, Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Avatar } from "../../components/Avatar";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -28,7 +28,7 @@ export const Post = (props) => {
     updated_at,
     postPage,
     setPosts,
-  } = props;
+  } = props;  
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
@@ -133,9 +133,13 @@ export const Post = (props) => {
           </Card.Text>
         )}
         {description && <Card.Text><em>Notes from {owner}:</em><br />{description}</Card.Text>}
-        {/* <Link to={`/posts/${id}`} className={styles.Link}>
-          <Card.Img src={file} alt={title} />
-        </Link> */}
+      
+        <a 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          href={file}>
+            <Button>Viw PDF in new tab</Button> 
+        </a>
 
         <PdfPreview data={file} postId={id} />
     
