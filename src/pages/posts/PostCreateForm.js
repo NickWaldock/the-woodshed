@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -17,11 +17,14 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { Alert } from "react-bootstrap";
 import { useRedirect } from "../../hooks/useRedirect";
+import { toastAlert } from "../../App";
+
 
 
 function PostCreateForm() {
   // Redirect non-authenticated users to sign in page
   useRedirect('loggedOut');
+
 
   const [errors, setErrors] = useState({});
 
@@ -70,7 +73,9 @@ function PostCreateForm() {
 
     try {
       const {data} = await axiosReq.post('/posts/', formData);
+      // handleShowAlert();
       history.push(`/posts/${data.id}`);
+      toastAlert();
     } catch(err){
       console.log(err);
       if (err.response?.status !== 401){
@@ -177,6 +182,9 @@ function PostCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
+      {/* <Alert show={showAlert} variant="success">
+      Success
+    </Alert> */}
       <Row>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container

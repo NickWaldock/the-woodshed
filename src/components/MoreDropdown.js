@@ -5,7 +5,7 @@ import { useHistory } from "react-router";
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
-const ThreeDots = React.forwardRef(({ onClick }, ref) => (
+const Gear = React.forwardRef(({ onClick }, ref) => (
   <i
     className="fa-solid fa-gear fa-2xl"
     ref={ref}
@@ -20,7 +20,7 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
 export const MoreDropdown = ({ handleEdit, handleDelete }) => {
   return (
     <Dropdown className="ml-auto" drop="left">
-      <Dropdown.Toggle as={ThreeDots} />
+      <Dropdown.Toggle as={Gear} />
       <Dropdown.Menu
         className="text-center"
         popperConfig={{ strategy: "fixed" }}
@@ -49,7 +49,7 @@ export function ProfileEditDropdown({ id }) {
   const history = useHistory();
   return (
     <Dropdown className={`ml-auto px-3 ${styles.Absolute} ${styles.Font}`} drop="left">
-      <Dropdown.Toggle as={ThreeDots} />
+      <Dropdown.Toggle as={Gear} />
       <Dropdown.Menu>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit`)}

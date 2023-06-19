@@ -17,6 +17,8 @@ import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 
 
+
+
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
@@ -46,6 +48,10 @@ function PostPage() {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
+        {/* <Alert>
+          <AlertCustom variant='success'></AlertCustom>
+        </Alert> */}
+        
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Content}>
         {currentUser ? (
