@@ -20,7 +20,6 @@ import { useRedirect } from "../../hooks/useRedirect";
 import { toastAlert } from "../../App";
 
 
-
 function PostCreateForm() {
   // Redirect non-authenticated users to sign in page
   useRedirect('loggedOut');

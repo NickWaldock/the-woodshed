@@ -15,11 +15,8 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
-
-// import toastStyles from "./styles/ToastAlert.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import "react-toastify/dist/ReactToastify.minimal.css";
 
 export const toastAlert = () => toast("Success! Nice!")
 
@@ -42,9 +39,7 @@ function App() {
         pauseOnHover={false}
         progressClassName={styles.ToastProgress}
         bodyClassName={styles.ToastBody}
-      >
-      </ToastContainer>
-      
+      />
         <Switch>
           <Route
             exact

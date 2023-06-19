@@ -13,6 +13,7 @@ import btnStyles from "../../styles/Button.module.css";
 import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { Alert } from "react-bootstrap";
+import { toastAlert } from "../../App";
 
 function PostEditForm() {
   const [errors, setErrors] = useState({});
@@ -96,6 +97,7 @@ function PostEditForm() {
     try {
       await axiosReq.put(`/posts/${id}/`, formData);
       history.push(`/posts/${id}`);
+      toastAlert();
     } catch(err){
       console.log(err);
       if (err.response?.status !== 401){
