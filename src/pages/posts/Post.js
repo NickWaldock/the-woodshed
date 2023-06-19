@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
+import btnStyles from "../../styles/Button.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Button, Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Avatar } from "../../components/Avatar";
@@ -137,8 +138,13 @@ export const Post = (props) => {
         <a 
           target="_blank" 
           rel="noopener noreferrer" 
-          href={file}>
-            <Button>Viw PDF in new tab</Button> 
+          href={file}
+        >
+            <Button
+              className={`${btnStyles.Button} mb-2`}
+            >
+              View PDF in new tab / Download
+            </Button> 
         </a>
 
         <PdfPreview data={file} postId={id} />
