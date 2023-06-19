@@ -17,6 +17,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LandingPage from "./pages/general/LandingPage";
 
 export const toastAlert = () => toast("Success! Nice!")
 
@@ -27,6 +28,7 @@ function App() {
   return (
     <div className={styles.App}>
       <NavBar />
+      
       <Container className={styles.Main}>
         <ToastContainer
         position="top-center"
@@ -40,7 +42,9 @@ function App() {
         progressClassName={styles.ToastProgress}
         bodyClassName={styles.ToastBody}
       />
+
         <Switch>
+          <Route exact path="/" render={() => <LandingPage />} />
           <Route
             exact
             path="/"
