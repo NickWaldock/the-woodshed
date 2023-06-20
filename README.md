@@ -122,7 +122,8 @@ https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-
 ## Tools
 - PNGs 
   - https://pngtree.com/
-
+  - https://webcode.tools/generators/css/keyframe-animation
+- Font Awesome
 
 
 ## Technologies

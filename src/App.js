@@ -18,6 +18,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LandingPage from "./pages/general/LandingPage";
+import Footer from "./components/Footer";
 
 export const toastAlert = () => toast("Success! Nice!")
 
@@ -95,6 +96,7 @@ function App() {
           />
           <Route render={() => <h1>Page not found!</h1>} />
         </Switch>
+        <Footer />
       </Container>
     </div>
   );
