@@ -12,25 +12,36 @@ const Footer = () => {
             type="button"
             className={`${styles.SocialIcons} btn-floating mx-2`}
           >
-            <i className="fa-brands fa-linkedin fa-2xl" />
+            <a
+              href="https://www.linkedin.com/in/nicholas-waldock-05237071/"
+              target="_blank"
+            >
+              <i className="fa-brands fa-linkedin fa-2xl" />
+            </a>
           </Button>
           <Button
             type="button"
             className={`${styles.SocialIcons} btn-floating mx-2`}
           >
-            <i className="fa-brands fa-square-github fa-2xl" />
+            <a href="https://github.com/NickWaldock" target="_blank">
+              <i className="fa-brands fa-square-github fa-2xl" />
+            </a>
           </Button>
           <Button
             type="button"
             className={`${styles.SocialIcons} btn-floating mx-2`}
           >
-            <i className="fab fa-facebook-f fa-2xl" />
+            <a href="https://facebook.com" target="_blank">
+              <i className="fab fa-facebook-f fa-2xl" />
+            </a>
           </Button>
           <Button
             type="button"
             className={`${styles.SocialIcons} btn-floating mx-2`}
           >
-            <i className="fab fa-youtube fa-2xl" />
+            <a href="https://youtube.com" target="_blank">
+              <i className="fab fa-youtube fa-2xl" />
+            </a>
           </Button>
         </div>
 
