@@ -43,10 +43,9 @@ const LandingPage = () => {
       </Container>
 
       {/* Info Card Container */}
-      <Container className={styles.Container}>
-        {/* <h3 className={styles.Subtitle}>How to use this site</h3> */}
-        <Row className={`${styles.CardCol} mt-3`}>
-          <Col >
+      <Container className={styles.CardContainer}>
+        <Row className={`${styles.CardCol} mt-4`}>
+          <Col className="col-md-6 col-12 my-2">
             <Card className={styles.Card}>
               <Row>
                 <Col>
@@ -81,8 +80,9 @@ const LandingPage = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-					<Card className={styles.Card}>
+
+          <Col className="col-md-6 col-12 my-2">
+					  <Card className={styles.Card}>
               <Row>
                 <Col>
                   <Card.Img
@@ -115,10 +115,10 @@ const LandingPage = () => {
             </Card>
           </Col>
         </Row>
-
-        <Row>
-          <Col className={styles.CardCol}>
-					<Card className={styles.Card}>
+        
+        <Row className="mt-4">
+          <Col className="col-md-6 col-12 my-2">
+					  <Card className={styles.Card}>
               <Row>
                 <Col>
                   <Card.Img
@@ -149,7 +149,8 @@ const LandingPage = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
+
+          <Col className="col-md-6 col-12 my-2">
             <Card className={styles.Card}>
               <Row>
                 <Col>

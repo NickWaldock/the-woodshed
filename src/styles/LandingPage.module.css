@@ -2,8 +2,7 @@
   background-color: #fde9a2;
   border: 3px solid black;
   border-radius: 5px;
-  height: 100%;
-  
+  height: 100%;  
 }
 
 @keyframes LogoAnimation {
@@ -65,11 +64,23 @@
   text-decoration: underline 10px solid black;
 }
 
-.CardCol {
-    /* align-items: center; */
-    justify-content: center;
-    margin: 20px 0px 10px 10px;
+.CardContainer {
+  /* display: inline-flex; */
+  background-color: #fde9a2;
+  border: 3px solid black;
+  border-radius: 5px;
+  height: 100%;  
+  justify-content: center;
+}
 
+.CardCol {
+  /* align-items: center; */
+  /* justify-content: center; */
+/* display: inline-flex; */
+
+/* flex-direction: row; */
+  /* margin: 20px 0px 10px 10px; */
+  
 }
 
 .CardTitle {
@@ -85,11 +96,13 @@
   font-family: "Roboto", sans-serif;
 }
 
+
 .Card {
   border: 5px solid black;
   border-radius: 5px;
-  width: 18rem;
-  margin: 0%;
+  width: 100%;
+  height: 100%;
+  
 }
 
 .CardImg {
