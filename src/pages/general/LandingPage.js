@@ -5,12 +5,16 @@ import logo from "../../assets/logo-1-nobg.png";
 
 const LandingPage = () => {
   return (
-    <div >
-			<Container>
+    <div className="text-center">
+			<Container className="">
 				<Jumbotron fluid className={styles.Container}>
-					<h1>Welcome to</h1>
-					<div className="">
-						<Image src={logo} className=""></Image>
+					{/* <h3 className={styles.Body}>Welcome to</h3> */}
+					<div>
+						<h1 className={styles.Title}>The Woodshed</h1>
+						<h3 className={styles.Subtitle}>Make good practice, permanent</h3>
+					</div>
+					<div className={`${styles.LogoContainer} mt-3`}>
+						<Image src={logo} className={styles.Logo}></Image>
 					</div>
 				</Jumbotron>
 			</Container>

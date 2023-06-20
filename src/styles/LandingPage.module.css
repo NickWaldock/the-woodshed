@@ -3,8 +3,33 @@
     height: 500px;
     border: 3px solid black;
     border-radius: 5px;
+    height: 100%;
+}
+
+.LogoContainer {
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #CC8D37;
+    display: inline-flex;
+    flex: center;
 }
 
 .Logo {
+    object-fit: cover;
+    max-width: 200px;
+}
 
+.Title {   
+    font-family: "Odibee Sans", sans-serif;
+    font-size: 16vw;
+    text-decoration: underline 10px solid black;
+}
+
+.Subtitle {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.Body {
+    font-family: "Roboto", sans-serif;
 }
