@@ -25,24 +25,28 @@ import btnStyles from "../../styles/Button.module.css";
 const LandingPage = () => {
   return (
     <div className="text-center">
-      <Container className="">
+      <Container>
         <Jumbotron fluid className={styles.Container}>
-          {/* <h3 className={styles.Body}>Welcome to</h3> */}
           <div>
             <h1 className={styles.Title}>The Woodshed</h1>
             <h3 className={styles.Subtitle}>Make good practice, permanent</h3>
           </div>
           <div className={`${styles.LogoContainer} mt-3`}>
-            <Image src={logo} className={styles.Logo}></Image>
+            <Link to={"/signin"} >
+              <Image src={logo} className={`${styles.Logo}`}></Image>
+								<Button className={`${btnStyles.Button} mb-3`}>
+									Click to enter
+								</Button>
+							</Link>
           </div>
         </Jumbotron>
       </Container>
 
+      {/* Info Card Container */}
       <Container className={styles.Container}>
-        <h3 className={styles.Subtitle}>How to use this site</h3>
-
-        <Row>
-          <Col>
+        {/* <h3 className={styles.Subtitle}>How to use this site</h3> */}
+        <Row className={`${styles.CardCol} mt-3`}>
+          <Col >
             <Card className={styles.Card}>
               <Row>
                 <Col>
@@ -109,12 +113,11 @@ const LandingPage = () => {
                 </Card.Text>
               </Card.Body>
             </Card>
-            
           </Col>
         </Row>
 
-        <Row className="mt-4">
-          <Col>
+        <Row>
+          <Col className={styles.CardCol}>
 					<Card className={styles.Card}>
               <Row>
                 <Col>
