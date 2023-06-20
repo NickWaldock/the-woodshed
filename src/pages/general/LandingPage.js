@@ -44,7 +44,7 @@ const LandingPage = () => {
 
       {/* Info Card Container */}
       <Container className={styles.CardContainer}>
-        <Row className={`${styles.CardCol} mt-4`}>
+        <Row className="mt-4">
           <Col className="col-md-6 col-12 my-2">
             <Card className={styles.Card}>
               <Row>
