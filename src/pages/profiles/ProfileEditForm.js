@@ -90,7 +90,7 @@ const ProfileEditForm = () => {
     });
   };
 
-  // Alerts
+  // Form Authentication Alerts
   const [showAlert, setShowAlert] = useState(true);
 
   const handleSubmit = async (event) => {
@@ -116,14 +116,14 @@ const ProfileEditForm = () => {
       history.goBack();
 
       
-      <Alert // Successful post update message
-        show={showAlert}
-        variant="success" 
-        onClose={()=>setShowAlert(false)} 
-        dismissable
-      >
-        Post updated successfully!
-      </Alert>
+      // <Alert // Successful post update message
+      //   show={showAlert}
+      //   variant="success" 
+      //   onClose={()=>setShowAlert(false)} 
+      //   dismissable
+      // >
+      //   Post updated successfully!
+      // </Alert>
 
     } catch (err) {
       console.log(err);
@@ -264,6 +264,7 @@ const ProfileEditForm = () => {
                 </Form.Label>
               </div>
               <Form.File
+                className="d-none"
                 id="image-upload"
                 ref={imageFile}
                 accept="image/*"
