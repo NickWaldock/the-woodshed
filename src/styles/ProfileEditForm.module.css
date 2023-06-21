@@ -8,3 +8,8 @@
     border-color: black;
     box-shadow: none;
 }
+
+.FormText {
+    font-family: "Odibee Sans", sans-serif;
+    font-size: 30px;
+}

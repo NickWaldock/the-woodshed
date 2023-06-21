@@ -13,6 +13,8 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import styles from "../../styles/ProfileEditForm.module.css";
+import { toastAlert } from "../../App";
 
 const UserPasswordForm = () => {
   const history = useHistory();
@@ -46,6 +48,7 @@ const UserPasswordForm = () => {
     try {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
       history.goBack();
+      toastAlert();
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);
@@ -58,9 +61,12 @@ const UserPasswordForm = () => {
         <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
-              <Form.Label>New password</Form.Label>
+              <Form.Label className={styles.FormText}>
+                Add your new password below
+              </Form.Label>
               <Form.Control
-                placeholder="new password"
+                className={styles.FormField}
+                placeholder="New Password"
                 type="password"
                 value={new_password1}
                 onChange={handleChange}
@@ -73,13 +79,16 @@ const UserPasswordForm = () => {
               </Alert>
             ))}
             <Form.Group>
-              <Form.Label>Confirm password</Form.Label>
+              <Form.Label className={styles.FormText}>
+                Confirm password
+              </Form.Label>
               <Form.Control
-                placeholder="confirm new password"
+                placeholder="Confirm New Password"
                 type="password"
                 value={new_password2}
                 onChange={handleChange}
                 name="new_password2"
+                className={styles.FormField}
               />
             </Form.Group>
             {errors?.new_password2?.map((message, idx) => (

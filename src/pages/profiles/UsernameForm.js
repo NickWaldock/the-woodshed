@@ -16,6 +16,8 @@ import {
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import styles from "../../styles/ProfileEditForm.module.css";
+import { toastAlert } from "../../App";
 
 const UsernameForm = () => {
   const [username, setUsername] = useState("");
@@ -46,6 +48,7 @@ const UsernameForm = () => {
         username,
       }));
       history.goBack();
+      toastAlert();
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);
@@ -58,12 +61,15 @@ const UsernameForm = () => {
         <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit} className="my-2">
             <Form.Group>
-              <Form.Label>Change username</Form.Label>
+              <Form.Label className={styles.FormText}>
+                Please enter your desired username below
+              </Form.Label>
               <Form.Control
                 placeholder="username"
                 type="text"
                 value={username}
                 onChange={(event) => setUsername(event.target.value)}
+                className={styles.FormField}
               />
             </Form.Group>
             {errors?.username?.map((message, idx) => (
