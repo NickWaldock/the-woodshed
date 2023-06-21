@@ -91,8 +91,31 @@ The Woodshed has been created as the 5th portfolio project for the [Code Institu
 - Create a interactive front-end application that consumes custom API data
 - Demonstrate the key role that specialist front-end developers perform in modern software development teams
 - Maintain a consistient and simple user interface design aesthetic
+<br />
+<br />
 
-  - [Wireframes](#wireframes)
+## Wireframes
+### Landing Page
+<table>
+<tr><td>
+  <image src="readme-files/wireframes/landing-page.png" width=50%>
+  <image src="readme-files/wireframes/landing-page-mobile.png" width=15%>
+</td></tr>
+
+<tr width=50%>
+<td><image src="readme-files/wireframes/landing-page-2.png" width=50%></td>
+</tr>
+</table>
+<br />
+<br />
+
+### Sign In / Sign Up Page
+
+
+
+
+
+
   - [Database](#database)
   - [Agile Methodology](#agile-methodology)
   - [Milestones](#milestones)
