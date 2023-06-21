@@ -6,7 +6,7 @@
     border: 2px solid black;
     text-align: left;
     padding: 10px;
-    font-family: "Roboto", monospace;
+    font-family: "Barlow Condensed", monospace;
 
   }
   
@@ -20,7 +20,7 @@
   }
 
   .Form {
-    font-family: "Odibee Sans", monospace;
+    /* font-family: "Odibee Sans", monospace; */
   }
   
   .Link {

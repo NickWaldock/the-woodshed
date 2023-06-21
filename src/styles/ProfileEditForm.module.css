@@ -1,0 +1,10 @@
+.FormField {
+    border: 3px solid black;
+    border-radius: 5px;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.FormField:focus {
+    border-color: black;
+    box-shadow: none;
+}

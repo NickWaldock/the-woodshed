@@ -17,6 +17,7 @@ import {
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import styles from "../../styles/ProfileEditForm.module.css";
 
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
@@ -132,8 +133,20 @@ const ProfileEditForm = () => {
 
   const textFields = (
     <>
+    <Form.Group>
+        <Form.Label className="d-none">Name</Form.Label>
+        <Form.Control
+          type="text"
+          value={name}
+          onChange={handleChange}
+          name="name"
+          placeholder="Contact name (Optional)"
+          className={styles.FormField}
+        />
+      </Form.Group>
+
       <Form.Group>
-        <Form.Label>Headline</Form.Label>
+        <Form.Label className="d-none">Headline</Form.Label>
         <Form.Control
           type="text"
           value={headline}
@@ -141,6 +154,7 @@ const ProfileEditForm = () => {
           name="headline"
           rows={2}
           placeholder="Add a snappy headline..."
+          className={styles.FormField}
         />
       </Form.Group>
       {errors?.headline?.map((message, idx) => (
@@ -150,13 +164,14 @@ const ProfileEditForm = () => {
       ))}
 
       <Form.Group>
-        <Form.Label>Location</Form.Label>
+        <Form.Label className="d-none">Location</Form.Label>
         <Form.Control
           type="text"
           value={location}
           onChange={handleChange}
           name="location"
           placeholder="Where in the world are you?"
+          className={styles.FormField}
         />
       </Form.Group>
       {errors?.location?.map((message, idx) => (
@@ -166,13 +181,14 @@ const ProfileEditForm = () => {
       ))}
 
       <Form.Group>
-        <Form.Label>Instrument</Form.Label>
+        <Form.Label className="d-none">Instrument</Form.Label>
         <Form.Control
           type="text"
           value={instrument}
           onChange={handleChange}
           name="instrument"
           placeholder="What instrument(s) do you play/teach?"
+          className={styles.FormField}
         />
       </Form.Group>
       {errors?.instrument?.map((message, idx) => (
@@ -182,7 +198,7 @@ const ProfileEditForm = () => {
       ))}
 
       <Form.Group>
-        <Form.Label>Bio</Form.Label>
+        <Form.Label className="d-none">Bio</Form.Label>
         <Form.Control
           as="textarea"
           value={description}
@@ -190,6 +206,7 @@ const ProfileEditForm = () => {
           name="description"
           rows={7}
           placeholder="Tell us a little bit about you..."
+          className={styles.FormField}
         />
       </Form.Group>
       {errors?.description?.map((message, idx) => (
@@ -199,13 +216,14 @@ const ProfileEditForm = () => {
       ))}
 
       <Form.Group>
-        <Form.Label>Email</Form.Label>
+        <Form.Label className="d-none">Email</Form.Label>
         <Form.Control
           type="email"
           value={email}
           onChange={handleChange}
           name="email"
           placeholder="Add contact email (Optional)"
+          className={styles.FormField}
         />
       </Form.Group>
 
