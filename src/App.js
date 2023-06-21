@@ -20,7 +20,7 @@ import "react-toastify/dist/ReactToastify.css";
 import LandingPage from "./pages/general/LandingPage";
 import Footer from "./components/Footer";
 
-export const toastAlert = () => toast("Success! Nice!")
+export const toastAlert = () => toast("Success!")
 
 function App() {
   const currentUser = useCurrentUser();

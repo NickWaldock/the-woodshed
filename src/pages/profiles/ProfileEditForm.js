@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
+import { toastAlert } from "../../App";
 
 import { axiosReq } from "../../api/axiosDefaults";
 import {
@@ -114,17 +115,7 @@ const ProfileEditForm = () => {
         profile_image: data.image,
       }));
       history.goBack();
-
-      
-      // <Alert // Successful post update message
-      //   show={showAlert}
-      //   variant="success" 
-      //   onClose={()=>setShowAlert(false)} 
-      //   dismissable
-      // >
-      //   Post updated successfully!
-      // </Alert>
-
+      toastAlert();
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);
