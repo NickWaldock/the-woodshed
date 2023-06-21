@@ -190,7 +190,6 @@ function PostEditForm() {
         </Alert>
       ))}
       
-    
       <Button 
         className={btnStyles.Button}
         onClick={() => history.goBack()}>
@@ -221,7 +220,7 @@ function PostEditForm() {
 									className={`${btnStyles.Button} btn`}
 									htmlFor="file-upload"
 								>
-									Change the file
+									Change the PDF
 								</Form.Label>
 							</div>
 

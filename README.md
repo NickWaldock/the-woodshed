@@ -1,103 +1,110 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Woodshed
 
-Welcome,
+<img src="readme-files/site-screeenshots/jumbotron.png" width="100%">
+<br/>
 
-This is the Code Institute student template for React apps on the Codeanywhere IDE. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[View the live site here](https://thewoodshed.herokuapp.com/)
+<br/>
+<br/>
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **19th April, 2023**
 
-## Codeanywhere Reminders
+# Table of Contents
+1. [Introduction](#introduction)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+2. [Project Planning](#project-planning)
+  - [Aims](#aims)
+  - [Wireframes](#wireframes)
+  - [Database](#database)
+  - [Agile Methodology](#agile-methodology)
+  - [Milestones](#milestones)
+  - [User Stories](#user-stories)
+  - [Sprints](#sprints)
 
-To log into the Heroku toolbelt CLI:
+3. [Technologies](#technologies)
+  - [React](#react)
+  - [Tools](#tools)
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+4. [Main Features](#main-features)
+  - [UX Design](#ux-desgin)
+  - [Typography](#typography)
+  - [Colour](#colour)
+  - [Bootstrap](#bootstrap)
+  - [CRUD](#crud)
+    1. [Add Post](#add-post)
+    2. [View Post](#view-posts)
+      - Home
+      - Feed
+      - Liked
+    3. [Update Post](#update-posts)
+    4. [Delete Post](#delete-post)
+    5. [Add Category](#add-category)
+    6. [Create Profile](#create-profile)
+    7. [Edit Profile](#edit-profile)
+    8. [Like & Comment](#like-&-comment)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+3. [Future Development](#future-developments)
 
----
 
-Happy coding!
+4. [Testing](#testing)
+  1. [HTML Validation](#html-validation)
+  2. [CSS Validation](#css-validation)
+  3. [React Validation](#react-validation)
+  4. [Lighthouse Report](#lighthouse-report)
+  5. [Manual Testing](#manual-testing)
+  6. [Jtest](#jtest)
+  7. [Bugs](#bugs)
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+5. [Deployment](#deployment)
+  1. [Heroku](#heroku)
+  2. [Forking](#forking)
+  3. [Cloning](#cloning)
 
-## Available Scripts
+6. [References & Acknowledgements](#references--acknowledgements)
+  1. [General Reference](#general-reference)
+  2. [Code Reference](#code-reference)
+  3. [Acknoledgements](#acknoledgements)
+<br />
+<br />
 
-In the project directory, you can run:
 
-### `npm install`
 
-Installs the required npm packages.
 
-### `npm start`
+# Introduction
+[**The Woodshed**](https://thewoodshed.herokuapp.com/)
+is a React front-end multi-user file sharing application designed to allow musicians to share, like, and comment on PDF files relating to musical practice. The name of the site refers to the colloquial term *'woodshedding'* which is often used by musicians to mean spending time in the practice room. This originates in old jazz vernacular meaning the musician should go to the woodshed, a solitary place where no-one can hear you continually get it wrong for your sake and theirs(!), until they can play the passage correctly and are ready to return. In modern times the term is now used commonly to deonte spending time practicing.
 
-Runs the app in the development mode.\
-Open port 3000 to view it in the browser.
+In the digital age PDFs are common as resources amongst musicians and music teachers alike. And with the large demand for online music lessons increasing during the 2020 pandemic the demand to share resources online increase.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The Woodshed attempts to demonstrate a social-media-esq application for musicians and teachers to share musical and educational resources and grow a following of students and other musicians. The content shared could include anything from simple exercises, to whole pieces and scores. 
 
-### `npm test`
+This site allows users to create an account, profile, and share PDF files as well as interact in the environment through likes, comments, and following users. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Woodshed has been created as the 5th portfolio project for the [Code Institue](https://codeinstitute.net) Full Stack Software Development Diploma and has no intended commerical purpose.
 
-### `npm run build`
+<br />
+<br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Project Planning
+## Aims
+- Design and create a multi-user interactive front-end web application using HTML, CSS, and JavaScript based on component composition
+- Create a interactive front-end application that consumes custom API data
+- Demonstrate the key role that specialist front-end developers perform in modern software development teams
+- Maintain a consistient and simple user interface design aesthetic
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - [Wireframes](#wireframes)
+  - [Database](#database)
+  - [Agile Methodology](#agile-methodology)
+  - [Milestones](#milestones)
+  - [User Stories](#user-stories)
+  - [Sprints](#sprints)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
 
@@ -130,8 +137,11 @@ https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-
 Axios
 Axios interceptors
 Toast
+React Bootstrap
 
 
 ## Future Developments
 All liked/saved posts can be organised into self-made categories
 Post list descriptions to preview text in case the post has a larger amount of text
+delete profile
+tutor profile, student followers
