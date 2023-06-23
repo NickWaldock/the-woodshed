@@ -30,34 +30,21 @@ const PdfPreview = ({ data, postId }) => {
   const paramId = useParams();
   const id = paramId.id || postId;
 
+  const [post, setPost] = useState({ results: [] });
+
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/${id}/`);
-        const {
-          title,
-          subtitle,
-          description,
-          instrument,
-          tags,
-          file,
-          is_owner,
-        } = data;
-
-        setPostData({
-          title,
-          subtitle,
-          description,
-          instrument,
-          tags,
-          file,
-        });
+				const {data: post} = await Promise.all([
+					axiosReq.get(`/posts/${id}`)
+				])
+				setPost({results: [post]});
       } catch (err) {
         console.log(err);
       }
     };
-    handleMount();
-  }, [history, id]);
+		handleMount();
+  }, [id]);
 
   return (
     <div
