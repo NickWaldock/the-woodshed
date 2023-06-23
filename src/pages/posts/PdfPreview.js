@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   useHistory,
   useParams,
@@ -7,7 +7,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import styles from "../../styles/PdfPreview.module.css";
 
 const PdfPreview = ({ data, postId }) => {
-  const [errors, setErrors] = useState({});
+  // const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
     title: "",
@@ -17,8 +17,12 @@ const PdfPreview = ({ data, postId }) => {
     tags: "",
     file: "",
   });
+
+  // All post instance data is required to be called to gain access to the file
   const { title, subtitle, description, instrument, tags, file } = postData;
-  const fileInput = useRef(null);
+
+  // const fileInput = useRef(null);
+  
   const history = useHistory();
 
   // Find post id from url for component in detail view
@@ -37,7 +41,7 @@ const PdfPreview = ({ data, postId }) => {
           instrument,
           tags,
           file,
-          is_owner,
+          // is_owner,
         } = data;
 
         setPostData({
@@ -59,7 +63,14 @@ const PdfPreview = ({ data, postId }) => {
     <div
       className={`${styles.Container} embed-responsive embed-responsive-1by1`}
     >
-      <object className="embed-responsive-item" data={data}></object>
+      <object 
+        className="embed-responsive-item" 
+        data={data}
+        alt='PDF File'
+        aria-labelledby="PDF Preview"
+        aria-label="PDF Preview"
+        type='image'
+      ></object>
     </div>
   );
 };
