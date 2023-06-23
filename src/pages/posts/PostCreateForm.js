@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -181,9 +181,6 @@ function PostCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      {/* <Alert show={showAlert} variant="success">
-      Success
-    </Alert> */}
       <Row>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
@@ -196,6 +193,10 @@ function PostCreateForm() {
                     <object
                       className="embed-responsive-item"
                       data={file}
+                      alt='PDF File'
+                      aria-labelledby="PDF Preview"
+                      aria-label="PDF Preview"
+                      type='image'
                     ></object>
                   </div>
                   <div>

@@ -26,9 +26,9 @@ export const Post = (props) => {
     instrument,
     file,
     // content,
-    image,
+    // image,
     updated_at,
-    postPage,
+    // postPage,
     setPosts,
   } = props;  
 
