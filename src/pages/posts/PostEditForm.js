@@ -117,6 +117,7 @@ function PostEditForm() {
             name="title"
             value={title}
             onChange={handleChange}
+            className={styles.Input}
           />
         </Form.Group>
         {errors?.title?.map((message, idx) => (
@@ -133,6 +134,7 @@ function PostEditForm() {
             name="subtitle"
             value={subtitle}
             onChange={handleChange}
+            className={styles.Input}
           />
         </Form.Group>
         {errors?.subtitle?.map((message, idx) => (
@@ -150,6 +152,7 @@ function PostEditForm() {
             placeholder="Provide a description to help other users understand how to use this pdf..."
             value={description}
             onChange={handleChange}
+            className={styles.Input}
           />
         </Form.Group>
         {errors?.description?.map((message, idx) => (
@@ -166,6 +169,7 @@ function PostEditForm() {
             name="instrument"
             value={instrument}
             onChange={handleChange}
+            className={styles.Input}
           />
         </Form.Group>
         {errors?.instrument?.map((message, idx) => (
@@ -182,6 +186,7 @@ function PostEditForm() {
             name="tags"
             value={tags}
             onChange={handleChange}
+            className={styles.Input}
           />
         </Form.Group>
         {errors?.tags?.map((message, idx) => (

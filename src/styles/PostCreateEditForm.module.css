@@ -1,4 +1,12 @@
 .Container {
     min-height: 343px;
   }
-  
+
+.Input {
+  background: #ffffff;
+  border: 2px solid black;
+  text-align: left;
+  padding: 10px;
+  font-family: "Barlow Condensed", monospace;
+
+}

@@ -1,58 +1,56 @@
 .Row {
-    height: 80vh;
-  }
-  .Input {
-    background: #ffffff;
-    border: 2px solid black;
-    text-align: left;
-    padding: 10px;
-    font-family: "Barlow Condensed", monospace;
+  height: 80vh;
+}
+.Input {
+  background: #ffffff;
+  border: 2px solid black;
+  text-align: left;
+  padding: 10px;
+  font-family: "Barlow Condensed", monospace;
+}
 
-  }
-  
-  .Header {
-    font-size: 30px;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    font-family: "Odibee Sans", monospace;
-    color: black;
-  }
+.Header {
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-family: "Odibee Sans", monospace;
+  color: black;
+}
 
-  .Form {
-    /* font-family: "Odibee Sans", monospace; */
-  }
-  
-  .Link {
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    margin: auto;
-    font-family: "Roboto", monospace;
-    color: black;
-    text-decoration: none !important;
-  }
-  
-  .Link span {
-    color: #CC8D37;
-    font-weight: bolder;
-    
-  }
-  .Link span:hover {
-    text-decoration: underline;
-    text-decoration-color: #CC8D37;
-    text-decoration-style: solid;
-    text-decoration-thickness: 2px;
-  }
-  
-  .Container {
-    padding: 30px 10px;
-  }
-  
-  .SignInCol {
-    height: 320px;
-  }
-  
-  .SignUpCol {
-    height: 375px;
-  }
+.Form {
+  /* font-family: "Odibee Sans", monospace; */
+}
+
+.Link {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-family: "Roboto", monospace;
+  color: black;
+  text-decoration: none !important;
+}
+
+.Link span {
+  color: #cc8d37;
+  font-weight: bolder;
+}
+.Link span:hover {
+  text-decoration: underline;
+  text-decoration-color: #cc8d37;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+}
+
+.Container {
+  padding: 30px 10px;
+}
+
+.SignInCol {
+  height: 320px;
+}
+
+.SignUpCol {
+  height: 375px;
+}
