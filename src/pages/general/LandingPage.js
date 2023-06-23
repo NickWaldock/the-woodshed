@@ -12,7 +12,6 @@ import React from "react";
 import logo from "../../assets/logo-1-nobg.png";
 import cello from "../../assets/landing-page-imgs/cello.png";
 import drums from "../../assets/landing-page-imgs/drums.png";
-import guitar from "../../assets/landing-page-imgs/guitar.png";
 import guitar2 from "../../assets/landing-page-imgs/guitar-2.png";
 import sax from "../../assets/landing-page-imgs/sax.png";
 import singer from "../../assets/landing-page-imgs/singer-1.png";
