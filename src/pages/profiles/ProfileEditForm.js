@@ -92,7 +92,7 @@ const ProfileEditForm = () => {
   };
 
   // Form Authentication Alerts
-  const [showAlert, setShowAlert] = useState(true);
+  // const [showAlert, setShowAlert] = useState(true);
 
   const handleSubmit = async (event) => {
     event.preventDefault();

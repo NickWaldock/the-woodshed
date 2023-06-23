@@ -196,7 +196,6 @@ function PostCreateForm() {
                       alt='PDF File'
                       aria-labelledby="PDF Preview"
                       aria-label="PDF Preview"
-                      type='image'
                     ></object>
                   </div>
                   <div>
