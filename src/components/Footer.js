@@ -14,6 +14,7 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/in/nicholas-waldock-05237071/"
               target="_blank"
+              rel="noreferrer noopener"
             >
               <i className="fa-brands fa-linkedin fa-2xl" />
             </a>
@@ -22,7 +23,11 @@ const Footer = () => {
             type="button"
             className={`${styles.SocialIcons} btn-floating mx-2`}
           >
-            <a href="https://github.com/NickWaldock" target="_blank">
+            <a
+              href="https://github.com/NickWaldock"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <i className="fa-brands fa-square-github fa-2xl" />
             </a>
           </Button>
@@ -30,7 +35,11 @@ const Footer = () => {
             type="button"
             className={`${styles.SocialIcons} btn-floating mx-2`}
           >
-            <a href="https://facebook.com" target="_blank">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <i className="fab fa-facebook-f fa-2xl" />
             </a>
           </Button>
@@ -38,7 +47,11 @@ const Footer = () => {
             type="button"
             className={`${styles.SocialIcons} btn-floating mx-2`}
           >
-            <a href="https://youtube.com" target="_blank">
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <i className="fab fa-youtube fa-2xl" />
             </a>
           </Button>
@@ -47,7 +60,11 @@ const Footer = () => {
         <div className={`${styles.Text} p-3 text-center`}>
           <p>
             This site was built as a portfolio project for {""}
-            <a href="https://codeinstitute.net">
+            <a
+              href="https://codeinstitute.net"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <strong>Code Institute's</strong>
             </a>{" "}
             Software Development Diploma
@@ -57,6 +74,8 @@ const Footer = () => {
             <a
               className={`${styles.Text} ml-2`}
               href="https://nicholasjameswaldock.uk"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               <strong>nicholasjameswaldock</strong>
             </a>
