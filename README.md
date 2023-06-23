@@ -168,3 +168,5 @@ All liked/saved posts can be organised into self-made categories
 Post list descriptions to preview text in case the post has a larger amount of text
 delete profile
 tutor profile, student followers
+larger pdf file sizes
+additional fiile formats

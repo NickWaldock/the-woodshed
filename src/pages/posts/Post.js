@@ -42,12 +42,13 @@ export const Post = (props) => {
   };
 
   // Delete a post then
-  // redirect user to previous page
+  // redirect user to home page
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
-      history.goBack();
-      // toastAlert()
+      history.push('/');
+      toastAlert();
+      console.log("delete success!")
     } catch (err) {
       console.log(err);
     }

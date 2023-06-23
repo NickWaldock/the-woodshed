@@ -1,5 +1,4 @@
 import React from "react";
-import appStyles from "../App.module.css";
 import styles from "../styles/Footer.module.css";
 import { Container, Button } from "react-bootstrap";
 

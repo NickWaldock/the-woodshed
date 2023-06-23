@@ -9,6 +9,7 @@ export const Avatar = ({src, height=45, text}) => {
             src={src}
             height={height} 
             width={height} 
+            alt='Profile'
         />
         {text}
     </span>
