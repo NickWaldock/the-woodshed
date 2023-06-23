@@ -225,7 +225,7 @@ function PostEditForm() {
 							</div>
 							<div>
 								<Form.Label
-									className={`${btnStyles.Button} btn`}
+									className={`${btnStyles.Button} mt-4`}
 									htmlFor="file-upload"
 								>
 									Change the PDF
