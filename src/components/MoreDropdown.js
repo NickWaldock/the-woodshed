@@ -22,7 +22,6 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
     <Dropdown className={`ml-auto px-3 ${styles.Absolute} ${styles.Font} `} drop="right">
       <Dropdown.Toggle as={Gear} />
       <Dropdown.Menu
-        className="text-center"
         popperConfig={{ strategy: "fixed" }}
         className={styles.General}
       >

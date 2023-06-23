@@ -107,6 +107,7 @@ export const Post = (props) => {
               <MoreDropdown
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}
+                
               />
             )}
           </div>

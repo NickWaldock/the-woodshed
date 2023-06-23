@@ -27,12 +27,15 @@
 }
 
 .Button:active {
-  background-color: #E15D05 !important;
+  background-color: #AA534E !important;
+  border-color: black;
   
 }
 
 .Button:focus {
-  background-color: #E15D05 !important;
+  background-color: #AA534E !important;
+  box-shadow: none;
+  border-color: black;
 
 } 
 
