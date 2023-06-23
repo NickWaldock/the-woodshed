@@ -23,23 +23,18 @@
 
 .General {
     background-color: #FDE9A2;
-    border:3px solid black;
+    border: 3px solid black;
     border-radius: 5px;
-    width: 50px;
     margin-left: 10px;
 }
 
-.IconBorder {
-    border: 2px solid black;
-    border-radius: 15%;
-    width: 40px;
-    height: 30px;
-    margin-left: 15px;
+.Hover:hover, .Hover:focus {
+    background-color: #FDE9A2;
+    text-decoration: solid underline 3px black;
+    color: black;
 }
 
-.IconBorder:hover {
-    background-color: #AA534E;
-}
+
 
 .Container {
     max-width: 50px;
