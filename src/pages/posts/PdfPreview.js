@@ -41,7 +41,7 @@ const PdfPreview = ({ data, postId }) => {
           instrument,
           tags,
           file,
-          // is_owner,
+          is_owner,
         } = data;
 
         setPostData({

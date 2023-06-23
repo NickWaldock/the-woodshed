@@ -67,7 +67,8 @@ function ProfilePage() {
             className={styles.ProfileImage}
             src={profile?.image}
           />
-          {profile?.location && <Col className={appStyles.BodyFont}><em>{profile.location}</em></Col>}
+          {profile?.name && <Col className={appStyles.BodyFont}><small><em>({profile.name})</em></small></Col>}
+          {profile?.location && <Col className={appStyles.BodyFont}><em> from {profile.location}</em></Col>}
           {profile?.instrument && <Col className={appStyles.BodyFont}>{profile.instrument}</Col>}
           {profile?.email && <Col className={appStyles.BodyFont}><em>{profile.email}</em></Col>}
         </Col>

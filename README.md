@@ -170,3 +170,4 @@ delete profile
 tutor profile, student followers
 larger pdf file sizes
 additional fiile formats
+in profiles, instuments in profile can be links that lead to posts or other profiles related to that instrument
