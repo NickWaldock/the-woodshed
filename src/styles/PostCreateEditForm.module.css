@@ -8,5 +8,18 @@
   text-align: left;
   padding: 10px;
   font-family: "Barlow Condensed", monospace;
+}
 
+.Input:focus {
+  border: 2px solid black;
+  box-shadow: none;
+}
+
+/* Upload file asset styling in Add Post page */
+.UploadContainer {
+  background-color: white;
+  border-radius: 5px;
+  --webkit-box-shadow: 8px 10px 11px 4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 8px 10px 11px 4px rgba(0,0,0,0.75);
+  box-shadow: 8px 10px 11px 4px rgba(0,0,0,0.75);
 }

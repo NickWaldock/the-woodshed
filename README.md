@@ -154,6 +154,8 @@ https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-
   - https://pngtree.com/
   - https://webcode.tools/generators/css/keyframe-animation
 - Font Awesome
+- Box shadow generator
+https://www.cssmatic.com/box-shadow
 
 
 ## Technologies

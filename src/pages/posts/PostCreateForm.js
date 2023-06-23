@@ -5,7 +5,6 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-// import Image from "react-bootstrap/Image";
 import Upload from "../../assets/upload.png";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
@@ -94,6 +93,7 @@ function PostCreateForm() {
             name="title"
             value={title}
             onChange={handleChange}
+            className={styles.Input}
           />
         </Form.Group>
         {errors?.title?.map((message, idx) => (
@@ -110,6 +110,7 @@ function PostCreateForm() {
             name="subtitle"
             value={subtitle}
             onChange={handleChange}
+            className={styles.Input}
           />
         </Form.Group>
         {errors?.subtitle?.map((message, idx) => (
@@ -127,6 +128,7 @@ function PostCreateForm() {
             placeholder="Provide a description to help other users understand how to use this pdf..."
             value={description}
             onChange={handleChange}
+            className={styles.Input}
           />
         </Form.Group>
         {errors?.description?.map((message, idx) => (
@@ -143,6 +145,7 @@ function PostCreateForm() {
             name="instrument"
             value={instrument}
             onChange={handleChange}
+            className={styles.Input}
           />
         </Form.Group>
         {errors?.instrument?.map((message, idx) => (
@@ -159,6 +162,7 @@ function PostCreateForm() {
             name="tags"
             value={tags}
             onChange={handleChange}
+            className={styles.Input}
           />
         </Form.Group>
         {errors?.tags?.map((message, idx) => (
@@ -212,10 +216,12 @@ function PostCreateForm() {
                   className="d-flex justify-content-center"
                   htmlFor="file-upload"
                 >
-                  <Asset
-                    src={Upload}
-                    message="Click or tap to upload a PDF"
-                  />
+                  <div className={styles.UploadContainer}>
+                    <Asset
+                      src={Upload}                  
+                      message="Click or tap to upload a PDF"
+                    />
+                  </div>
                 </Form.Label>
               )}
 
