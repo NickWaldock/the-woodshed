@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <Container>
       <footer className="text-center text-lg-start">
-        <div class="container d-flex justify-content-center py-5">
+        <div className="container d-flex justify-content-center py-5">
           <Button
             type="button"
             className={`${styles.SocialIcons} btn-floating mx-2`}
