@@ -1,12 +1,13 @@
 .Row {
   height: 80vh;
 }
-.Input {
+.Input, .Input:focus {
   background: #ffffff;
   border: 2px solid black;
   text-align: left;
   padding: 10px;
   font-family: "Barlow Condensed", monospace;
+  box-shadow: none;
 }
 
 .Header {

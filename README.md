@@ -174,3 +174,9 @@ tutor profile, student followers
 larger pdf file sizes
 additional fiile formats
 in profiles, instuments in profile can be links that lead to posts or other profiles related to that instrument
+
+
+
+## Bugs
+[Alert wont show on delete post function](https://github.com/NickWaldock/the-woodshed/issues/107#issuecomment-1604253384)
+[After deleting a user in the back end the users posts are still available to interact with in the front end](https://github.com/NickWaldock/the-woodshed/issues/112)
