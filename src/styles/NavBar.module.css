@@ -13,7 +13,6 @@
 }
 
 .NavLink:hover {
-    
     text-decoration: underline overline;
     text-decoration-color: black;
     text-decoration-style: solid;
@@ -26,4 +25,8 @@
     text-decoration-color: black;
     text-decoration-style: solid;
     text-decoration-thickness: 3px;
+}
+
+.BurgerMenu {
+    border: 3px solid black !important;
 }
