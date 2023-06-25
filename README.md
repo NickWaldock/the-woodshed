@@ -41,7 +41,24 @@
         - 7.2 [Tools](#tools)
 
 3. [Main Features](#main-features)
-    
+    - 3.1 [Logo]()
+    - 3.2 [Landing Page]()
+    - 3.3 [About]()
+    - 3.4 [Navigation Bar]()
+    - 3.5 [Dropdown Menus]()
+    - 3.6 [Footer]()
+    - 3.7 [Sign In / Up]()
+    - 3.8 [Search Bar]()
+    - 3.9 [List Views]()
+    - 3.10 [Add Post]()
+    - 3.11 [Posts]()
+    - 3.12 [Edit Post]()
+    - 3.13 [Profile]()
+    - 3.14 [Edit Profile]()
+    - 3.15 [Most Followed Profiles]()
+    - 3.16 [Change Username]()
+    - 3.17 [Change Password]()
+    - 3.18 [Alert]()
 
   
 
