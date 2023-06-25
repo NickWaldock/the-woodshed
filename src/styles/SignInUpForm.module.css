@@ -6,7 +6,7 @@
   border: 2px solid black;
   text-align: left;
   padding: 10px;
-  font-family: "Barlow Condensed", monospace;
+  font-family: "Barlow Condensed", sans-serif;
   box-shadow: none;
 }
 
@@ -15,12 +15,18 @@
   text-align: center;
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  font-family: "Odibee Sans", monospace;
+  font-family: "Odibee Sans", sans-serif;
   color: black;
 }
 
-.Form {
-  /* font-family: "Odibee Sans", monospace; */
+.Font {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+}
+
+.Font2 {
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 30px;
 }
 
 .Link {
@@ -28,7 +34,7 @@
   text-align: center;
   display: block;
   margin: auto;
-  font-family: "Roboto", monospace;
+  font-family: "Roboto", sans-serif;
   color: black;
   text-decoration: none !important;
 }

@@ -117,9 +117,10 @@ const SignInForm = () => {
             ))}
           </Form>
         </Container>
-        <Container className={`mt-3 ${appStyles.Content}`}>
+        <Container className={`mt-3 text-center ${appStyles.Content}`}>
+          <span className={styles.Font}>Don't have an account?</span>
           <Link className={styles.Link} to="/signup">
-            Don't have an account? <span>Sign up now!</span>
+             <span className={styles.Font2}>Sign up now!</span>
           </Link>
         </Container>
       </Col>

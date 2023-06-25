@@ -135,9 +135,9 @@ const SignUpForm = () => {
           </Form>
         </Container>
         <Container className={`mt-3 text-center ${appStyles.Content}`}>
-          <span>Already have an account?</span>
+          <span className={styles.Font}>Already have an account?</span>
           <Link className={styles.Link} to="/signin">
-            <span>Sign In</span>
+            <span className={styles.Font2}>Sign In</span>
           </Link>
         </Container>
       </Col>
