@@ -1,6 +1,6 @@
 # The Woodshed
 
-<img src="readme-files/site-screeenshots/jumbotron.png" width="100%">
+<img src="readme-files/site-screeenshots/landing-page/jumbotron.png" width="100%">
 <br/>
 
 [View the live site here](https://thewoodshed.herokuapp.com/)
@@ -29,6 +29,7 @@
         - 5.1 [Milestones](#milestones)
         - 5.2 [User Stories](#user-stories)
         - 5.3 [Sprints](#sprints)
+        - 5.4 [MoSCoW]
   
     6. [UX Design](#ux-desgin)
         - 6.1 [Typography](#typography)
