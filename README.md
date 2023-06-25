@@ -292,6 +292,284 @@ Axios interceptors
 Toast
 React Bootstrap
 
+<br/>
+<br/>
+<br/>
+<hr />
+
+# Main Features
+The following is a list of all of the current main features with descriptions of functionality.
+<hr/>
+
+## <ins>***Logo***
+<table>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/logo/main-logo.png" width=100%>
+    </td>
+    <td>
+      The logo for The Woodshed application was created using the online logo generator
+      <a href="https://looka.com/">Looka</a>. The logo wanted to be simple and fun, in -line with the site's design principles and denote a musical instrument of some kind.
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+## <ins>***Landing Page***
+<table>
+  <tr>
+    <td>
+      The first page the user arrives at is simple and bold, making a clear statement where the user is and what to do. The logo and button "Click to Enter" are a single link card that directs the user straight to the login page. The original idea behind the card was to look like a vip backstage tour pass from a music festival, this more detailed styling of design will be completed at a later date. on mobile view this is much smaller meaning the user can see the beginning of the site info below.
+    </td>
+    <td>
+      <image src="readme-files/site-screenshots/mobile/landing-page-1.png" width=100%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/landing-page/landing-page.png" width=100%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+## About
+<table>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/landing-page/landing-page-info.png" width=49%>
+      <image src="readme-files/site-screenshots/landing-page/landing-page-info-2.png" width=49%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Below the main jumbotron of the landing page are four cards. Each card contains succint and general information about the site with casual images denoting a variety of instruments and musicians. The titles of the cards and the related text offer the user context to the purpose of the application and the ethos whilst attempting to maintain a fun and casual approach.
+      <br/>
+      <br/>
+      Below the four cards is a wide call to action button to encourage the user to "Get Started". This button directs the user to the login page where they can either login or navigate to create an account.
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+## <ins>***Navigation Bar***
+<table>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/navigation/navbar.png" width=100%><br/><hr /><image src="readme-files/site-screenshots/mobile/navbar.png" width=50%>
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      The navigation bar is a standard Bootstrap Nav component that expands to the full width of the user's screen and automatically becomes a typical expandable mobile menu or 'burger' menu on the top right at a breakpoint of 767px screen-width.
+      <br/><br/>
+      When a user is not logged in the navbar only displays the Sign In and Sign Up navigation links. When a user is logged in all available links display. 
+      <br/><br/>
+      'Add Post' displays on the left-hand side and seperately from the rest of the links so it is easily identifyable to the user, this leads to the Add Post page. In mobile view this link does not appear in the burger menu but continues in the main navbar and centered making it still distinct from the other navigation elements.
+      <br/><br/>
+      <em>'Home'</em>, <em>'Feed'</em>, and <em>'Liked'</em> navigation links direct the user to the realted list pages. This is essentially a single list page which renders the available posts in reverse chronological order through one of teh following filter options: Home renders all posts, Feed renders only the posts of profiles the user is following, and Liked only renders posts the the user has 'liked'.
+      <br/><br/>
+      Sign Out leads the user back to the Landing Page and de-authenticates them giving them a logged-out status.
+      <br/><br/>
+      The current user's avatar image is the users profile picture which can be uploaded in the Edit Profile page. This image and profile nav link leads the user to their profile page.
+      <br/><br/>
+      The site logo is always present on the left-hand side, is clickable and leads to the landing page.
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+## <ins>***Dropdown Menus***
+<table>
+  <tr>
+    <td>
+    Additional edit options are available for a logged-in user with relevant access privilidges for the post component and the profile component which are represented by a gear icon. These are dropdown menus providing the uer with links to additional pages: The profile gear leads the user to the Edit Profile page where what can add additional profile information, change their username, or change their password; The post gear offers an edit and delete function, edit directs the user to the edit post page, and delete will permanently delete that post instance from the database.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/navigation/post-dropdown.png" width=50%>  <image src="readme-files/site-screenshots/navigation/profile-dropdown.png" width=44%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+## <ins>***Footer***
+<table>
+  <tr>
+    <td>
+    A basic footer exists on all pages regardless of user authentication status. On most pages it will not be seen unless the user scrolls down past the page content, this is especially true for the post list pages where the footer will only be visible once all posts in the database have been rendered.
+    <br/><br/>
+    Four icons link to social pages: Linkedin links to my Linkedin profile, Github links to my github repos, and, Facebook and YouTube link to the main homepages for those social sites and act as demo links.
+    <br/><br/>
+    The links embedded within the text link to <a href="https://codeinstitute.net/"><ins><em>Code Institute</em></a> it is for this course that this project has been created; and finally below, a link to my <a href="https://nicholasjameswaldock.uk/"><ins><em>personal website</em></a>. 
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/navigation/footer.png" width=100%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Sign In / Up</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Search Bar</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>List Views</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Add Post</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Posts</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Edit Posts</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Profile</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Edit Profile</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Most Followed Profiles</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Change Username</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Change Password</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th>Alert</th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+<table>
+  <th></th>
+  <tr>
+    <td>
+      <image src="" width=70%>
+    </td>
+  </tr>
+</table>
+<br/>
+<hr/>
+
+
+<br/>
+<br/>
+<br/>
+<hr />
+
+
+
 ## Future Developments
 
 All liked/saved posts can be organised into self-made categories
