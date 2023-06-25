@@ -11,40 +11,38 @@
 
 1. [Introduction](#introduction)
 
-2. [Project Planning](#project-planning)
+2. [Project Development](#project-development)
+    - 2.1. [Repos & Projects](#repos--project-links)
+    - 2.2. [Aims](#aims)
+    - 2.3. [Wireframes](#wireframes)
+    - 2.4. [Landing Page](#landing-page)
+    - 2.5. [Sign In / Up](#sign-in--up)
+    - 2.6. [Home / Feed / Liked](#home--feed--liked)
+    - 2.7. [Add Post](#add-post)
+    - 2.8. [Profile](#profile)
+    - 2.9. [Edit Profile](#edit-profile)
+    - 2.10. [Change Password / Username](#change-password)
 
-- [Aims](#aims)
-- [Wireframes](#wireframes)
-- [Database](#database)
-- [Agile Methodology](#agile-methodology)
-- [Milestones](#milestones)
-- [User Stories](#user-stories)
-- [Sprints](#sprints)
+    4. [Database](#database)
+        - 4.1 [CRUD](#crud)
+    5. [Agile Methodology](#agile-methodology)
+        - 5.1 [Milestones](#milestones)
+        - 5.2 [User Stories](#user-stories)
+        - 5.3 [Sprints](#sprints)
+  
+    6. [UX Design](#ux-desgin)
+        - 6.1 [Typography](#typography)
+        - 6.2 [Colour](#colour)
+        - 6.3 [Bootstrap](#bootstrap)
 
-3. [Technologies](#technologies)
+    7. [Technologies](#technologies)
+        - 7.1 [React](#react)
+        - 7.2 [Tools](#tools)
 
-- [React](#react)
-- [Tools](#tools)
+3. [Main Features](#main-features)
+    
 
-4. [Main Features](#main-features)
-
-- [UX Design](#ux-desgin)
-  - [Change Password / Change Username](#change-password)
-- [Typography](#typography)
-- [Colour](#colour)
-- [Bootstrap](#bootstrap)
-- [CRUD](#crud)
-  1. [Add Post](#add-post)
-  2. [View Post](#view-posts)
-  - Home
-  - Feed
-  - Liked
-  3. [Update Post](#update-posts)
-  4. [Delete Post](#delete-post)
-  5. [Add Category](#add-category)
-  6. [Create Profile](#create-profile)
-  7. [Edit Profile](#edit-profile)
-  8. [Like & Comment](#like-&-comment)
+  
 
 3. [Future Development](#future-developments)
 
@@ -82,13 +80,23 @@ This site allows users to create an account, profile, and share PDF files as wel
 
 The Woodshed has been created as the 5th portfolio project for the [Code Institue](https://codeinstitute.net) Full Stack Software Development Diploma and has no intended commerical purpose.
 
+Built using: React, Django, Bootstrap, CSS, and HTML(JSX), as well as Cloudinary for image and file storage.
+
 <br />
 <br />
 
-# Project Planning
+# Project Development
+
+## Repos & Project Links
+- [Front-end Repository](https://github.com/NickWaldock/the-woodshed)
+- [Front-end Project Board](https://github.com/users/NickWaldock/projects/7)
+- [Back-end Repository & READEME](https://github.com/NickWaldock/the-woodshed-api)
+- [Back-end Project Board](https://github.com/users/NickWaldock/projects/6)
+- [Github Profile](https://github.com/NickWaldock)
+
+<br />
 
 ## Aims
-
 - Design and create a multi-user interactive front-end web application using HTML, CSS, and JavaScript based on component composition
 - Create a interactive front-end application that consumes custom API data
 - Demonstrate the key role that specialist front-end developers perform in modern software development teams
@@ -102,7 +110,6 @@ Wireframes were produced during the intitial development of the project to guide
 
 <br />
 <hr />
-
 
 ### <ins>***Landing Page***
 The Landing Page is a simple Jumbotron design front and center including the site name, headline, and logo which acts as a quick sign-in button for users familiar with the site. The Navbar contains the traditional sign in and sign up links, and the brand logo on the left hand side, this exists on every page including on mobile views.
@@ -202,9 +209,28 @@ When a user clicks on the gear icon in their profile a drop down menu appears to
 <hr />
 
 ### <ins>***Update Password / Update Username***
-Wireframes were not included for this feature as the forms are a single field. For more info see [Change Password](#change-password) in [Features](#main-features)
+Wireframes were not included for this feature as the forms are a single field. For more info see [Change Password](#change-password) in [Main Features](#main-features)
+<br />
+<br />
+<hr />
 
-- [Database](#database)
+## Database
+[Django REST Framework](https://www.django-rest-framework.org/) was utilised for building a custom API in a seperate repository. Further information (including database schema) on this side of the project can be viewed here --> <ins>[The Woodshed API](https://github.com/NickWaldock/the-woodshed-api)
+
+[ElephantSQL](https://www.elephantsql.com/) was used to host and manage the PostgreSQL database. The data base works in tandem with the REACT front-end application to manage and store data delivered via the custom API. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 - [Agile Methodology](#agile-methodology)
 - [Milestones](#milestones)
 - [User Stories](#user-stories)
