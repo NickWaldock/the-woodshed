@@ -419,55 +419,118 @@ The following is a list of all of the current main features with descriptions of
 <br/>
 <hr/>
 
+## <ins>***Sign In / Up***
 <table>
-  <th>Sign In / Up</th>
   <tr>
     <td>
-      <image src="" width=70%>
+      <image src="readme-files/site-screenshots/sign-in-up/sign-in.png" width=49%>
+      <image src="readme-files/site-screenshots/sign-in-up/sign-up.png" width=49%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      After the user has clicked on either the 'Get Started!' button on the Landing Page or one of the first available Navbar links they are brought to this Sign In page. Here a user can securely log into the account. The back-end for this functionality is handled automatically by <a href="https://docs.djangoproject.com/en/4.2/topics/auth/"><em>Django Authentication</em></a> which include basic user management including "password strength checking, throttling of login attempts, authentication against third-parties, object-level permissions" (from Django <a href="https://docs.djangoproject.com/en/4.2/topics/auth/"><em>docs</em></a>).
+      <br/><br/>
+      The if the user is a first-time visitor to the application they can easily find links to create an account in the Navbar or below the sign in form.
+      <br/><br/>
+      The Sign Up page is almost identical to the Sign In page with the addition of a confirm password box and swapped links to login if the user already has an account.
     </td>
   </tr>
 </table>
 <br/>
 <hr/>
 
+## <ins>***Search Bar***
 <table>
-  <th>Search Bar</th>
   <tr>
     <td>
-      <image src="" width=70%>
+      <image src="readme-files/site-screenshots/utilities/search.png" width=100%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    The search bar exists at the top of all of the list pages: Home, Feed, and Liked. It allows the user to search for posts via title and for profiles by username. Future functionality will be added to allow for searching of for profiles via profile elements including location, instrument, and bio; as well as post searching all other post elements including: instrument, tags, subtitle, and possibly even the description.
+    <br/><br/>
+    The search bar filters search results with a short timeout function to prevent the page updating too quickly from every keyboard stroke, and a data loading spinner appears while posts are being rendered.
     </td>
   </tr>
 </table>
 <br/>
 <hr/>
 
+## <ins>***List Views***
 <table>
-  <th>List Views</th>
   <tr>
     <td>
-      <image src="" width=70%>
+      <image src="/workspace/the-woodshed/readme-files/site-screenshots/list-views/feed.png" width=45%>
+      <image src="/workspace/the-woodshed/readme-files/site-screenshots/list-views/home.png" width=54%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Three main list views represent the main experience for the user. 
+      <br/><br/>
+      <strong>Home</strong> is typically where the user can view all available posts that exist within the database. These are organised by the time the post was last updated or created so the most recent post or update is at the top.
+      <br/><br/>
+      <strong>Feed</strong> will render posts in the same manner as Home but filtered by only those posts by profiles that the current logged in user is actively following.
+      <br/><br/>
+      <strong>Liked</strong> will also render posts in the same manner as Home but filtered to display only those posts that the current logged in user has actively 'liked', i.e. clicked the thumbs up icon in a post component.
+      <br/><br/>
+      These list pages also include the Most Followed Profiles component on the right hand side in desktop which displays above the search bar instead in mobile view. This component does not 'stick' to the top of the view.
+      <br/><br/>
+      The list pages also include post pagination to help with user experience loading mulitple post data, especially as some file sizes could make loading posts slower if rendering all post instances at once. The first 10 posts will load on page refresh, a following 10 posts will load if the usre scrolls to the bottom of the page. This process repeats until all posts are loaded.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <image src="/workspace/the-woodshed/readme-files/site-screenshots/list-views/liked-1.png" width=50%>
+      <image src="/workspace/the-woodshed/readme-files/site-screenshots/list-views/liked-2.png" width=49%>
     </td>
   </tr>
 </table>
 <br/>
 <hr/>
 
+## <ins>***Add Post***
 <table>
-  <th>Add Post</th>
+<tr>
+  <td>
+    A major piece of functionality for the application is the abilty to generate new posts. A clear, simple design means the user can clearly discover the process for creating a new post. The main body of the window is taken up by the clickable area to upload a PDF. In mobile view this stacks on top of the form.
+    <br/><br/>
+    The form includes placeholder text to indicate the kind to information to be added to each field. Fields include: Title, Subtitle, a text area for a detail description, instrument (the instrument the post is intended to serve), and any relevant tags.
+    <br/><br/>
+    A cancel button will return the user to their previous page without submitting the post and the create button submits the form and directs the user to the detail view of that created post and displays a success message.
+    <br/><br/>
+    The form contains error handling to ensure all fields have data inputted. A form with an empty field will not be submitted and an alert on the form will display.
+  </td>
+</tr>
   <tr>
     <td>
-      <image src="" width=70%>
+      <image src="readme-files/site-screenshots/posts/add-post.png" width=72%><image src="readme-files/site-screenshots/mobile/add-post.png" width=27%>
     </td>
   </tr>
 </table>
 <br/>
 <hr/>
 
+## <ins>***Posts***
 <table>
-  <th>Posts</th>
+<tr>
+  <td>
+    The post component is where the majority of the applications interaction occurs. The top of the component has the post author's avatar which links to that user's profile page, on the right is the date for when the post was last updated and further to that, if the current logged in user is the post owner, is the gear icon leading to a <a href="#dropdown-menus"><em>dropdown menu</em></a> for editing the post.
+    <br/><br/>
+    The main information for the post component is then displayed in order of relevance to a user. This begins with the title and subtitle,followed by the instrument(s) the post is desigined to be used with, and the related tags. Finally, what was added in the Add Post page form for the description is rendered here as "Notes from {user}" which gives any final details to the user. 
+    <br/><br/>
+    A button to redirect the user to a new page where the pdf can be viewed i full screen and has other general browser PDF viewing options such as, zoom, rotate, and download. This always opens in a new tab to avoid taking the user away from the main application.
+    <br/><br/>
+    The PDF is then rendered as a preview for the user to be able to interact with it and view it within the component. They also have access to the basic PDF viewing options here as well. 
+    <br/><br/>
+    Finally, in this component is the like and comment icons. The like icon (thumbs up) is clickable and the icon's colour changes of hover and once it has been clicked. On clicking the icon the colour changes and the counter on the right of it will increase by one, indicating the post has been liked. This post will then be available in the user's Liked page. 
+  </td>
+</tr>
   <tr>
     <td>
-      <image src="" width=70%>
+      <image src="readme-files/site-screenshots/posts/post-1.png" width=49%><image src="readme-files/site-screenshots/posts/post-2.png" width=49%>
     </td>
   </tr>
 </table>
