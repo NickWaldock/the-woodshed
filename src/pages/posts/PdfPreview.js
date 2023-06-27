@@ -28,7 +28,7 @@ const PdfPreview = ({ data, postId }) => {
   // Find post id from url for component in detail view
   // If not use destructured postId prop for list views
   const paramId = useParams();
-  const id = paramId.id || postId;
+  const id = postId || paramId.id;
 
   const [post, setPost] = useState({ results: [] });
 
