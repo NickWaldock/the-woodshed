@@ -12,76 +12,68 @@
 1. [Introduction](#introduction)
 
 2. [Project Development](#project-development)
-    - 2.1. [Repos & Projects](#repos--project-links)
-    - 2.2. [Aims](#aims)
-    - 2.3. [Wireframes](#wireframes)
-    - 2.4. [Landing Page](#landing-page)
-    - 2.5. [Sign In / Up](#sign-in--up)
-    - 2.6. [Home / Feed / Liked](#home--feed--liked)
-    - 2.7. [Add Post](#add-post)
-    - 2.8. [Profile](#profile)
-    - 2.9. [Edit Profile](#edit-profile)
-    - 2.10. [Change Password / Username](#change-password)
+    - 2.1 [Repos & Projects](#repos--project-links)
+    - 2.2 [Aims](#aims)
+    - 2.3 [Wireframes](#wireframes)
+    - 2.4 [Database](#database)
+    - 2.5 [CRUD](#crud)
+    - 2.6 [Agile Methodology](#agile-methodology)
+        - [Milestones](#milestones)
+        - [User Stories](#user-stories)
+        - [Sprints](#sprints)
+        - [MoSCoW]()
+    - 2.7. [UX Design](#ux-desgin)
+        - [Typography](#typography)
+        - [Colour](#colour)
+        - [General Styling](#bootstrap)
 
-    4. [Database](#database)
-        - 4.1 [CRUD](#crud)
-    5. [Agile Methodology](#agile-methodology)
-        - 5.1 [Milestones](#milestones)
-        - 5.2 [User Stories](#user-stories)
-        - 5.3 [Sprints](#sprints)
-        - 5.4 [MoSCoW]
-  
-    6. [UX Design](#ux-desgin)
-        - 6.1 [Typography](#typography)
-        - 6.2 [Colour](#colour)
-        - 6.3 [Bootstrap](#bootstrap)
+3. [Technologies](#technologies)
+    - 3.1 [React](#react)
+    - 3.2 [Bootstrap]()
+    - 3.3 [Tools](#tools)
 
-    7. [Technologies](#technologies)
-        - 7.1 [React](#react)
-        - 7.2 [Tools](#tools)
+4. [Main Features](#main-features)
+    - 4.1 [Logo](#logo)
+    - 4.2 [Landing Page](#landing-page)
+    - 4.3 [About](#about)
+    - 4.4 [Navigation Bar](#navigation-bar)
+    - 4.5 [Dropdown Menus](#dropdown-menus)
+    - 4.6 [Footer](#footer)
+    - 4.7 [Sign In / Up](#sign-in--up)
+    - 4.8 [Search Bar](#search-bar)
+    - 4.9 [List Views](#list-views)
+    - 4.10 [Add Post](#add-post)
+    - 4.11 [Posts](#posts)
+    - 4.12 [Edit Post](#edit-post)
+    - 4.13 [Profile](#profile)
+    - 4.14 [Edit Profile](#edit-profile)
+    - 4.15 [Most Followed Profiles](#most-followed-profiles)
+    - 4.16 [Change Username](#change-username)
+    - 4.17 [Change Password](#change-password)
+    - 4.18 [Alert](#alert)
 
-3. [Main Features](#main-features)
-    - 3.1 [Logo]()
-    - 3.2 [Landing Page]()
-    - 3.3 [About]()
-    - 3.4 [Navigation Bar]()
-    - 3.5 [Dropdown Menus]()
-    - 3.6 [Footer]()
-    - 3.7 [Sign In / Up]()
-    - 3.8 [Search Bar]()
-    - 3.9 [List Views]()
-    - 3.10 [Add Post]()
-    - 3.11 [Posts]()
-    - 3.12 [Edit Post]()
-    - 3.13 [Profile]()
-    - 3.14 [Edit Profile]()
-    - 3.15 [Most Followed Profiles]()
-    - 3.16 [Change Username]()
-    - 3.17 [Change Password]()
-    - 3.18 [Alert]()
+5. [Future Development](#future-developments)
 
-  
+6. [Testing](#testing)
+    - 6.1 [Manual Testing](#manual-testing)
+    - 6.2 [Automated Testing](#automated-testing)
+    - 6.3 [Bugs](#bugs)
 
-3. [Future Development](#future-developments)
+7. [Code Validation](#code-validation)
+    - 7.1 [React Validation](#react-validation)
+    - 7.2 [HTML Validation](#html-validation)
+    - 7.3 [CSS Validation](#css-validation)
+    - 7.4 [Lighthouse Report](#lighthouse-report)
 
-4. [Testing](#testing)
-5. [HTML Validation](#html-validation)
-6. [CSS Validation](#css-validation)
-7. [React Validation](#react-validation)
-8. [Lighthouse Report](#lighthouse-report)
-9. [Manual Testing](#manual-testing)
-10. [Jtest](#jtest)
-11. [Bugs](#bugs)
+8. [Deployment](#deployment)
+    - 8.1 [Heroku](#heroku)
+    - 8.2 [Forking](#forking)
+    - 8.3 [Cloning](#cloning)
 
-12. [Deployment](#deployment)
-13. [Heroku](#heroku)
-14. [Forking](#forking)
-15. [Cloning](#cloning)
-
-16. [References & Acknowledgements](#references--acknowledgements)
-17. [General Reference](#general-reference)
-18. [Code Reference](#code-reference)
-19. [Acknoledgements](#acknoledgements)
+9. [References & Acknowledgements](#references--acknowledgements)
+    - 9.1 [General Reference](#general-reference)
+    - 9.2 [Code Reference](#code-reference)
+    - 9.3 [Acknoledgements](#acknoledgements)
     <br />
     <br />
 
@@ -129,7 +121,7 @@ Wireframes were produced during the intitial development of the project to guide
 <br />
 <hr />
 
-### <ins>***Landing Page***
+<ins>***Landing Page***</ins><br/>
 The Landing Page is a simple Jumbotron design front and center including the site name, headline, and logo which acts as a quick sign-in button for users familiar with the site. The Navbar contains the traditional sign in and sign up links, and the brand logo on the left hand side, this exists on every page including on mobile views.
 <table>
   <tr>
@@ -150,7 +142,7 @@ The Landing Page is a simple Jumbotron design front and center including the sit
 </table>
 <hr />
 
-### <ins>***Sign In / Up***
+<ins>***Sign In / Up***</ins><br/>
 The Sign Up page is styled exactly the same as the Sign In page with the exception of the addition of the confirm password field. Both contain the sign up/in simple form mirrored by the main logo on the right. On mobile view, the main logo will not display to prioritise the form.
 <table>
   <tr>
@@ -163,7 +155,7 @@ The Sign Up page is styled exactly the same as the Sign In page with the excepti
 <br />
 <hr />
 
-### <ins>***Home / Feed / Liked***
+<ins>***Home / Feed / Liked***</ins><br/>
 The 3 main list pages are indentical in layout and design, the only difference between them is the filtered content. Home page will display all posts, Feed will display only posts from users your profile is following, and Liked will only display posts you have 'liked'. 
 
 At this point the user is logged in and we have all Navbar links displaying. These links collapse into a typical 'burger' menu in mobile view. Additionaly, a profile avatar and link to the user's profile page renders on the right hand side where it exists on all pages when logged in. The add post link is kept seperate from the other links to be distinctive and easy to find. This link does not move to the burger menu in mobile but is the sole link in the center of the navbar. This is because it is assumed this link will be the most commonly used in the navigation element and saves the user having to click through to the burger menu to create a post.
@@ -186,8 +178,7 @@ Finally the posts themselves are rendered on a background the help them standout
 <br />
 <hr />
 
-### <ins>***Add Post***
-
+<ins>***Add Post***</ins><br/>
 This page contains a form which allows the user to upload a new post. The PDF upload area is kept seperate from the form for ease of use. The form contains the input fields for the post model including: Title, Subtitle, Description (which displays as 'Notes' in the later rendering), Instrument, Tags, and finally two buttons, one to submit the form and the other to cancel and retun the user to thier previous page.
 
 Here we can can mention the footer which exists and the bottom on all pages but may not be immediately visiable due to content. It contains social links and copyright information.
@@ -200,7 +191,7 @@ Here we can can mention the footer which exists and the bottom on all pages but 
 </table>
 <hr />
 
-### <ins>***Profile***
+<ins>***Profile***</ins><br/>
 Clicking on any user avatar on a posts or popular profile component, or clicking on your own profile link in the nav bar will bring you to the profile page. Here a user can see all submitted information about a specific user. If the logged in user is the owner of the profile they have the option to edit the profile throught the gear icon (which will also render in the below posts). The profile header contains: user avatar, location, instrument played, and contact info on the left; main username, real name (small and in brackets), headline, and biography. Underneath are basic analytics for the number of posts the user has written, number of followers, and number of people that user is following. 
 
 Finally, underneath the profile header all posts relating to that user are rendered. On mobile view the Popular Profiles component renders above the profile header as it does on the list pages.
@@ -214,7 +205,7 @@ Finally, underneath the profile header all posts relating to that user are rende
 <br />
 <hr />
 
-### <ins>***Edit Profile***
+<ins>***Edit Profile***</ins><br/>
 When a user clicks on the gear icon in their profile a drop down menu appears to allow them to edit thier profile. This brings them to this page which is designed similarly to the Add Post page. The form contains all of the relevant fields, note these fields will be empty as the user is not required to fill in this information to create an account. The image will also set to a default for the same reason.Here the user can upload an image for the user avatar. The Cancel button returns the user to the previous page and the Save button submits the form.
 <table>
   <tr>
@@ -226,7 +217,7 @@ When a user clicks on the gear icon in their profile a drop down menu appears to
 </table>
 <hr />
 
-### <ins>***Update Password / Update Username***
+<ins>***Update Password / Update Username***</ins><br/>
 Wireframes were not included for this feature as the forms are a single field. For more info see [Change Password](#change-password) in [Main Features](#main-features)
 <br />
 <br />
@@ -238,27 +229,18 @@ Wireframes were not included for this feature as the forms are a single field. F
 [ElephantSQL](https://www.elephantsql.com/) was used to host and manage the PostgreSQL database. The data base works in tandem with the REACT front-end application to manage and store data delivered via the custom API. 
 
 
+## CRUD Functionality
+<br/><hr>
 
+## Agile Methodology
+### Milestones
+### User Stories
+### Sprints
+### MoSCoW
+<br/><hr>
 
-
-
-
-
-
-
-
-
-
-- [Agile Methodology](#agile-methodology)
-- [Milestones](#milestones)
-- [User Stories](#user-stories)
-- [Sprints](#sprints)
-
-## Change password
-
-
-## Refernces
-
+## UX Design
+### Typograpgy
 Google Fonts
 
 - Roboto
@@ -270,11 +252,13 @@ Google Fonts
   - Semibold 600
 - Odibee Sans
 
-## SO
+### Colors
+### General Styling
+<br/><hr>
 
-- For adding PDF file types to the add post form
-  https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-accept-only-pdf-and-xls
-
+# Technologies
+## React
+## Bootstrap
 ## Tools
 
 - PNGs
@@ -285,17 +269,13 @@ Google Fonts
   https://www.cssmatic.com/box-shadow
   http://colormind.io/bootstrap/#
 
-## Technologies
 
 Axios
 Axios interceptors
 Toast
 React Bootstrap
+<br/><hr>
 
-<br/>
-<br/>
-<br/>
-<hr />
 
 # Main Features
 The following is a list of all of the current main features with descriptions of functionality.
@@ -332,10 +312,6 @@ The following is a list of all of the current main features with descriptions of
       <image src="readme-files/site-screenshots/landing-page/landing-page.png" width=100%>
     </td>
     <td><image src="readme-files/site-screenshots/mobile/landing-page-2.png" width=100%></td>
-  </tr>
-  <tr>
-    
-    <td></td>
   </tr>
 </table>
 <br/>
@@ -707,10 +683,9 @@ The following is a list of all of the current main features with descriptions of
 </table>
 <br/>
 <hr/>
+<br/>
 
-
-
-## Future Developments
+# Future Developments
 
 All liked/saved posts can be organised into self-made categories
 Post list descriptions to preview text in case the post has a larger amount of text
@@ -727,6 +702,35 @@ A user can currently have a blank profile if they don't visit the edit profile p
 - Popular profiles component can show the number of followers a profile has and could always be visible when scrolling down list pages
 - Users can click on the following or followers metric in a profile to get a list of users either following or being followed by that profile
 
-## Bugs
+<br/><hr><br/>
+# Testing
 
+## Manual Testing
+## Automated Testing
+## Bugs
 [Alert wont show on delete post function](https://github.com/NickWaldock/the-woodshed/issues/107#issuecomment-1604253384)
+
+<br/><hr><br/>
+# Code Validation
+## React Validation
+## HTML Validation
+## CSS Validation
+## Lighthouse Report
+
+<br/><hr><br/>
+# Deployment
+## Heroku
+## Forking
+## Cloning
+
+<br/><hr><br/>
+# References & Acknowledgements
+## General Reference
+## Code Reference
+
+- For adding PDF file types to the add post form
+  https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-accept-only-pdf-and-xls
+
+## Acknowledgements
+
+
