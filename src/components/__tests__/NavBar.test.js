@@ -10,8 +10,7 @@ test("renders NavBar", () => {
     </Router>
   );
 
-  // screen.debug();
-  const signInLink = screen.getByRole("link", { name: "SIGN IN" });
+  const signInLink = screen.getByRole("link", { name: "Sign In" });
   expect(signInLink).toBeInTheDocument();
 });
 
@@ -35,12 +34,40 @@ test("renders sign in and sign up links again on log out", async () => {
 			</CurrentUserProvider>
     </Router>
   );
-	const signOutLink = await screen.findByRole('link', {name: 'SIGN OUT'});
+	const signOutLink = await screen.findByRole('link', {name: 'Sign Out'});
 	fireEvent.click(signOutLink);
 
-	const signInLink = await screen.findByRole('link', {name: 'SIGN IN'});
+	const signInLink = await screen.findByRole('link', {name: 'Sign In'});
 	expect(signInLink).toBeInTheDocument();
 
-	const signUpLink = await screen.findByRole('link', {name: 'SIGN UP'});
+	const signUpLink = await screen.findByRole('link', {name: 'Sign Up'});
 	expect(signUpLink).toBeInTheDocument();
 });
+
+
+test("Renders additional nav links when user is logged in", async () => {
+  render(
+    <Router>
+			<CurrentUserProvider>
+      	<NavBar />
+			</CurrentUserProvider>
+    </Router>
+  );
+	const addPostLink = await screen.findByRole('link', {name: 'Add Post'});
+	fireEvent.click(addPostLink);
+  expect(addPostLink).toBeInTheDocument();
+
+  const homeLink = await screen.findByRole('link', {name: 'Home'});
+  fireEvent.click(homeLink);
+  expect(homeLink).toBeInTheDocument();
+
+  const feedLink = await screen.findByRole('link', {name: 'Feed'});
+  fireEvent.click(feedLink);
+  expect(feedLink).toBeInTheDocument();
+
+  const likedLink = await screen.findByRole('link', {name: 'Liked'});
+  fireEvent.click(likedLink);
+  expect(likedLink).toBeInTheDocument();
+});
+
+

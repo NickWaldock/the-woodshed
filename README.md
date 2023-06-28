@@ -704,10 +704,32 @@ A user can currently have a blank profile if they don't visit the edit profile p
 
 <br/><hr><br/>
 # Testing
-
 ## Manual Testing
+
+Manual testing has been carried out on the application to determine the outcome of expected functions, events, and interactions. The tables in the below files indicate the type of test applied, the expected outcome, the actual outcome, and any errors found and linked to an issue in the [project board](https://github.com/users/NickWaldock/projects/7).
+
+A detailed list of all manual testing under-taken can be found here: <br/> 
+[>> Manual Testing](/readme-files/testing/manual-testing.md)
+<br/><br/><hr>
+
 ## Automated Testing
+
+React uses [Jest](https://jestjs.io/docs/tutorial-react) as its test runner, this was used in conjunction with the [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) which comes with a range of utility methods to test components in isolation.
+
+Additionally, [Mock Service Worker](https://mswjs.io/docs/) was used during automated testing to supply mock API calls.
+
+<image src="readme-files/testing/navbar-test.png" width=80%><br/>
+
+Automated tests were used to determine whether the Navbar renders links correctly. 
+
+<image src="readme-files/testing/testing-results.png" width=30%><br/>
+
+The full code for these tests can be found here: >>> [NavBar Testing](https://github.com/NickWaldock/the-woodshed/blob/main/src/components/__tests__/NavBar.test.js)
+<br/><br/><hr>
+
 ## Bugs
+Here is a summary of known bugs and issues discovered from the test procedure: 
+
 [Alert wont show on delete post function](https://github.com/NickWaldock/the-woodshed/issues/107#issuecomment-1604253384)
 
 <br/><hr><br/>
@@ -732,5 +754,4 @@ A user can currently have a blank profile if they don't visit the edit profile p
   https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-accept-only-pdf-and-xls
 
 ## Acknowledgements
-
 

@@ -1,5 +1,7 @@
 import { rest } from "msw";
 
+
+// Define a mock API response for automated testing
 const baseURL = 'https://the-woodshed-api.herokuapp.com/';
 
 export const handlers = [
