@@ -92,7 +92,7 @@ is a React front-end multi-user file sharing application designed to allow music
 
 In the digital age PDFs are common as resources amongst musicians and music teachers alike. And with the large demand for online music lessons increasing during the 2020 pandemic the demand to share resources online increase.
 
-The Woodshed attempts to demonstrate a social-media-esq application for musicians and teachers to share musical and educational resources and grow a following of students and other musicians. The content shared could include anything from simple exercises, to whole pieces and scores.
+The Woodshed attempts to demonstrate a social-media-esq application for musicians and teachers to share musical and educational resources and grow a following of students and other musicians and potentially recruit new students through the contact information. The content shared could include anything from simple exercises, to whole pieces and scores.
 
 This site allows users to create an account, profile, and share PDF files as well as interact in the environment through likes, comments, and following users.
 
@@ -364,7 +364,7 @@ The following is a list of all of the current main features with descriptions of
   </tr> 
   <tr>
     <td>
-      The navigation bar is a standard Bootstrap Nav component that expands to the full width of the user's screen and automatically becomes a typical expandable mobile menu or 'burger' menu on the top right at a breakpoint of 767px screen-width.
+      The navigation bar is a standard <a href="https://getbootstrap.com/docs/4.0/components/navbar/"><em>Bootstrap Navbar</em></a> component that expands to the full width of the user's screen and automatically becomes a typical expandable menu or 'burger' menu on the top right for mobiles at a breakpoint of 767px screen-width.
       <br/><br/>
       When a user is not logged in the navbar only displays the Sign In and Sign Up navigation links. When a user is logged in all available links display. 
       <br/><br/>
@@ -537,99 +537,153 @@ The following is a list of all of the current main features with descriptions of
 <br/>
 <hr/>
 
+## <ins>***Edit Post***
 <table>
-  <th>Edit Posts</th>
   <tr>
     <td>
-      <image src="" width=70%>
+    The Edit Post page is built from the same code as the Add Post page with the addition of a feature to prepoulate the page with all existing data related to the post to be edited. Once the form data has been edited and/or the PDF file has been changed (or not, fields can remain unchanged), clicking 'Save' will redirected the user to the updated version of the individual post detail view. A success Alert will pop up to indicate the successful update of the post. If the user clicks the cancel button the user is returned to the same post detail view but as but without any of the changes made in the Edit Post form/file.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/posts/edit-post.png" width=72%>
+      <image src="readme-files/site-screenshots/mobile/edit-post.png" width=27%>
     </td>
   </tr>
 </table>
 <br/>
 <hr/>
 
+## <ins>***Profile***
 <table>
-  <th>Profile</th>
+<tr>
+    <td>
+      If a user has clicked on a user's avatar in a post, the Most Followed Profiles component or on their profile Navbar link, they are directed to a profile page to view all details about that specific user or their own profile.
+      <br/><br/>
+      If it is the user's own profile the gear icon appears in the top right of the component as a dropdown menu to edit the profile, change the username, or change the password.
+      <br/><br/>
+      The profile's picture renders in the top left of the component and is the only time the profile image is not clickable. But it displays larger than the more commonly seen user avatar. Underneath the profile image is the users details (if they exist): given name, location, instrument(s), and contact email.
+      <br/><br/>
+      Otherwise the profile takes on a similar aesthetic to the post component and displays the profile information centered within a single column. Username; headline, a short descriptive statement, a biography; and finally some basic profile data.
+      <br/><br/>
+      Basic profile data consists of real-time reflection of this user's interactions within the application.<br/>
+        - Posts indicates the number of posts that profile has published<br/>
+        - Followers indicates the number of other user profiles that are following this particular profile<br/>
+        - Following indicates the number of other profiles that this profile is actively following<br/><br/>
+        Finally, under the main profile information is a list (in order of most recent) of all of that user's posts.
+    </td>
+  </tr>
+    <td>
+      <image src="readme-files/site-screenshots/profile/profile.png" width=73%>
+      <image src="readme-files/site-screenshots/mobile/profile.png" width=26%>
+    </td>
+  </tr>
   <tr>
     <td>
-      <image src="" width=70%>
+      When a user first signs up to the site they only do so with a username and a password. On a first visit to the profile page they will be presented with an empty profile. The profile image is a default image and the posts list will be empty (assuming they haven't created a post yet).
+    </td>
+  </tr>
+  <tr><tr>
+    <td><image src="readme-files/site-screenshots/profile/empty-profile.png" width="100%"></td>
+  </tr>
+  <tr>
+</table>
+<hr/>
+
+## <ins>***Edit Profile***
+<table>
+  <tr>
+    <td>
+      The Edit Post page is constructed in a similar fashion to the Edit Post page. The user's profile information will pre-poplulate with the user's data if it exists.<br/></br>
+      The form contains authenication and will only submit on completed fields to make sure the user has some , with the exception of Name and Email, these two fields can be left blank and the form will not throw any errors and can be submitted. As the site is intended for musicians and music teachers to share resources it is also available for users to share contact information in order to recruit students or colloaborators, this is why the more personal details of name and email have been left as optional. In the future as the site grows, the implications of security and privacy will need to be addressed.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/profile/edit-profile.png" width=100%>
     </td>
   </tr>
 </table>
 <br/>
 <hr/>
 
+## <ins>***Most Followed Profiles***
 <table>
-  <th>Edit Profile</th>
   <tr>
     <td>
-      <image src="" width=70%>
+      This component appears on  profile pages and all list pages. In mobile view it renders above the search bar or above the profile header in the profile pages. In larger screens it is rendered on the right-hand side of the page. It doesn't not scroll. This component renders the most followed profiles, profiles with a higher follower count will appear at the top of the list.
+      In mobile view this component will only render the top four avatars. <br/><br/>
+      The component has a reactive follow/unfollow button. If the user is not currently following a profile the button will display 'follow', on click the button changes to 'unfollow' and the backgorund color changes to signify the user is now followed. If the user was to go to to their profile or that user's profile they would see the followers and following number have increase respectively.
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/profile/most-followed.png" width=50%><image src="readme-files/site-screenshots/mobile/list.png" width=30%>
     </td>
   </tr>
 </table>
 <br/>
 <hr/>
 
+## <ins>***Change Username***
 <table>
-  <th>Most Followed Profiles</th>
   <tr>
     <td>
-      <image src="" width=70%>
+      A user can choose to change thier username if they wish, through the gear icon <a href="#dropdown-menus"><em>dropdown menu</em></a> in their profile.
+    </td>
+    <td><image src="readme-files/site-screenshots/navigation/profile-dropdown.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td>
+      Clicking this option brings the user to this simple form where they can submit a new username. Clicking save will update the profile database instance which will reflect on all relevant components, it will also reflected in authentication in the sign in page, requiring the user to use the updated username to log in. Clicking cancel returns the user to their profile page.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/utilities/username.png" width=100%>
     </td>
   </tr>
 </table>
 <br/>
 <hr/>
 
+## <ins>***Change Password***
 <table>
-  <th>Change Username</th>
   <tr>
     <td>
-      <image src="" width=70%>
+      A user can choose to change thier password if they wish, through the gear icon <a href="#dropdown-menus"><em>dropdown menu</em></a> in their profile.
+    </td>
+    <td><image src="readme-files/site-screenshots/navigation/profile-dropdown.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/utilities/password.png" width=100%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Clicking this option brings the user to this simple form where they can submit a new password. Clicking save will update the user authorisation which will be reflected in authentication for the user in the sign in page, requiring use of the updated password to log in. Clicking cancel returns the user to their profile page.
     </td>
   </tr>
 </table>
 <br/>
 <hr/>
 
+## <ins>***Alert***
 <table>
-  <th>Change Password</th>
   <tr>
     <td>
-      <image src="" width=70%>
+      The <a href="https://www.npmjs.com/package/react-toastify"><em>Toastify</em></a> package is used to display a simple success message on major crud operation such as: creating a post and updating a post or profile. The post is styled with custom css to maintain design aesthetics with the rest of the site.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/utilities/alert.png" width=100%>
     </td>
   </tr>
 </table>
 <br/>
 <hr/>
-
-<table>
-  <th>Alert</th>
-  <tr>
-    <td>
-      <image src="" width=70%>
-    </td>
-  </tr>
-</table>
-<br/>
-<hr/>
-
-<table>
-  <th></th>
-  <tr>
-    <td>
-      <image src="" width=70%>
-    </td>
-  </tr>
-</table>
-<br/>
-<hr/>
-
-
-<br/>
-<br/>
-<br/>
-<hr />
 
 
 
@@ -643,6 +697,12 @@ larger pdf file sizes
 additional fiile formats
 in profiles, instuments in profile can be links that lead to posts or other profiles related to that instrument
 Practice Companion - metronone, play alongs, audio
+More complex profile component - to allow for larger expressions of biograpical data, and more data fields
+Users can view which other profiles a profile is following or being followed by
+A user can currently have a blank profile if they don't visit the edit profile page, they can either have a blank profile or have to provide certain information. A more detailed sign up page, or profile creation page could be included so users can create a profile during the process of signing up to the site
+- contact user button; allow users to send a private message to other users
+- Popular profiles component can show the number of followers a profile has and could always be visible when scrolling down list pages
+- Users can click on the following or followers metric in a profile to get a list of users either following or being followed by that profile
 
 ## Bugs
 
