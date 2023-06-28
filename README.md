@@ -325,11 +325,17 @@ The following is a list of all of the current main features with descriptions of
     <td>
       <image src="readme-files/site-screenshots/mobile/landing-page-1.png" width=100%>
     </td>
+    
   </tr>
   <tr>
     <td>
       <image src="readme-files/site-screenshots/landing-page/landing-page.png" width=100%>
     </td>
+    <td><image src="readme-files/site-screenshots/mobile/landing-page-2.png" width=100%></td>
+  </tr>
+  <tr>
+    
+    <td></td>
   </tr>
 </table>
 <br/>
@@ -430,10 +436,16 @@ The following is a list of all of the current main features with descriptions of
   <tr>
     <td>
       After the user has clicked on either the 'Get Started!' button on the Landing Page or one of the first available Navbar links they are brought to this Sign In page. Here a user can securely log into the account. The back-end for this functionality is handled automatically by <a href="https://docs.djangoproject.com/en/4.2/topics/auth/"><em>Django Authentication</em></a> which include basic user management including "password strength checking, throttling of login attempts, authentication against third-parties, object-level permissions" (from Django <a href="https://docs.djangoproject.com/en/4.2/topics/auth/"><em>docs</em></a>).
-      <br/><br/>
+    </td>
+  </tr>
+  <tr>
+    <td>
       The if the user is a first-time visitor to the application they can easily find links to create an account in the Navbar or below the sign in form.
       <br/><br/>
       The Sign Up page is almost identical to the Sign In page with the addition of a confirm password box and swapped links to login if the user already has an account.
+    </td>
+    <td>
+      <image src="/workspace/the-woodshed/readme-files/site-screenshots/mobile/sign-in.png" width=200%>
     </td>
   </tr>
 </table>
@@ -462,8 +474,13 @@ The following is a list of all of the current main features with descriptions of
 <table>
   <tr>
     <td>
-      <image src="/workspace/the-woodshed/readme-files/site-screenshots/list-views/feed.png" width=45%>
-      <image src="/workspace/the-woodshed/readme-files/site-screenshots/list-views/home.png" width=54%>
+      <image src="/workspace/the-woodshed/readme-files/site-screenshots/list-views/feed.png" width=70%>
+      <image src="/workspace/the-woodshed/readme-files/site-screenshots/mobile/list.png" width=29%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <image src="/workspace/the-woodshed/readme-files/site-screenshots/list-views/home.png" width=100%>
     </td>
   </tr>
   <tr>
@@ -530,7 +547,13 @@ The following is a list of all of the current main features with descriptions of
 </tr>
   <tr>
     <td>
-      <image src="readme-files/site-screenshots/posts/post-1.png" width=49%><image src="readme-files/site-screenshots/posts/post-2.png" width=49%>
+      <image src="readme-files/site-screenshots/posts/post-1.png" width=70%>
+      <image src="/workspace/the-woodshed/readme-files/site-screenshots/mobile/post.png" width=29%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/posts/post-2.png" width=70%>
     </td>
   </tr>
 </table>
