@@ -797,7 +797,9 @@ HTML, CSS, were validated using [W3C](https://validator.w3.org/)
 ## React Validation
 [ES Lint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) was installed into VS code for continual code validation during the project development. Every JavaScript file was checked for errors or warnings and dealth with accordingly.
 
-
+Currently only one file consists of warnings for unused variables, PdfPreview.js.
+<image src="readme-files/testing/eslint-warnings.png" width=100%>
+These warnings have not been 'fixed' due to the nature of this component. The decision was made to make the PDF preview a seperate component rather than solely existing in the already complex Post component. The whole database object was required to be called or retrieved via the API in order to access the single pdf file attribute which was to be utilised in the component.
 
 ## HTML Validation
 ## CSS Validation

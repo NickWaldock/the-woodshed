@@ -34,7 +34,7 @@ Below is the account of all manual testing that has taken place on the project.
     <td>Site Responsiveness - Tablet Browsers</td>
     <td>Checked responsiveness of the site by navigating with tablet browsers on an iPad: Chrome, Safari, FireFox, and Edge</td>
     <td>Site should look consistent across all browsers</td>
-    <td></td>
+    <td>PASS</td>
     <td></td>
     <td></td>
   </tr>
