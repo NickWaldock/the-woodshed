@@ -730,6 +730,67 @@ The full code for these tests can be found here: >>> [NavBar Testing](https://gi
 ## Bugs
 Here is a summary of known bugs and issues discovered from the test procedure: 
 
+<table>
+  <th>BUG</th>
+  <th>Status</th>
+  <tr>
+    <td>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31576277">
+    Deleting a post redirects the user to tsignin page and then to homepage</a>
+    </td>
+  <td>SOLVED</td>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31612906">Console error "Can't perform a React state update on an unmounted component"</a>
+    </td>
+  <td>UNRESOLVED</td>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31649372">Possible to navigat to pages when unauthenticaed via the url bar</a>
+    </td>
+  <td>SOLVED</td>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31839935">404 Not FOund errors when pdfs are rendering on two particualr profiles, even though the files are rendering ok in the DOM</a>
+    </td>
+  <td>SOLVED</td>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31586557">Toastify alert won't display on the delete post function</a>
+    </td>
+  <td>UNRESOLVED</td>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31976680">In Safari on OSX and iOS, user login attempts continually redirect top the landing page</a>
+    </td>
+  <td>SOLVED</td>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31066437">Clicking on a user profile redirects back to the home page instead of profile page</a>
+    </td>
+  <td>SOLVED</td>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31034422">Popular profiles component is not rendering in the post detail page view</a>
+    </td>
+  <td>SOLVED</td>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31066662">PDF preview renders only one instance in the list view and not in all post instances in the list views</a>
+    </td>
+  <td>SOLVED</td>
+  </tr>
+  
+</table>
+
 [Alert wont show on delete post function](https://github.com/NickWaldock/the-woodshed/issues/107#issuecomment-1604253384)
 
 <br/><hr><br/>
