@@ -383,10 +383,10 @@ Below is the account of all manual testing that has taken place on the project.
     <td><a href="https://github.com/users/NickWaldock/projects/7/views/1?pane=issue&itemId=31649372">*SOLVED* View in Github Projects</a></td>
   </tr>
 <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Search Bar</td>
+    <td>Type text of known existing profile or post title, type text of known non-existing profile or post title</td>
+    <td>Known existing title or profile will render related posts in the list. Known non-existing search will render no posts and a message</td>
+    <td>PASS</td>
     <td></td>
     <td></td>
   </tr>
