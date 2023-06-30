@@ -380,7 +380,7 @@ Below is the account of all manual testing that has taken place on the project.
     <td>User should not be able to navigate to any of these pages and be redirected to the Landing Page</td>
     <td>FAIL*</td>
     <td>All pages will redirect to the Landing Page except an individual profile or an indivdual post</td>
-    <td><a href="https://github.com/users/NickWaldock/projects/7/views/1?pane=issue&itemId=32158623">View in Github Projects</a></td>
+    <td><a href="https://github.com/users/NickWaldock/projects/7/views/1?pane=issue&itemId=32158623">*SOLVED* View in Github Projects</a></td>
   </tr>
 <tr>
     <td></td>
