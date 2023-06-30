@@ -1,15 +1,15 @@
 .FormField {
-    border: 3px solid black;
-    border-radius: 5px;
-    font-family: "Barlow Condensed", sans-serif;
+  border: 3px solid black;
+  border-radius: 5px;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 .FormField:focus {
-    border-color: black;
-    box-shadow: none;
+  border-color: black;
+  box-shadow: none;
 }
 
 .FormText {
-    font-family: "Odibee Sans", sans-serif;
-    font-size: 30px;
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 30px;
 }

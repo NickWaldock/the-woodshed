@@ -1,6 +1,6 @@
 .Container {
-    min-height: 343px;
-  }
+  min-height: 343px;
+}
 
 .Input {
   background: #ffffff;
@@ -19,7 +19,7 @@
 .UploadContainer {
   background-color: white;
   border-radius: 5px;
-  --webkit-box-shadow: 8px 10px 11px 4px rgba(0,0,0,0.75);
-  -moz-box-shadow: 8px 10px 11px 4px rgba(0,0,0,0.75);
-  box-shadow: 8px 10px 11px 4px rgba(0,0,0,0.75);
+  --webkit-box-shadow: 8px 10px 11px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 10px 11px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px 10px 11px 4px rgba(0, 0, 0, 0.75);
 }

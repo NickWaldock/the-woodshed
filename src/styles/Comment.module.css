@@ -1,21 +1,20 @@
 .Owner {
-    font-weight: bold;
-    color: black;
-    margin-right: 8px;
-    font-size: 27px;
-    font-family: "Odibee Sans", sans-serif;
-    letter-spacing: 0.06em;
-
+  font-weight: bold;
+  color: black;
+  margin-right: 8px;
+  font-size: 27px;
+  font-family: "Odibee Sans", sans-serif;
+  letter-spacing: 0.06em;
 }
 
 .Date {
-    font-weight: lighter;
-    color: rgb(74, 74, 74);
-    font-family: "Roboto", sans-serif;
-    font-size: 10px;
+  font-weight: lighter;
+  color: rgb(74, 74, 74);
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
 }
 
 .CommentBody {
-    font-family: "Barlow Condensed", sans-serif;
-    font-size: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
 }

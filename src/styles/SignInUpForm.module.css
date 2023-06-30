@@ -1,7 +1,8 @@
 .Row {
   height: 80vh;
 }
-.Input, .Input:focus {
+.Input,
+.Input:focus {
   background: #ffffff;
   border: 2px solid black;
   text-align: left;

@@ -2,37 +2,38 @@
   background-color: #fde9a2;
   border: 3px solid black;
   border-radius: 5px;
-  height: 100%;  
+  height: 100%;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
+/* Logo Bounce Effect */
 @keyframes LogoAnimation {
-    0%,
-    100% {
-      transform: translateX(0%);
-      transform-origin: 50% 50%;
-    }
-  
-    15% {
-      transform: translateX(-30px) rotate(-6deg);
-    }
-  
-    30% {
-      transform: translateX(15px) rotate(6deg);
-    }
-  
-    45% {
-      transform: translateX(-15px) rotate(-3.6deg);
-    }
-  
-    60% {
-      transform: translateX(9px) rotate(2.4deg);
-    }
-  
-    75% {
-      transform: translateX(-6px) rotate(-1.2deg);
-    }
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
   }
+
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
 
 .LogoContainer {
   border: 3px solid black;
@@ -45,14 +46,12 @@
   -moz-box-shadow: inset 0px 0px 39px -7px rgba(0, 0, 0, 0.71);
   box-shadow: inset 0px 0px 39px -7px rgba(0, 0, 0, 0.71);
   animation: LogoAnimation 1.5s ease-in 0s 1 normal forwards;
-
 }
 
 .LogoContainer:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
-
 
 .Logo {
   object-fit: cover;
@@ -69,11 +68,10 @@
   background-color: #fde9a2;
   border: 3px solid black;
   border-radius: 5px;
-  height: 100%;  
+  height: 100%;
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-
 
 .CardTitle {
   font-family: "Odibee Sans", sans-serif;
@@ -88,13 +86,13 @@
   font-family: "Roboto", sans-serif;
 }
 
-
 .Card {
   border: 5px solid black;
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;}
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 
 .CardImg {
   width: 100%;

@@ -9,35 +9,32 @@
   text-transform: uppercase;
   font-family: "Odibee Sans", monospace;
   color: black;
-  background-color: #CC8D37;
+  background-color: #cc8d37;
 }
 
 .Button:hover {
   border-color: transparent;
   cursor: pointer;
-  background-color: #AA534E;
+  background-color: #aa534e;
   color: black;
   border: 4px solid black;
 }
 
-
 .Button:hover:active {
-  background-color: #AA534E !important;
+  background-color: #aa534e !important;
   border: 4px solid black;
 }
 
 .Button:active {
-  background-color: #AA534E !important;
+  background-color: #aa534e !important;
   border-color: black;
-  
 }
 
 .Button:focus {
-  background-color: #AA534E !important;
+  background-color: #aa534e !important;
   box-shadow: none;
   border-color: black;
-
-} 
+}
 
 .Wide {
   padding: 10px 50px;
@@ -45,17 +42,15 @@
   border: 4px solid black;
 }
 
-
-.Follow, 
+.Follow,
 .FollowOutline:hover {
-  background-color: #AA534E;
+  background-color: #aa534e;
   color: white;
-  
 }
 
 .Follow:hover,
 .FollowOutline {
-  background-color: #372E38;
+  background-color: #372e38;
   color: white;
   border-color: black;
 }

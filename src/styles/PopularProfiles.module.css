@@ -1,11 +1,11 @@
 .Font {
-    font-family: 'Odibee Sans', sans-serif;
-    font-size: 22px;
-    letter-spacing: 0.07rem;
-    font-weight: lighter;
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.07rem;
+  font-weight: lighter;
 }
 
 .Title span {
-    text-decoration: underline solid black 2px;
-    margin-left: 8px;
+  text-decoration: underline solid black 2px;
+  margin-left: 8px;
 }

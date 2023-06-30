@@ -1,41 +1,39 @@
 .DropdownItem {
-    display: inline-flex;
-    max-width: 50%;
-    padding: 0px;
-    margin: 0px;
-    
+  display: inline-flex;
+  max-width: 50%;
+  padding: 0px;
+  margin: 0px;
 }
 
 .DropdownItem:hover {
-    background-color: #FDE9A2;
+  background-color: #fde9a2;
 }
 
 .Absolute {
-    position: absolute;
-    right: 0;
-    z-index: 99;
+  position: absolute;
+  right: 0;
+  z-index: 99;
 }
 
 .Font {
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: bold;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
 }
 
 .General {
-    background-color: #FDE9A2;
-    border: 3px solid black;
-    border-radius: 5px;
-    margin-left: 10px;
+  background-color: #fde9a2;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-left: 10px;
 }
 
-.Hover:hover, .Hover:focus {
-    background-color: #FDE9A2;
-    text-decoration: solid underline 3px black;
-    color: black;
+.Hover:hover,
+.Hover:focus {
+  background-color: #fde9a2;
+  text-decoration: solid underline 3px black;
+  color: black;
 }
-
-
 
 .Container {
-    max-width: 50px;
+  max-width: 50px;
 }

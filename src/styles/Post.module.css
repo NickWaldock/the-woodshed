@@ -1,38 +1,37 @@
 .Post {
-  background-color: #FDE9A2;
+  background-color: #fde9a2;
   border: 3px solid black;
   border-radius: 5px;
   margin-bottom: 16px;
   text-align: center;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 20px;
-
 }
-  
+
 .Post figure,
 h5 {
   margin: 0 0;
 }
 
 .Post span {
-  color: #372E38;
+  color: #372e38;
 }
 
+/* Like Button */
 .Thumb {
-  color: #AA534E;
+  color: #aa534e;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
-
 }
 
 .Thumb:hover {
-  color: #372E38;
+  color: #372e38;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #AA534E;
+  -webkit-text-stroke-color: #aa534e;
 }
 
 .ThumbOutline:hover {
-  color: #AA534E;
+  color: #aa534e;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
@@ -48,7 +47,6 @@ h5 {
   font-family: "Odibee Sans", sans-serif;
   font-size: 40px;
   text-decoration: underline solid 3px;
-
 }
 
 .PostSubtitle {
@@ -66,26 +64,25 @@ h5 {
 
 .Link {
   text-decoration: none;
-  color: #372E38;
+  color: #372e38;
   cursor: pointer;
   font-family: "Odibee Sans", sans-serif;
 }
 
 .Link:hover {
-  text-decoration-color: #AA534E;
-  color: #AA534E;
+  text-decoration-color: #aa534e;
+  color: #aa534e;
   cursor: pointer;
 }
 
 .Comment {
-  color: #AA534E;
+  color: #aa534e;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
 
 .Comment:hover {
   cursor: pointer;
-  color: #AA534E;
+  color: #aa534e;
   text-shadow: 3px 3px black;
-  
 }

@@ -788,14 +788,17 @@ Here is a summary of known bugs and issues discovered from the test procedure:
     </td>
   <td>SOLVED</td>
   </tr>
-  
 </table>
-
-[Alert wont show on delete post function](https://github.com/NickWaldock/the-woodshed/issues/107#issuecomment-1604253384)
 
 <br/><hr><br/>
 # Code Validation
+HTML, CSS, were validated using [W3C](https://validator.w3.org/)
+
 ## React Validation
+[ES Lint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) was installed into VS code for continual code validation during the project development. Every JavaScript file was checked for errors or warnings and dealth with accordingly.
+
+
+
 ## HTML Validation
 ## CSS Validation
 ## Lighthouse Report
