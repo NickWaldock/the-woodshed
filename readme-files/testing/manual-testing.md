@@ -379,7 +379,7 @@ Below is the account of all manual testing that has taken place on the project.
     <td>Sign out of any profiles, attempt to reach list, add post, profiles, and individual post page directly from the url bar</td>
     <td>User should not be able to navigate to any of these pages and be redirected to the Landing Page</td>
     <td>FAIL*</td>
-    <td>All pages will redirect to the Landing Page except an individual profile</td>
+    <td>All pages will redirect to the Landing Page except an individual profile or an indivdual post</td>
     <td><a href="https://github.com/users/NickWaldock/projects/7/views/1?pane=issue&itemId=32158623">View in Github Projects</a></td>
   </tr>
 <tr>

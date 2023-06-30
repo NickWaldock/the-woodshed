@@ -20,7 +20,9 @@ import { useRedirect } from "../../hooks/useRedirect";
 
 
 function PostsPage({message, filter=''}) {
+  // Redirect non-authenticated users to sign in page
   useRedirect('loggedOut')
+  
   const [posts, setPosts] = useState({results: []});
   const [hasLoaded, setHasLoaded] = useState(false);
   const {pathname} = useLocation();

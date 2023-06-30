@@ -24,8 +24,12 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { Post } from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function ProfilePage() {
+  // Redirect non-authenticated users to sign in page
+  useRedirect('loggedOut')
+  
   const [hasLoaded, setHasLoaded] = useState(false);
   const currentUser = useCurrentUser();
   const { id } = useParams();

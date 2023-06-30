@@ -14,8 +14,12 @@ import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min
 import { axiosReq } from "../../api/axiosDefaults";
 import { Alert } from "react-bootstrap";
 import { toastAlert } from "../../App";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function PostEditForm() {
+    // Redirect non-authenticated users to sign in page
+  useRedirect('loggedOut')
+  
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({

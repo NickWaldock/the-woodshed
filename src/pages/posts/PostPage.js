@@ -15,11 +15,12 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
-
-
-
+import { useRedirect } from "../../hooks/useRedirect";
 
 function PostPage() {
+  // Redirect non-authenticated users to sign in page
+  useRedirect('loggedOut')
+  
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
 

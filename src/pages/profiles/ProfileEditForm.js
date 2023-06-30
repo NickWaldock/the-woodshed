@@ -19,8 +19,12 @@ import {
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/ProfileEditForm.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const ProfileEditForm = () => {
+  // Redirect non-authenticated users to sign in page
+  useRedirect('loggedOut')
+  
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
   const { id } = useParams();
