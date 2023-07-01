@@ -2,6 +2,7 @@ import React from "react";
 import { Spinner } from "react-bootstrap";
 import styles from "../styles/Asset.module.css";
 
+// Displays loading spinner, messages, or image for files not found
 const Asset = ({ spinner, src, message}) => {
     return (
         <div className={`${styles.Asset} p-4`}>
