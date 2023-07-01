@@ -102,7 +102,7 @@ Built using: React, Django, Bootstrap, CSS, and HTML(JSX), as well as Cloudinary
 ## Repos & Project Links
 - [Front-end Repository](https://github.com/NickWaldock/the-woodshed)
 - [Front-end Project Board](https://github.com/users/NickWaldock/projects/7)
-- [Back-end Repository & READEME](https://github.com/NickWaldock/the-woodshed-api)
+- [Back-end Repository & README](https://github.com/NickWaldock/the-woodshed-api)
 - [Back-end Project Board](https://github.com/users/NickWaldock/projects/6)
 - [Github Profile](https://github.com/NickWaldock)
 
@@ -229,30 +229,107 @@ Wireframes were not included for this feature as the forms are a single field. F
 [Django REST Framework](https://www.django-rest-framework.org/) was utilised for building a custom API in a seperate repository. Further information (including database schema) on this side of the project can be viewed here --> <ins>[The Woodshed API](https://github.com/NickWaldock/the-woodshed-api)
 
 [ElephantSQL](https://www.elephantsql.com/) was used to host and manage the PostgreSQL database. The data base works in tandem with the REACT front-end application to manage and store data delivered via the custom API. 
-
+<br/><hr>
 
 ## CRUD Functionality
+
+This project incorporates CRUD (Create, Read, Update, Delete) functionality as a key feature. Users will need to be able to create, edit and update existing elements, and finally delete any created content. All content stored in the back-end is to be kept updated in the front-end rendering so changes remain apparent to the user.
+
 <br/><hr>
 
 ## Agile Methodology
+
+A [Agile](https://agilemanifesto.org/) development approach was undertaken in the conception of the project. Specifically in this project, relating to the use of user stories, milestones, and sprints to dictate the development process and responding to change in design as the project progressed with the ultimate aims in mind.
+
+The following sections in this readme will detail the development process undertaken. 
+
+[Github Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) was used to manage the project tasks. Each task was listed within a [Milestone](#milestones) and a [User Story](#user-stories), and was finally assigned proiritisation under the [MoSCoW](#moscow) system. Tasks were loaded into the Backlog and tackled during [sprints](#sprints). Sprints were not strictly defined to within certain timeframes as they would be in a professional team development environment, this was due to the nature of my current working practices which are unpredictable making it difficult to plan when development work on the project would occur. The sprints therefore were flexible in terms of time frame and are instead better arranged by sections/features of development.
+
+
+The project management board for the front-end can be viewed here: --> [GitHub Projects](https://github.com/users/NickWaldock/projects/7)
+
+Additinoally, the project board for the back-end can be viewed here: --> [Back-End Project](https://github.com/users/NickWaldock/projects/6)
+
+<br/><hr>
+
 ### Milestones
+With initial conceptual design complete though [wireframes](#wireframes) development was organised into key [Milestones](https://github.com/NickWaldock/the-woodshed/milestones)
+
+- Authentication & Registration
+    - Sign in, account registration, page authentication
+
+- CRUD Posts & Profiles
+    - Functionality within components to create, edit profiles, comments and posts, and delete comments and posts
+
+- Navigation
+    - Navigating the site through the navigation bar or buttons
+
+- Interactions
+    - Any actions a user takes in interacting with other users of the site: i.e. Likes, followers, followed by, comments
+
+- UX Design
+    - Aesthetic and cosmetic design
+
+- Bugs
+    - Issues documented in [GitHub Issues](https://github.com/NickWaldock/the-woodshed/issues)
+
+- Documentation & Testing
+    - Tests, planning, readme, and other documentation
+
 ### User Stories
+
 ### Sprints
+The following screen shots demonstrate the various sprints undertaken during the project's development. The project [kanban board](https://github.com/users/NickWaldock/projects/7/views/2) was used exclusivly to keep track of tasks.
+<table>
+  <tr>
+   <td><image src="readme-files/sprints/1.png" width=100%></td>
+    <td><image src="readme-files/sprints/2.png" width=100%></td>
+  </tr>
+    <tr>
+   <td><image src="readme-files/sprints/3.png" width=100%></td>
+    <td><image src="readme-files/sprints/4.png" width=100%></td>
+  </tr>
+    <tr>
+   <td><image src="readme-files/sprints/5.png" width=100%></td>
+    <td><image src="readme-files/sprints/6.png" width=100%></td>
+  </tr>
+    <tr>
+   <td><image src="readme-files/sprints/7.png" width=100%></td>
+    <td><image src="readme-files/sprints/8.png" width=100%></td>
+  </tr>
+    <tr>
+   <td><image src="readme-files/sprints/9.png" width=100%></td>
+    <td><image src="readme-files/sprints/10.png" width=100%></td>
+  </tr>
+    <tr>
+   <td><image src="readme-files/sprints/11.png" width=100%></td>
+    <td><image src="readme-files/sprints/12.png" width=100%></td>
+  </tr>
+</table>
+<br/><hr>
+
 ### MoSCoW
+
+The [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) method was used to determine the priority of certain tasks and to maintain sprints within the project's scope. These were added as labels to each individual task.
+
+Tasks were assigned a status in the project [kanban board](https://github.com/users/NickWaldock/projects/7/views/2) of either:
+- <strong>Must Have</strong> : Essential for the project
+- <strong>Should Have</strong> : Important but not essential
+- <strong>Could Have</strong> : An idea for consideration but not a priority
+- <strong>Won't Have</strong> : Not currently in the project's scope
 <br/><hr>
 
 ## UX Design
 ### Typograpgy
-Google Fonts
+[Google Fonts](https://fonts.google.com/) provided the fonts for the site. Fonts used are:<br>
+- [Odibee Sans](https://fonts.google.com/specimen/Odibee+Sans?preview.text=The%20Woodshed&preview.text_type=custom&category=Sans+Serif,Display&query=odibee) : As the main title font for components and buttons<br>
+- [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed?preview.text=The%20Woodshed&preview.text_type=custom&category=Sans+Serif,Display&query=barlow+condense) : As a primary body text and occasional title or subtitle text <br>
+- [Roboto](https://fonts.google.com/specimen/Roboto?preview.text=The%20Woodshed&preview.text_type=custom&category=Sans+Serif,Display&query=roboto) : as a secondary body text
+<br>
+<image src="readme-files/site-screenshots/utilities/fonts.png" width=70%>
 
-- Roboto
-- Barlow Condensed
-  - light 300
-  - Light 300 Italic
-  - Regular 400
-  - Medium 500
-  - Semibold 600
-- Odibee Sans
+With sans-serif as back-up fonts
+<br/><hr>
 
 ### Colors
 ### General Styling
@@ -730,7 +807,7 @@ The full code for these tests can be found here: >>> [NavBar Testing](https://gi
 <br/><br/><hr>
 
 ## Bugs
-Here is a summary of known bugs and issues discovered from the test procedure: 
+Here is a summary of known bugs and issues discovered from the testing procedure: 
 
 <table>
   <th>BUG</th>
