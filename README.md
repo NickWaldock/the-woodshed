@@ -66,9 +66,11 @@
     - 7.4 [Lighthouse Report](#lighthouse-report)
 
 8. [Deployment](#deployment)
-    - 8.1 [Heroku](#heroku)
-    - 8.2 [Forking](#forking)
-    - 8.3 [Cloning](#cloning)
+    - 8.1 [Cloudinary](#cloudinary)
+    - 8.2 [PostgresSQL](#postgresql)
+    - 8.3 [Heroku](#heroku)
+    - 8.4 [Forking](#forking)
+    - 8.5 [Cloning](#cloning)
 
 9. [References & Acknowledgements](#references--acknowledgements)
     - 9.1 [General Reference](#general-reference)
@@ -789,6 +791,17 @@ Here is a summary of known bugs and issues discovered from the test procedure:
   <td>SOLVED</td>
   </tr>
 </table>
+<br/><br/>
+The following bugs persist and are permissible as part of the submission of this project:
+<br/><br/>
+400 - Bad Request: Occurs when submitting incorrect form data
+<image src="readme-files/testing/400.png" width=50%>
+<br/><br/>
+401 - Unorthorised: Occurs when an accesses token has expired and is refreshed in the background
+<image src="readme-files/testing/401-1.png" width=50%>
+<br/><br/>
+401 - Unorthorised: Occurs when navigating to the sign in or sign up page when not logged in, this console error occurs when checking if the logged in user needs to be redirected from this page<br>
+<image src="readme-files/testing/401-2.png" width=50%>
 
 <br/><hr><br/>
 # Code Validation
@@ -802,16 +815,136 @@ Currently only one file consists of warnings for unused variables, PdfPreview.js
 These warnings have not been 'fixed' due to the nature of this component. The decision was made to make the PDF preview a seperate component rather than solely existing in the already complex Post component. The whole database object was required to be called or retrieved via the API in order to access the single pdf file attribute which was to be utilised in the component.
 
 ## HTML Validation
+[W3C Markup Validation Service](https://validator.w3.org/) was used to validate application HTML
+<br>
+<image src="readme-files/testing/html/root.png" width=49%>
+<image src="readme-files/testing/html/signin.png" width=49%>
+<image src="readme-files/testing/html/signup.png" width=49%>
+<image src="readme-files/testing/html/home.png" width=49%>
+<image src="readme-files/testing/html/landing-page.png" width=49%>
+<image src="readme-files/testing/html/add-post.png" width=49%>
+<image src="readme-files/testing/html/post.png" width=49%>
+<image src="readme-files/testing/html/post-edit.png" width=49%>
+<image src="readme-files/testing/html/profile-edit.png" width=49%>
+<image src="readme-files/testing/html/profile.png" width=49%>
+<image src="readme-files/testing/html/password.png" width=49%>
+<image src="readme-files/testing/html/username.png" width=49%>
+<br/><br/>
+The following info markers suggested removing trailing slashes for JSX elements and were ignored.<br>
+<image src="readme-files/testing/html/info.png" width=49%>
+
 ## CSS Validation
+[W3C Markup Validation Service](https://validator.w3.org/) was used to validate application CSS
+<br>
+<image src="readme-files/testing/css/root.png" width=49%>
+<image src="readme-files/testing/css/landing-page.png" width=49%>
+<image src="readme-files/testing/css/signin.png" width=49%>
+<image src="readme-files/testing/css/signup.png" width=49%>
+<image src="readme-files/testing/css/home.png" width=49%>
+<image src="readme-files/testing/css/add-post.png" width=49%>
+<image src="readme-files/testing/css/post.png" width=49%>
+<image src="readme-files/testing/css/post-edit.png" width=49%>
+<image src="readme-files/testing/css/profiles.png" width=49%>
+<image src="readme-files/testing/css/password.png" width=49%>
+<image src="readme-files/testing/css/username.png" width=49%>
+<br><hr>
+
 ## Lighthouse Report
 
 <br/><hr><br/>
 # Deployment
-## Heroku
-## Forking
-## Cloning
 
-<br/><hr><br/>
+[The live site can be accessed here](https://the-woodshed.herokuapp.com/)
+<br/><br/>
+To create and deploy your own version of this application please follow the steps below.
+
+## Cloudinary
+
+1. Navigate to the [Cloudinary website](https://cloudinary.com/)
+2. Log in or create and account
+3. On the main console page click "Dashboard"
+4. Here you will find all the information for the next steps
+
+## PostgreSQL
+
+1. Navigate to [ElephantSQL](https://www.elephantsql.com/) or another PostgresSQL database provider
+2. Log in or create an account
+3. Click "Create New Instance"
+4. Add a name for your database, tags and a plan (Tiny Turtle is Free)
+5. Click "Select Region"
+6. Select your cloest region
+7. Click Review
+8. On the confirm page click "Create Instance"
+9. Your database is now set up. Click on the name of your database in the dashboard to view all information for the next steps
+
+
+## Heroku
+### Back-End
+To deploy the back-end to Heroku:
+1. Log in to [Heroku](https://www.heroku.com/) (create an account if necessary)
+2. From the dashboard, click on the "New" button and select "Create new app"
+3. Choose an appropriate name for your app and select the region closest to your location
+4. Access the "Settings" tab
+5. Click on "Reveal Config Vars"
+6. Add all necessary key-value pairs:
+<image src="readme-files/heroku-vars-backend.png">
+<br/>
+Required config vars:
+- ALLOWED_HOST --> The URL of the back-end application
+- CLIENT_ORIGIN --> The URL of the front-end application
+- CLOUNDINARY_URL --> Available from Cloudinary (for image, file storage)
+- DATASABE_URL --> Available from your SQL provider
+- DISABLE_COLLECTSTATIC - "1"
+- SECRET_KEY --> Django secret key, found in env.py file. Should be unique!
+
+7. Access the "Deploy" tab
+8. Select "GitHub - Connect to GitHub" from the deployment methods and click on "Connect to GitHub"
+10. Search for the relevant GitHub repository and click it
+11. Choose automatic deploys to allow the deployed site to be updated each time code is pushed to GiHub
+12. Click "View" to view the deployed site. The back-end is now deployed!
+<br><br>
+
+### Front-end
+1. Log in to [Heroku](https://www.heroku.com/) (create an account if necessary)
+2. From the dashboard, click on the "New" button and select "Create new app"
+3. Choose an appropriate name for your app and select the region closest to your location
+4. Navigate to "Settings"
+9. Select "GitHub - Connect to GitHub" from the deployment methods and click on "Connect to GitHub"
+10. Search for the relevant GitHub repository and click it
+11. Choose automatic deploys to allow the deployed site to be updated each time code is pushed to GiHub
+12. Click "View" to view the deployed site. The site is now deployed!
+<br><br>
+## Forking
+To fork this repository on [Github](https://github.com/NickWaldock/the-woodshed) proceed with the following steps:
+1. Log it to GitHub (create an account if necessary)
+2. Locate the [GitHub Respository](https://github.com/NickWaldock/the-woodshed)
+3. On the repository page, find the 'Fork' menu in the top right, click on the small down arrow
+4. Select '+ Create a new fork'
+5. Remane repository as required
+6. Click 'Create Fork'
+7. You now have your forked version of this repository
+
+<em>* NOTE * You can find the back-end repo for this project [here](https://github.com/NickWaldock/the-woodshed-api)</em>
+<br />
+<br />
+
+## Cloning
+To clone the repository procees with the following steps:
+1. Log in to GitHub (create an account if necessary)
+2. Locate the [GitHub Respository](https://github.com/NickWaldock/the-woodshed)
+3. On the repository page, find and click on the 'Code' menu in the mid-top right of the page
+4. Choose to either download or open in GitHub Desktop,
+  - or;
+    5. Choose the HTTPS option and copy the URL to your clipboard
+    6. - To clone the repository using HTTPS, under "HTTPS", copy the url
+       - To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then copy the url
+       - To clone a repository using GitHub CLI, click GitHub CLI, then copy url
+    7. Open Terminal and change the current directory to where you want the cloned directory
+    8. Type git clone, and paste the url, press Enter to create your local clone
+<br/><br/>
+<em>* NOTE * You can find the back-end repo for this project [here](https://github.com/NickWaldock/the-woodshed-api)</em>
+
+<hr><br /><br />
 # References & Acknowledgements
 ## General Reference
 ## Code Reference
