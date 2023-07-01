@@ -29,6 +29,7 @@ function PostsPage({message, filter=''}) {
 
   const [query, setQuery] = useState('');
 
+  // Get post data
   useEffect(() => {
     const fetchPosts = async () => {
         try {
@@ -40,6 +41,7 @@ function PostsPage({message, filter=''}) {
         }
     }
     setHasLoaded(false);
+    // Timeout to delay fetching posts
     const timer = setTimeout(() => {
       fetchPosts();
     }, 1000)
@@ -53,7 +55,6 @@ function PostsPage({message, filter=''}) {
       
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
-
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form 
           className={styles.SearchBar}

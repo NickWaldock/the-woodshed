@@ -20,11 +20,13 @@ const Comment = (props) => {
     setComments,
   } = props;
 
+  // Shows comment form when state is updated to true
   const [showEditForm, setShowEditForm] = useState(false);
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
+  // Function to handle the deletion of a comment
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}/`)

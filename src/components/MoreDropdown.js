@@ -3,8 +3,7 @@ import styles from "../styles/MoreDropdown.module.css";
 import { Dropdown } from "react-bootstrap";
 import { useHistory } from "react-router";
 
-// The forwardRef is important!!
-// Dropdown needs access to the DOM node in order to position the Menu
+// Dropdown menu as gear icon
 const Gear = React.forwardRef(({ onClick }, ref) => (
   <i
     className="fa-solid fa-gear fa-2xl"
@@ -46,6 +45,7 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
   );
 };
 
+// Dropdown menu for profile to allow editing and changing password/username
 export function ProfileEditDropdown({ id }) {
   const history = useHistory();
   return (

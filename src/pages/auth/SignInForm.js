@@ -6,7 +6,6 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import logo from "../../assets/main-logo.png";
-
 import {
   Form,
   Button,
@@ -16,7 +15,7 @@ import {
   Container,
   Alert,
 } from "react-bootstrap";
-// import { SetCurrentUserContext } from "../../App";
+
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimeStamp } from "../../utils/utils";

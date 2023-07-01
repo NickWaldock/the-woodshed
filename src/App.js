@@ -3,25 +3,29 @@ import NavBar from "./components/NavBar";
 import Container from "react-bootstrap/Container";
 import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
+
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
-import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
-
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import LandingPage from "./pages/general/LandingPage";
 import Footer from "./components/Footer";
 
+import { useCurrentUser } from "./contexts/CurrentUserContext";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+// Success Alert
 export const toastAlert = () => toast("Success!")
 
+// Main Application
 function App() {
   const currentUser = useCurrentUser();
   const profile_id = currentUser?.profile_id || "";
@@ -29,7 +33,7 @@ function App() {
   return (
     <div className={styles.App}>
       <NavBar />
-      
+      {/* Alert */}
       <Container className={styles.Main}>
         <ToastContainer
         position="top-center"
@@ -43,7 +47,7 @@ function App() {
         progressClassName={styles.ToastProgress}
         bodyClassName={styles.ToastBody}
       />
-
+        {/* Routing for navigation */}
         <Switch>
           <Route exact path="/welcome" render={() => <LandingPage />} />
           <Route

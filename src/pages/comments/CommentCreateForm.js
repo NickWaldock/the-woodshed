@@ -8,14 +8,17 @@ import btnStyles from "../../styles/Button.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
+// Function for the comment form
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
 
+  // Updates the form on keyboard input
   const handleChange = (event) => {
     setContent(event.target.value);
   };
 
+  // Submits the form
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

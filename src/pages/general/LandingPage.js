@@ -41,7 +41,7 @@ const LandingPage = () => {
         </Jumbotron>
       </Container>
 
-      {/* Info Card Container */}
+      {/* Info Card Container and Cards */}
       <Container className={styles.CardContainer}>
         <Row className="mt-4">
           <Col className="col-md-6 col-12 my-2">

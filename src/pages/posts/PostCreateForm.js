@@ -10,19 +10,19 @@ import Upload from "../../assets/upload.png";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import { toastAlert } from "../../App";
 import Asset from "../../components/Asset";
 
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { Alert } from "react-bootstrap";
 import { useRedirect } from "../../hooks/useRedirect";
-import { toastAlert } from "../../App";
+
 
 
 function PostCreateForm() {
   // Redirect non-authenticated users to sign in page
   useRedirect('loggedOut');
-
 
   const [errors, setErrors] = useState({});
 
@@ -71,7 +71,6 @@ function PostCreateForm() {
 
     try {
       const {data} = await axiosReq.post('/posts/', formData);
-      // handleShowAlert();
       history.push(`/posts/${data.id}`);
       toastAlert();
     } catch(err){

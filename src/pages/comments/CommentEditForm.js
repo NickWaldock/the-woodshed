@@ -6,15 +6,18 @@ import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
+// Functino to manage editing a comment
 function CommentEditForm(props) {
   const { id, content, setShowEditForm, setComments } = props;
 
   const [formContent, setFormContent] = useState(content);
 
+  // Updates the text field on keybaord input
   const handleChange = (event) => {
     setFormContent(event.target.value);
   };
 
+  // Manages form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

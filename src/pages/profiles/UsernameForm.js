@@ -7,6 +7,11 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
+import btnStyles from "../../styles/Button.module.css";
+import appStyles from "../../App.module.css";
+import styles from "../../styles/ProfileEditForm.module.css";
+import { toastAlert } from "../../App";
+
 import { useHistory, useParams } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
 import {
@@ -14,11 +19,8 @@ import {
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
 
-import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
-import styles from "../../styles/ProfileEditForm.module.css";
-import { toastAlert } from "../../App";
 
+// Form for changing username
 const UsernameForm = () => {
   const [username, setUsername] = useState("");
   const [errors, setErrors] = useState({});
@@ -29,6 +31,7 @@ const UsernameForm = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
+  // Sets the username in the form
   useEffect(() => {
     if (currentUser?.profile_id?.toString() === id) {
       setUsername(currentUser.username);
@@ -37,6 +40,7 @@ const UsernameForm = () => {
     }
   }, [currentUser, history, id]);
 
+  // Manages submission for hte username form
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

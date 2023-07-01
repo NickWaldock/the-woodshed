@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/Avatar.module.css'
 
+// User Profile Avatar
 export const Avatar = ({src, height=45, text}) => {
   return (
     <span>

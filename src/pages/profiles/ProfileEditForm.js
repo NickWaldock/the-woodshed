@@ -53,6 +53,7 @@ const ProfileEditForm = () => {
 
   const [errors, setErrors] = useState({});
 
+  // Get profile data and populate form
   useEffect(() => {
     const handleMount = async () => {
       if (currentUser?.profile_id?.toString() === id) {
@@ -88,6 +89,7 @@ const ProfileEditForm = () => {
     handleMount();
   }, [currentUser, history, id]);
 
+  // Manage keyboard inputs to be displayed in the form
   const handleChange = (event) => {
     setProfileData({
       ...profileData,
@@ -95,9 +97,7 @@ const ProfileEditForm = () => {
     });
   };
 
-  // Form Authentication Alerts
-  // const [showAlert, setShowAlert] = useState(true);
-
+  // Manage form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -126,6 +126,7 @@ const ProfileEditForm = () => {
     }
   };
 
+  // Form fields
   const textFields = (
     <>
     <Form.Group>

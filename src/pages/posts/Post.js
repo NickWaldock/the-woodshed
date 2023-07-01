@@ -8,7 +8,6 @@ import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import PdfPreview from "./PdfPreview";
-// import toastAlert from "../../App";
 
 export const Post = (props) => {
   const {
@@ -25,15 +24,14 @@ export const Post = (props) => {
     tags,
     instrument,
     file,
-    // content,
-    // image,
     updated_at,
-    // postPage,
     setPosts,
   } = props;  
 
+  // Get current user
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
   const history = useHistory();
 
   // Redirect user to edit page function
@@ -47,9 +45,6 @@ export const Post = (props) => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
       history.push('/');
-      // This hook currently doesn't work!
-      // toastAlert();
-      console.log("delete success!")
     } catch (err) {
       console.log(err);
     }

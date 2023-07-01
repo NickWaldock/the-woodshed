@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
+// Function to redirect the user from a page depending on their authentication status
 export const useRedirect = (userAuthStatus) => {
   const history = useHistory();
 

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+// Burger Menu Logic to auto close when clicking on any part of the page
 export const useClickOutsideToggle = () => {
-  // Burger Menu Logic
   const [expanded, setExpanded] = useState(false);
   const ref = useRef(null);
   useEffect(() => {

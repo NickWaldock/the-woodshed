@@ -7,15 +7,16 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
-import { useHistory, useParams } from "react-router-dom";
-import { axiosRes } from "../../api/axiosDefaults";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/ProfileEditForm.module.css";
 import { toastAlert } from "../../App";
 
+import { useHistory, useParams } from "react-router-dom";
+import { axiosRes } from "../../api/axiosDefaults";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+
+// Form for changing user's password
 const UserPasswordForm = () => {
   const history = useHistory();
   const { id } = useParams();
@@ -29,6 +30,7 @@ const UserPasswordForm = () => {
 
   const [errors, setErrors] = useState({});
 
+  // Allow users keyboard inputs to be displayed
   const handleChange = (event) => {
     setUserData({
       ...userData,
@@ -36,13 +38,14 @@ const UserPasswordForm = () => {
     });
   };
 
+  // Redirect user if they are not the owner
   useEffect(() => {
     if (currentUser?.profile_id?.toString() !== id) {
-      // redirect user if they are not the owner of this profile
       history.push("/");
     }
   }, [currentUser, history, id]);
 
+  // Manage submission of the password change form
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

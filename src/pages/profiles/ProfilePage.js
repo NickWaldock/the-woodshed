@@ -26,6 +26,7 @@ import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 import { useRedirect } from "../../hooks/useRedirect";
 
+
 function ProfilePage() {
   // Redirect non-authenticated users to sign in page
   useRedirect('loggedOut')
@@ -41,6 +42,7 @@ function ProfilePage() {
   // Set up the empty array for user posts count
   const [profilePosts, setProfilePosts] = useState({ results: [] });
 
+  // Get profile data
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -62,6 +64,7 @@ function ProfilePage() {
     fetchData();
   }, [id, setProfileData]);
 
+  // Profile Component
   const mainProfile = (
     <>
       {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
@@ -114,11 +117,11 @@ function ProfilePage() {
               </Button>
             ))}
         </Col>
-        
       </Row>
     </>
   );
-
+  
+  // Displays the profile's authored posts
   const mainProfilePosts = (
     <>
       <hr />

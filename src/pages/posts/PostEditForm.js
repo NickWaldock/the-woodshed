@@ -35,6 +35,7 @@ function PostEditForm() {
   const history = useHistory();
   const { id } = useParams();
 
+  // Get post data
   useEffect(() => {
     const handleMount = async () => {
       try {

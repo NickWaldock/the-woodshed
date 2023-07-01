@@ -3,9 +3,11 @@ import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import { followHelper, unfollowHelper } from "../utils/utils";
 
+// Create Context objects for passing profile data to components
 const ProfileDataContext = createContext();
 const SetProfileDataContext = createContext();
 
+// profile data contexts for use in other js component files 
 export const useProfileData = () => useContext(ProfileDataContext);
 export const useSetProfileData = () => useContext(SetProfileDataContext);
 
@@ -17,6 +19,7 @@ export const ProfileDataProvider = ({ children }) => {
 
   const currentUser = useCurrentUser();
 
+  // Function to manage a user following another user
   const handleFollow = async (clickedProfile) => {
     try {
       const { data } = await axiosRes.post("/followers/", {
@@ -42,6 +45,7 @@ export const ProfileDataProvider = ({ children }) => {
     }
   };
 
+  // Funtion to manange a user unfollowing another user
   const handleUnfollow = async (clickedProfile) => {
 		console.log(clickedProfile)
     try {
@@ -66,6 +70,7 @@ export const ProfileDataProvider = ({ children }) => {
     }
   };
 
+  // Set users profile data
   useEffect(() => {
     const handleMount = async () => {
       try {
