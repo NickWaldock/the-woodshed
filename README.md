@@ -1,6 +1,6 @@
 # The Woodshed
 
-<img src="readme-files/site-screeenshots/landing-page/jumbotron.png" width="100%">
+<img src="readme-files/site-screenshots/amiresponsive.png" width="100%">
 <br/>
 
 [View the live site here](https://thewoodshed.herokuapp.com/)
@@ -92,7 +92,7 @@ This site allows users to create an account, profile, and share PDF files as wel
 
 The Woodshed has been created as the 5th portfolio project for the [Code Institue](https://codeinstitute.net) Full Stack Software Development Diploma and has no intended commerical purpose.
 
-Built using: React, Django, Bootstrap, CSS, and HTML(JSX), as well as Cloudinary for image and file storage.
+Built using: [React](https://react.dev/), [Django Rest Framework](https://www.django-rest-framework.org/), [React Bootstrap](https://react-bootstrap.netlify.app/), [CSS](https://www.w3.org/Style/CSS/Overview.en.html#:~:text=Cascading%20Style%20Sheets%20(CSS)%20is,CSS%20and%20on%20available%20software.), and [HTML(JSX)](https://www.w3schools.com/react/react_jsx.asp), as well as [Cloudinary](https://cloudinary.com/) for image and file storage, [ElephantSQL](https://www.elephantsql.com/) for database management, and [Heroku](https://www.heroku.com/) for deployment hosting.
 
 <br />
 <br />
@@ -101,21 +101,59 @@ Built using: React, Django, Bootstrap, CSS, and HTML(JSX), as well as Cloudinary
 
 ## Repos & Project Links
 - [Front-end Repository](https://github.com/NickWaldock/the-woodshed)
-- [Front-end Project Board](https://github.com/users/NickWaldock/projects/7)
-- [Back-end Repository & README](https://github.com/NickWaldock/the-woodshed-api)
-- [Back-end Project Board](https://github.com/users/NickWaldock/projects/6)
+- [Front-end Project Board](https://github.com/users/NickWaldock/projects/7)<br><br>
+- [Back-end Repository](https://github.com/NickWaldock/the-woodshed-api)
+- [Back-end Project Board](https://github.com/users/NickWaldock/projects/6)<br><br>
 - [Github Profile](https://github.com/NickWaldock)
-
-<br />
+<br><br><hr>
 
 ## Aims
-- Design and create a multi-user interactive front-end web application using HTML, CSS, and JavaScript based on component composition
-- Create a interactive front-end application that consumes custom API data
-- Demonstrate the key role that specialist front-end developers perform in modern software development teams
+- Design and create a multi-user interactive front-end web application using HTML, CSS, and JavaScript based on component composition<br><br>
+- Create a interactive front-end application that consumes custom API data<br><br>
+- Create a back-end API to allow users to store and manipulate data records<br><br>
+- Demonstrate the key role that specialist front-end developers perform in modern software development teams<br><br>
 - Maintain a consistient and simple user interface design aesthetic
 <br />
 <br />
 <hr />
+
+## Database
+[Django REST Framework](https://www.django-rest-framework.org/) was utilised for building a custom API in a seperate repository which can be viewed here: <br> --> <strong><ins>[The Woodshed API](https://github.com/NickWaldock/the-woodshed-api)</strong>
+
+[ElephantSQL](https://www.elephantsql.com/) was used to host and manage the PostgreSQL database. The database works in tandem with the REACT front-end application to manage and store data delivered via the custom API. 
+<br/><hr>
+
+### Models
+In order to fulfil the requirements of the project database [models](https://docs.djangoproject.com/en/4.2/topics/db/models/) would be required to store data. The following are the models created and used by the API to allow the users to interact with and manipulate data on the site.
+
+#### User
+[Django Auth](https://docs.djangoproject.com/en/4.2/topics/auth/) is a built in Django library that automatically manages all user creation, authorisation and authentication. This was utilised to handle the heavy lifting of user management. Features include password checking, permissions, and user management through the admin panel.
+
+
+#### <ins>***Profile Model***
+<image src="readme-files/backend/models/profile-model.png" width=70%><br>
+
+- The Profile model relates to the <a href="#user">User</a> django auth package via the <strong><em>'owner'</em></strong> model attribute in a one-to-one relationship. Meaning a user can only have a single profile within the application.<br><br>
+- <strong><em>'created_at'</em></strong> and <strong><em>'updated_at'</em></strong> timestamps that will be automatically added to the creation or updating of the profile. This data is not currently being viewed in the front-end but is available to view in the back-end admin panel (this feature has been noted as a <a href="#future-developments">future development</a>)<br><br>
+- <strong><em>'name'</em></strong> is the attribute for the user to add optionally in the front-end. One of the remits for the site is that users will eventually be able to use it to find new contacts/students. This field has been added to allow the user to add their real name to the site if they so choose<br><br>
+- <strong><em>'description'</em></strong> acts as a bio for the user. Biographical info can be added here to give context for other users as to who this profile is for, why they are there, and what their experience is and what they are likey to be posting about<br><br>
+- <strong><em>'headline'</em></strong> is a short (80 characters) text string which aims to be an attention-grabber for when a user views a profile. Inspiration for this comes from the popular social media site [Twitter](https://twitter.com)<br><br>
+- <strong><em>'instrument'</em></strong> means the user can add thier instrumental specialisms to their profile, giving context to the content they are likely to share. [Future developments](#future-developments) will offer dedicated pages for searching instrument specific content or users
+- <strong><em>'location'</em></strong>
+- <strong><em>'email'</em></strong>
+- <strong><em>'image'</em></strong>
+
+
+
+
+
+
+<br><br><hr>
+## CRUD Functionality
+
+This project incorporates CRUD (Create, Read, Update, Delete) functionality as a key feature. Users will need to be able to create, edit and update existing elements, and finally delete any created content. All content stored in the back-end is to be kept updated in the front-end rendering so changes remain apparent to the user.
+
+<br/><hr>
 
 ## Wireframes
 Wireframes were produced during the intitial development of the project to guide design and layout. Even though the product went through a design change in the early stages, this was only related to color scheme and typograpy, so the original wireframes were still valid.
@@ -225,17 +263,7 @@ Wireframes were not included for this feature as the forms are a single field. F
 <br />
 <hr />
 
-## Database
-[Django REST Framework](https://www.django-rest-framework.org/) was utilised for building a custom API in a seperate repository. Further information (including database schema) on this side of the project can be viewed here --> <ins>[The Woodshed API](https://github.com/NickWaldock/the-woodshed-api)
 
-[ElephantSQL](https://www.elephantsql.com/) was used to host and manage the PostgreSQL database. The data base works in tandem with the REACT front-end application to manage and store data delivered via the custom API. 
-<br/><hr>
-
-## CRUD Functionality
-
-This project incorporates CRUD (Create, Read, Update, Delete) functionality as a key feature. Users will need to be able to create, edit and update existing elements, and finally delete any created content. All content stored in the back-end is to be kept updated in the front-end rendering so changes remain apparent to the user.
-
-<br/><hr>
 
 ## Agile Methodology
 
@@ -253,6 +281,9 @@ Additinoally, the project board for the back-end can be viewed here: --> [Back-E
 <br/><hr>
 
 ### Milestones
+
+#### Front-end project development:
+
 With initial conceptual design complete though [wireframes](#wireframes) development was organised into key [Milestones](https://github.com/NickWaldock/the-woodshed/milestones)
 
 - Authentication & Registration
@@ -275,6 +306,17 @@ With initial conceptual design complete though [wireframes](#wireframes) develop
 
 - Documentation & Testing
     - Tests, planning, readme, and other documentation
+
+#### Back-End Project Development Milestones
+The [milestones](https://github.com/NickWaldock/the-woodshed-api/milestones) for the back-end development were managed seperately but were similar in scope to the front-end.
+- Authentication & Profiles
+- CRUD Functionality
+- User Interactivity
+- Forms
+- Deployment
+- Bugs
+- Documentation
+
 
 ### User Stories
 
@@ -780,6 +822,8 @@ A user can currently have a blank profile if they don't visit the edit profile p
 - contact user button; allow users to send a private message to other users
 - Popular profiles component can show the number of followers a profile has and could always be visible when scrolling down list pages
 - Users can click on the following or followers metric in a profile to get a list of users either following or being followed by that profile
+- Profiles contain a 'user since' data set allowing users to know how long a profile has been active on the site and how recently they have been active
+- Instrument specific pages allowing users to search profiles or posts that are instrument specific
 
 <br/><hr><br/>
 # Testing
@@ -867,6 +911,10 @@ Here is a summary of known bugs and issues discovered from the testing procedure
     </td>
   <td>SOLVED</td>
   </tr>
+  <tr>
+    <td><a href="https://github.com/NickWaldock/the-woodshed-api/issues/54">(Back-end)/profiles/url recieves a 500 error on accessing</a></td>
+    <td>SOLVED</td>
+  </tr>
 </table>
 <br/><br/>
 The following bugs persist and are permissible as part of the submission of this project:
@@ -913,17 +961,18 @@ The following info markers suggested removing trailing slashes for JSX elements 
 ## CSS Validation
 [W3C Markup Validation Service](https://validator.w3.org/) was used to validate application CSS
 <br>
-<image src="readme-files/testing/css/root.png" width=49%>
-<image src="readme-files/testing/css/landing-page.png" width=49%>
-<image src="readme-files/testing/css/signin.png" width=49%>
-<image src="readme-files/testing/css/signup.png" width=49%>
-<image src="readme-files/testing/css/home.png" width=49%>
-<image src="readme-files/testing/css/add-post.png" width=49%>
-<image src="readme-files/testing/css/post.png" width=49%>
-<image src="readme-files/testing/css/post-edit.png" width=49%>
-<image src="readme-files/testing/css/profiles.png" width=49%>
-<image src="readme-files/testing/css/password.png" width=49%>
-<image src="readme-files/testing/css/username.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/root.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/landing-page.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/signin.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/signup.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/home.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/add-post.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/post.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/post-edit.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/profiles.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/profile-edit.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/password.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/username.png" width=49%>
 <br><hr>
 
 ## Lighthouse Report
@@ -964,7 +1013,7 @@ To deploy the back-end to Heroku:
 4. Access the "Settings" tab
 5. Click on "Reveal Config Vars"
 6. Add all necessary key-value pairs:
-<image src="readme-files/heroku-vars-backend.png">
+<image src="readme-files/backend/heroku-vars-backend.png">
 <br/>
 Required config vars:
 - ALLOWED_HOST --> The URL of the back-end application
@@ -1025,6 +1074,9 @@ To clone the repository procees with the following steps:
 # References & Acknowledgements
 ## General Reference
 ## Code Reference
+
+Using validators for file type (pdf)
+https://stackoverflow.com/questions/69054680/safe-way-to-validate-file-extension-in-serializer-django
 
 - For adding PDF file types to the add post form
   https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-accept-only-pdf-and-xls
