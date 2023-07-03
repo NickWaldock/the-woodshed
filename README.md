@@ -1069,28 +1069,63 @@ The following info markers suggested removing trailing slashes for JSX elements 
 <image src="readme-files/testing/html/info.png" width=49%>
 
 ## CSS Validation
-[W3C Markup Validation Service](https://validator.w3.org/) was used to validate application CSS via uploading the individual CSS module files.
+[W3C Markup Validation Service](https://validator.w3.org/) was used to validate application CSS via uploading the individual CSS module files. All CSS files pass the W3C Validator with no errors. Some warnings show (detailed below) but these are only due to W3C not validating vender extensions.<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p><br>
+
+Only one error was found during validation: <strong>LandingPage.module.css</strong>
+<table>
+<tr>
+  <td><image src="/workspace/the-woodshed/readme-files/testing/css/landing-fail.png" width=100%></td>
+  <td>This was due to not having a correct flex class. This was changed to <em>"flex: auto;"</em> which now passes validation --></td>
+  <td><image src="/workspace/the-woodshed/readme-files/testing/css/landing-pass.png" width=100%></td>
+</tr>
+</table><br>
+The warning in this file and the are relating to the use of vendor extensions in rendering a box shadow on the landing page. Other similar occuring warnings are detailed below.<br>
+<details open>
+<summary><ins><strong>Additional Vendor Extension Warnings</strong></summary>
+<br>
+For creating an outline in the thumb 'like' icon<br>
+<image src="/workspace/the-woodshed/readme-files/testing/css/post-warning.png" width=49%><br><br>
+For use of a box shadow in the upload image container in the 'Add Post' page
+<image src="/workspace/the-woodshed/readme-files/testing/css/post-create-warning.png" width=49%><br><br>
+CSS created by REACT
+<image src="/workspace/the-woodshed/readme-files/testing/css/index-warnings.png" width=100%>
+</details>
+<br>
+<details open>
+<summary><ins><strong>CSS File Validations</strong></summary>
 <br>
 
-Landing Page - Fail and Warnings
-
-
-
-
-
-<br>
-<image src="/workspace/the-woodshed/readme-files/testing/css/root.png" width=49%>
-<image src="/workspace/the-woodshed/readme-files/testing/css/landing-page.png" width=49%>
-<image src="/workspace/the-woodshed/readme-files/testing/css/signin.png" width=49%>
-<image src="/workspace/the-woodshed/readme-files/testing/css/signup.png" width=49%>
-<image src="/workspace/the-woodshed/readme-files/testing/css/home.png" width=49%>
-<image src="/workspace/the-woodshed/readme-files/testing/css/add-post.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/index.png" width=49%>
 <image src="/workspace/the-woodshed/readme-files/testing/css/post.png" width=49%>
-<image src="/workspace/the-woodshed/readme-files/testing/css/post-edit.png" width=49%>
-<image src="/workspace/the-woodshed/readme-files/testing/css/profiles.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/app.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/asset.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/avatar.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/button.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/comment-form.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/comment.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/dropdown.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/footer.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/navbar.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/pdf.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/popular.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/post-create.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/posts.png" width=49%>
 <image src="/workspace/the-woodshed/readme-files/testing/css/profile-edit.png" width=49%>
-<image src="/workspace/the-woodshed/readme-files/testing/css/password.png" width=49%>
-<image src="/workspace/the-woodshed/readme-files/testing/css/username.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/profile-page.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/profile.png" width=49%>
+<image src="/workspace/the-woodshed/readme-files/testing/css/signin.png" width=49%>
+</details>
+
+
+
+
+
 <br><hr>
 
 ## Lighthouse Report
