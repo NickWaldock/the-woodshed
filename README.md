@@ -117,10 +117,12 @@ Built using: [React](https://react.dev/), [Django Rest Framework](https://www.dj
 
 ## Aims
 - Design and create a multi-user interactive front-end web application using HTML, CSS, and JavaScript based on component composition<br><br>
-- Create a interactive front-end application that consumes custom API data<br><br>
+- Create a interactive front-end application that consumes custom API data and has CRUD functionality<br><br>
 - Create a back-end API to allow users to store and manipulate data records<br><br>
 - Demonstrate the key role that specialist front-end developers perform in modern software development teams<br><br>
 - Maintain a consistient and simple user interface design aesthetic
+- Create an application designed for musicians and music teachers to act as a platorm for sharing musically educational and/or music-related file content
+- Create an application designed for musicians and music teachers to interact with one another through likes, comments, and follow; where they can share ideas and gain new students via their presence on the site
 <br />
 <br />
 <hr />
@@ -130,6 +132,12 @@ Built using: [React](https://react.dev/), [Django Rest Framework](https://www.dj
 
 [ElephantSQL](https://www.elephantsql.com/) was used to host and manage the PostgreSQL database. The database works in tandem with the REACT front-end application to manage and store data delivered via the custom API. 
 <br/><br>
+
+### Database Schema
+The following database design was decided upon during development to facilitate reaching the project's purpose and aims<br>
+<image src="readme-files/backend/database.png" width=70%><br>
+
+<em>*Database schema created using [LucidChart](https://www.lucidchart.come)</em><br><br>
 
 ### Models
 In order to fulfil the requirements of the project database [models](https://docs.djangoproject.com/en/4.2/topics/db/models/) would be required to store data. The following are the models created and used by the API to allow the users to interact with and manipulate data on the site.<br><br>
@@ -256,9 +264,6 @@ class Meta:
 ([Date Time Field](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#datetimefield)) provides a current time stamp when the relationship was established. <br><em>*Note: This field does not require an `updated_at` model attribute. This is because a 'like' instance will either exist or not. If a user is to 'unlike' a post, the 'like' instance is removed completely and not updated. A repeated 'like' action will create a new 'like' instance</em>
 <br><br><hr>
 
-### Database Schema
-
-<br><br><hr>
 ## CRUD Functionality
 
 This project incorporates CRUD (Create, Read, Update, Delete) functionality as a key feature. Users will need to be able to create, edit and update existing elements, and finally delete any created content. All content stored in the back-end is to be kept updated in the front-end rendering so changes remain apparent to the user.
