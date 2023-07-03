@@ -915,25 +915,34 @@ The following is a list of all of the current main features with descriptions of
 <br/>
 
 # Future Developments
+This project inherently holds a great deal of potential developmental possibilities both in terms of file sharing, and as a musicians practice companion. Below is a list of possible future developments that are currently out of scope but could be considered for further iterations of the project.
 
-All liked/saved posts can be organised into self-made categories
-Post list descriptions to preview text in case the post has a larger amount of text
-delete profile
-tutor profile, student followers
-larger pdf file sizes
-additional fiile formats
-in profiles, instuments in profile can be links that lead to posts or other profiles related to that instrument
-Practice Companion - metronone, play alongs, audio
-More complex profile component - to allow for larger expressions of biograpical data, and more data fields
-Users can view which other profiles a profile is following or being followed by
-A user can currently have a blank profile if they don't visit the edit profile page, they can either have a blank profile or have to provide certain information. A more detailed sign up page, or profile creation page could be included so users can create a profile during the process of signing up to the site
-- contact user button; allow users to send a private message to other users
-- Popular profiles component can show the number of followers a profile has and could always be visible when scrolling down list pages
+
+### General Improvements
+- In the post list views the post component descriptions could preview a few lines if the content with a 'show more' button, if the content is over a certain length
+- Full user profile CRUD functionality - the abiltiy for a user to delete thier profile and their user instance if they wihed to leave the site
+- Larger PDF file sizes. Post handling for larger PDF file sizes, not be previewed in list views (to save data loading) but have links to view in seperate page. Better for large PDFs such as orchestral scores, section parts, which can inherently be much larger than a typical PDF
+- Additional file formats. Incorporate additional file formats that musicians commonly use: firstly other image files such as PNG, and JPEG but also including music-specific formats such as: [MIDI](https://en.wikipedia.org/wiki/MIDI), [Sibelius](https://www.avid.com/sibelius?gclid=CjwKCAjw44mlBhAQEiwAqP3eVsvE7t6X28TIr8thw0TbNdghx0F1i_sEYJt8T1GwbRMIVVRAdDPtWhoCre4QAvD_BwE), [MusicXML](https://en.wikipedia.org/wiki/MusicXML), [iReal Pro HTML](https://www.irealpro.com/ireal-pro-file-format), or [JAM](https://en.wikipedia.org/wiki/JAM_notation) to mention a few. Previews and full page expressions of these filetypes in components would need to be tailored.
+- Media Player. Users can upload audio (mp3/WAV/AIFF) alongside their PDF, a basic media player allows the user to play the audio whilst reading along with the PDF
+- Extended Profiles: Instuments listed in a user's profile can be clicked on and lead to posts or other profiles related to that particular instrument
+- User notes: Users can make their own private notes on a post or PDF when they have saved it (currently 'liked'). These notes could be made public or kept private
+- More Complex Profile Component: To allow for larger expressions of biograpical data such as: social/web links, and video/audio content embedding as examples of performance style
+- Users could view which other profiles a profile is following or being followed by
 - Users can click on the following or followers metric in a profile to get a list of users either following or being followed by that profile
-- Profiles contain a 'user since' data set allowing users to know how long a profile has been active on the site and how recently they have been active
-- Instrument specific pages allowing users to search profiles or posts that are instrument specific
+- A user can currently have a blank profile if they do not visit the edit profile page to add additional profile content. A more detailed sign up page, or profile creation page could be included so users can create a profile during the process of signing up to the site
+- Contact User Button: Allow users to send a private message to other users, or request to contact the user which the recipient user would have to allow
+- The Popular Profiles component could show the number of followers a profile has and the whole component could always be visible when scrolling down list pages
+- User Since: Profiles contain a 'user since' data display allowing users to know how long a profile has been active on the site and how recently they have been active
+- Instrument Specific Pages: allowing users to search profiles or posts that are instrument specific
+
+
+### Extended Scope
+- Users could apply to admins for a verified Tutor status to add to their profile. Users could add a status of Tutor, Student, or Professional to their profile
+- Practice Companion: The app could contain a component dedicated as a practice companion and include tools for users to work with the PDF content immediately. Tools such as: a metric-meter adjustable and customisable metronome, pitch tuner,
+- Habit Tracker Component: Users can track their progress on the site and view analytics on their interactions. This component would be particularly useful/applicable if the application has the above Practice Companion component. Users could track data such as: number of times practiced, practice duration, streaks, self-efficacy reporting, and note-taking
+- Users could post video tutorials alongside their PDFs content
 - Location can be developed to utilise a google maps API for generalised location display, or an ability for users to search for profiles in a generalised and localised area
-- More robust file validation for PDFs or abiltiy to upload different filetypes that can be previewed and renderes and that behave similarly to the current PDFs
+- More robust file validation for PDFs or abiltiy to upload different filetypes that can be previewed and renderes and that behave similarly to the current PDFs. Protection agains users attempting to circumvent basic PDF validation by changing filetype suffix to ".pdf"
 
 <br/><hr><br/>
 # Testing
@@ -1052,6 +1061,8 @@ These warnings have not been 'fixed' due to the nature of this component. The de
 ## HTML Validation
 [W3C Markup Validation Service](https://validator.w3.org/) was used to validate application HTML
 <br>
+<details open>
+<summary><ins><strong>HTML Validation Results</strong></summary>
 <image src="readme-files/testing/html/root.png" width=49%>
 <image src="readme-files/testing/html/signin.png" width=49%>
 <image src="readme-files/testing/html/signup.png" width=49%>
@@ -1064,8 +1075,10 @@ These warnings have not been 'fixed' due to the nature of this component. The de
 <image src="readme-files/testing/html/profile.png" width=49%>
 <image src="readme-files/testing/html/password.png" width=49%>
 <image src="readme-files/testing/html/username.png" width=49%>
-<br/><br/>
+</details>
+<br/>
 The following info markers suggested removing trailing slashes for JSX elements and were ignored.<br>
+
 <image src="readme-files/testing/html/info.png" width=49%>
 
 ## CSS Validation
