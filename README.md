@@ -16,14 +16,15 @@
     - 2.2 [Aims](#aims)
     - 2.3 [Wireframes](#wireframes)
     - 2.4 [Database](#database)
-        - 2.4.1 [Models](#models)
-            - [User Authorisation](#user-authorisation)
-            - [Profile Model](#profile-model)
-            - [Post Model](#post-model)
-            - [Comment Model](#comment-model)
-            - [Like Model](#like-model)
-            - [Follower Model](#follower-model)
-        - 2.4.2 [Database Schema]()
+      - 2.4.1 [Database Schema](#database-schema)
+      - 2.4.2 [Models](#models)
+          - [User Model](#user-model)
+          - [Profile Model](#profile-model)
+          - [Post Model](#post-model)
+          - [Comment Model](#comment-model)
+          - [Like Model](#like-model)
+          - [Follower Model](#follower-model)
+      
     - 2.5 [CRUD](#crud)
     - 2.6 [Agile Methodology](#agile-methodology)
         - [Milestones](#milestones)
@@ -134,7 +135,7 @@ Built using: [React](https://react.dev/), [Django Rest Framework](https://www.dj
 <br/><br>
 
 ### Database Schema
-The following database design was decided upon during development to facilitate reaching the project's purpose and aims<br>
+The following database design was decided upon during development to facilitate reaching the project's purpose and [aims](#aims)<br>
 <image src="readme-files/backend/database.png" width=70%><br>
 
 <em>*Database schema created using [LucidChart](https://www.lucidchart.come)</em><br><br>
@@ -142,7 +143,7 @@ The following database design was decided upon during development to facilitate 
 ### Models
 In order to fulfil the requirements of the project database [models](https://docs.djangoproject.com/en/4.2/topics/db/models/) would be required to store data. The following are the models created and used by the API to allow the users to interact with and manipulate data on the site.<br><br>
 
-#### <ins>***User Authorisation***
+#### <ins>***User Model***
 [Django Auth](https://docs.djangoproject.com/en/4.2/topics/auth/) is a built in Django library that automatically manages all user creation, authorisation and authentication. This was utilised to handle the heavy lifting of user management. Features include password checking, permissions, and user management through the admin panel.<br><br>
 
 
@@ -271,10 +272,7 @@ This project incorporates CRUD (Create, Read, Update, Delete) functionality as a
 <br/><hr>
 
 ## Wireframes
-Wireframes were produced during the intitial development of the project to guide design and layout. Even though the product went through a design change in the early stages, this was only related to color scheme and typograpy, so the original wireframes were still valid.
-
-<br />
-<hr />
+Wireframes were produced during the intitial development of the project to guide design and layout. Even though the product went through a design change in the early stages, this was only related to color scheme and typograpy, so the original wireframes were still valid.<br /><br>
 
 <ins>***Landing Page***</ins><br/>
 The Landing Page is a simple Jumbotron design front and center including the site name, headline, and logo which acts as a quick sign-in button for users familiar with the site. The Navbar contains the traditional sign in and sign up links, and the brand logo on the left hand side, this exists on every page including on mobile views.
@@ -307,7 +305,6 @@ The Sign Up page is styled exactly the same as the Sign In page with the excepti
     </td>
   </tr>
 </table>
-<br />
 <hr />
 
 <ins>***Home / Feed / Liked***</ins><br/>
@@ -329,9 +326,7 @@ A seach bar sits just below the navbar for easy searching of posts.
 The Popular Profiles segment is a component that will exists on all list-based pages. It shows popular profiles on the site with user's avatars, username, and the option to follow/unfollow depending on followed status. In mobile view this moves to the top of the page above the search bar and will show a maximum of 4 avatars.
 
 Finally the posts themselves are rendered on a background the help them standout from the main site background. Each post element includes all of the post details: Title, subtitle, username and avatar of the author, date last updated, the instrument the post is designed for, and relevant user added tags and notes. Just before the PDF preview is rendered a button is available which will open the PDF in a new tab and in full screen with the option to download. 
-<br />
-<br />
-<hr />
+<br /><br /><hr />
 
 <ins>***Add Post***</ins><br/>
 This page contains a form which allows the user to upload a new post. The PDF upload area is kept seperate from the form for ease of use. The form contains the input fields for the post model including: Title, Subtitle, Description (which displays as 'Notes' in the later rendering), Instrument, Tags, and finally two buttons, one to submit the form and the other to cancel and retun the user to thier previous page.
@@ -357,7 +352,6 @@ Finally, underneath the profile header all posts relating to that user are rende
     </td>
   </tr>
 </table>
-<br />
 <hr />
 
 <ins>***Edit Profile***</ins><br/>
@@ -511,7 +505,6 @@ Axios interceptors
 Toast
 React Bootstrap
 <br/><hr>
-
 
 # Main Features
 The following is a list of all of the current main features with descriptions of functionality.
@@ -913,7 +906,7 @@ The following is a list of all of the current main features with descriptions of
   </tr>
   <tr>
     <td>
-      <image src="readme-files/site-screenshots/utilities/alert.png" width=100%>
+      <image src="readme-files/site-screenshots/utilities/alert.png" width=70%>
     </td>
   </tr>
 </table>
@@ -1036,13 +1029,13 @@ Here is a summary of known bugs and issues discovered from the testing procedure
 <br/><br/>
 The following bugs persist and are permissible as part of the submission of this project:
 <br/><br/>
-400 - Bad Request: Occurs when submitting incorrect form data
+<strong>400 - Bad Request</strong>: Occurs when submitting incorrect form data
 <image src="readme-files/testing/400.png" width=50%>
 <br/><br/>
-401 - Unorthorised: Occurs when an accesses token has expired and is refreshed in the background
+<strong>401 - Unauthorised</strong>: Occurs when an accesses token has expired and is refreshed in the background
 <image src="readme-files/testing/401-1.png" width=50%>
 <br/><br/>
-401 - Unorthorised: Occurs when navigating to the sign in or sign up page when not logged in, this console error occurs when checking if the logged in user needs to be redirected from this page<br>
+<strong>401 - Unauthorised</strong>: Occurs when navigating to the sign in or sign up page when not logged in, this console error occurs when checking if the logged in user needs to be redirected from this page<br>
 <image src="readme-files/testing/401-2.png" width=50%>
 
 <br/><hr><br/>
@@ -1076,7 +1069,15 @@ The following info markers suggested removing trailing slashes for JSX elements 
 <image src="readme-files/testing/html/info.png" width=49%>
 
 ## CSS Validation
-[W3C Markup Validation Service](https://validator.w3.org/) was used to validate application CSS
+[W3C Markup Validation Service](https://validator.w3.org/) was used to validate application CSS via uploading the individual CSS module files.
+<br>
+
+Landing Page - Fail and Warnings
+
+
+
+
+
 <br>
 <image src="/workspace/the-woodshed/readme-files/testing/css/root.png" width=49%>
 <image src="/workspace/the-woodshed/readme-files/testing/css/landing-page.png" width=49%>
@@ -1101,14 +1102,14 @@ The following info markers suggested removing trailing slashes for JSX elements 
 <br/><br/>
 To create and deploy your own version of this application please follow the steps below.
 
-## Cloudinary
+## <ins>Cloudinary
 
 1. Navigate to the [Cloudinary website](https://cloudinary.com/)
 2. Log in or create and account
 3. On the main console page click "Dashboard"
 4. Here you will find all the information for the next steps
 
-## PostgreSQL
+## <ins>PostgreSQL
 
 1. Navigate to [ElephantSQL](https://www.elephantsql.com/) or another PostgresSQL database provider
 2. Log in or create an account
@@ -1121,8 +1122,8 @@ To create and deploy your own version of this application please follow the step
 9. Your database is now set up. Click on the name of your database in the dashboard to view all information for the next steps
 
 
-## Heroku
-### Back-End
+## <ins>Heroku
+### <em>Back-End</em>
 To deploy the back-end to Heroku:
 1. Log in to [Heroku](https://www.heroku.com/) (create an account if necessary)
 2. From the dashboard, click on the "New" button and select "Create new app"
@@ -1147,7 +1148,7 @@ Required config vars:
 12. Click "View" to view the deployed site. The back-end is now deployed!
 <br><br>
 
-### Front-end
+### <em>Front-end</em>
 1. Log in to [Heroku](https://www.heroku.com/) (create an account if necessary)
 2. From the dashboard, click on the "New" button and select "Create new app"
 3. Choose an appropriate name for your app and select the region closest to your location
@@ -1157,7 +1158,8 @@ Required config vars:
 11. Choose automatic deploys to allow the deployed site to be updated each time code is pushed to GiHub
 12. Click "View" to view the deployed site. The site is now deployed!
 <br><br>
-## Forking
+
+## <ins>Forking
 To fork this repository on [Github](https://github.com/NickWaldock/the-woodshed) proceed with the following steps:
 1. Log it to GitHub (create an account if necessary)
 2. Locate the [GitHub Respository](https://github.com/NickWaldock/the-woodshed)
@@ -1167,11 +1169,11 @@ To fork this repository on [Github](https://github.com/NickWaldock/the-woodshed)
 6. Click 'Create Fork'
 7. You now have your forked version of this repository
 
-<em>* NOTE * You can find the back-end repo for this project [here](https://github.com/NickWaldock/the-woodshed-api)</em>
+<em>* Note * You can find the back-end repo for this project [here](https://github.com/NickWaldock/the-woodshed-api)</em>
 <br />
 <br />
 
-## Cloning
+## <ins>Cloning
 To clone the repository procees with the following steps:
 1. Log in to GitHub (create an account if necessary)
 2. Locate the [GitHub Respository](https://github.com/NickWaldock/the-woodshed)
@@ -1188,6 +1190,7 @@ To clone the repository procees with the following steps:
 <em>* NOTE * You can find the back-end repo for this project [here](https://github.com/NickWaldock/the-woodshed-api)</em>
 
 <hr><br /><br />
+
 # References & Acknowledgements
 ## General Reference
 ## Code Reference
