@@ -78,6 +78,8 @@
     - 8.1 [Cloudinary](#cloudinary)
     - 8.2 [PostgresSQL](#postgresql)
     - 8.3 [Heroku](#heroku)
+        - [Back-End](#back-end)
+        - [Front-End](#front-end)
     - 8.4 [Forking](#forking)
     - 8.5 [Cloning](#cloning)
 
@@ -480,11 +482,22 @@ Tasks were assigned a status in the project [kanban board](https://github.com/us
 <image src="readme-files/site-screenshots/utilities/fonts.png" width=70%>
 
 With sans-serif as back-up fonts
-<br/><hr>
+<br/><br>
 
 ### Colors
+
+[Colormind](http://colormind.io/) is an AI-based colour scheme generator that was used to determine the projects colour scheme.
+<image src="readme-files/site-screenshots/utilities/colors.png">
+The following colour pallete was used in the develpment of this project. With the exception of #87AA8D (Green). This colour hasn't yet found a place in the project, but it fits well with the others in the pallette and will be used at a future date.
+
+
 ### General Styling
 <br/><hr>
+
+
+### Change of Style
+During the development process the main logo design and colour scheme was adapted. The original logo, font, and colours (below) were deemed to give the wrong impression, relating more to a literal tool workshop or tool supplier site rather than a more creativly-based project. The original logo, fonts and colors were created by [Looka](https://www.looka.com) which was also responsible for the current logo and logo fonts <br>
+<image src="readme-files/site-screenshots/old-style/old-logo.png" width=50%>
 
 # Technologies
 ## React
@@ -1049,14 +1062,15 @@ The following bugs persist and are permissible as part of the submission of this
 
 <br/><hr><br/>
 # Code Validation
-HTML, CSS, were validated using [W3C](https://validator.w3.org/)
 
 ## React Validation
-[ES Lint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) was installed into VS code for continual code validation during the project development. Every JavaScript file was checked for errors or warnings and dealth with accordingly.
+[ES Lint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) was installed into VS code for continual code validation during the project development. Every JavaScript file was checked for errors or warnings and dealth with accordingly.<br><br>
 
-Currently only one file consists of warnings for unused variables, PdfPreview.js.
-<image src="readme-files/testing/eslint-warnings.png" width=100%>
-These warnings have not been 'fixed' due to the nature of this component. The decision was made to make the PDF preview a seperate component rather than solely existing in the already complex Post component. The whole database object was required to be called or retrieved via the API in order to access the single pdf file attribute which was to be utilised in the component.
+At time of deployment, only one file consists of a warning for an unused variable, when the project is compiled; PdfPreview.js.
+<image src="readme-files/testing/eslint-warning.png" width=70%>
+<br><br>
+
+No other issues with the [React JavaScript](https://react.dev/) code are present.
 
 ## HTML Validation
 [W3C Markup Validation Service](https://validator.w3.org/) was used to validate application HTML
