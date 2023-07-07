@@ -1,6 +1,6 @@
 # The Woodshed
 
-<img src="readme-files/site-screenshots/amiresponsive.png" width="100%">
+<img src="readme-files/site-screenshots/utilities/amiresponsive.png" width="100%">
 <br/>
 
 [View the live site here](https://thewoodshed.herokuapp.com/)
@@ -38,7 +38,11 @@
 
 3. [Technologies](#technologies)
     - 3.1 [React](#react)
-    - 3.2 [Bootstrap]()
+        - [Toastify](#toastify)
+        - [Infinite Scroll](#infinite-scroll)
+        - [Axios](#axios)
+        - [Router](#router)
+    - 3.2 [Bootstrap](#bootstrap)
     - 3.3 [Tools](#tools)
 
 4. [Main Features](#main-features)
@@ -498,11 +502,53 @@ The following colour pallete was used in the develpment of this project. With th
 ### Change of Style
 During the development process the main logo design and colour scheme was adapted. The original logo, font, and colours (below) were deemed to give the wrong impression, relating more to a literal tool workshop or tool supplier site rather than a more creativly-based project. The original logo, fonts and colors were created by [Looka](https://www.looka.com) which was also responsible for the current logo and logo fonts <br>
 <image src="readme-files/site-screenshots/old-style/old-logo.png" width=50%>
+<br><hr>
 
 # Technologies
 ## React
+[REACT](https://react.dev/) is a popular JavaScript library that creates interfaces out of individualised components that combine to create the users screen experience.
+
+
+### Toastify
+[Toastify](https://www.npmjs.com/package/react-toastify) is s React library for creating custom pop-up alerts. In this project I wanted to utilise a custom alert that wasn't the typical bootstrap alert style. This alert has a progress bar that indicated to the user when it will dissapear, it also has an animation effect when entering the screen and leaving the screen. The alert is shown when a user changes data in the database such as a post or profile update or submits a form.
+<br>
+<image src="readme-files/site-screenshots/utilities/alert.png" width=50%>
+
+### Infinite Scroll
+The [Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) component for React is a feature that adds data when a user scrolls down the page, saving data loading times by avoiding the requirement to load all list post data at once.
+
+### Axios
+The [Axios](https://www.npmjs.com/package/react-axios) library tells the react app to make requests to the [API](https://github.com/NickWaldock/the-woodshed-api)
+
+It also utilies [Interceptors](https://lightrains.com/blogs/axios-intercepetors-react/) automatically intercept API requests and respones allowing custom code to be exectued before the action is complete. In this project interceptors were used for two main applications:
+- <strong>Response:</strong> Listen for a 401
+ ([access token](https://jwt.io) expired) response from the API, refresh the access token, repeat the request again. Keeps the user logged-in for upto 24hrs
+
+- <strong>Request:</strong> Intercepts any request the React application makes to the 
+[API](https://github.com/NickWaldock/the-woodshed-api) that requires the user to be logged-in to retrieve (such as retireving a single post instance), refreshes the user's [access token](https://jwt.io) before the request is made
+
+<br><br>
+
+[PostPage.js](https://github.com/NickWaldock/the-woodshed/blob/main/src/pages/posts/PostPage.js):<br>
+<image src="readme-files/code-screenshots/axios.png">
+<br>Here axios intercepts the data request to the API (checking the user's access token is valid or refreshing it) before setting the data for the post and comments.
+<br><br>
+
+### Router
+The [React Router](https://reactrouter.com/en/main/start/overview) enables "Client-side routing": <br><br>
+<em>"In traditional websites, the browser requests a document from a web server, downloads and evaluates CSS and JavaScript assets, and renders the HTML sent from the server. When the user clicks a link, it starts the process all over again for a new page.
+
+Client side routing allows your app to update the URL from a link click without making another request for another document from the server. Instead, your app can immediately render some new UI and make data requests with fetch to update the page with new information.
+
+This enables faster user experiences because the browser doesn't need to request an entirely new document or re-evaluate CSS and JavaScript assets for the next page. It also enables more dynamic user experiences with things like animation."</em> - from [React Router](https://reactrouter.com/en/main/start/overview)<br><br>
+<image src="readme-files/code-screenshots/route.png"><br>
+Here the routes for component to allow the user to sign in, sign up, create a post, view a specific post, and edit a specific post are displayed. ([App.js](https://github.com/NickWaldock/the-woodshed/blob/main/src/App.js))
+
 ## Bootstrap
+This project utilises [React Bootstrap](https://react-bootstrap.netlify.app) for general page and component layout and organisation. Similar to traditional [Bootstrap](https://getbootstrap.com), this library is built specificially for use with React.
+
 ## Tools
+The following tools were used in development:
 
 - PNGs
   - https://pngtree.com/
@@ -512,11 +558,6 @@ During the development process the main logo design and colour scheme was adapte
   https://www.cssmatic.com/box-shadow
   http://colormind.io/bootstrap/#
 
-
-Axios
-Axios interceptors
-Toast
-React Bootstrap
 <br/><hr>
 
 # Main Features
