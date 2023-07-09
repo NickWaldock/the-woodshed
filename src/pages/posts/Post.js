@@ -1,11 +1,17 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Media from "react-bootstrap/Media";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Button, Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { axiosRes } from "../../api/axiosDefaults";
+
 import { Avatar } from "../../components/Avatar";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import PdfPreview from "./PdfPreview";
 

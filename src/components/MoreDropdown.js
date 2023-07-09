@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/MoreDropdown.module.css";
-import { Dropdown } from "react-bootstrap";
+import Dropdown from "react-bootstrap/Dropdown";
 import { useHistory } from "react-router";
 
 // Dropdown menu as gear icon

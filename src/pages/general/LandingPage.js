@@ -1,13 +1,13 @@
-import {
-  Image,
-  Jumbotron,
-  Container,
-  Card,
-  Button,
-  Row,
-  Col,
-} from "react-bootstrap";
+import Image from "react-bootstrap/Image";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import styles from "../../styles/LandingPage.module.css";
+import btnStyles from "../../styles/Button.module.css";
+
 import React from "react";
 import logo from "../../assets/logo-1-nobg.png";
 import cello from "../../assets/landing-page-imgs/cello.png";
@@ -19,7 +19,7 @@ import singer2 from "../../assets/landing-page-imgs/singer-2.png";
 import trumpet from "../../assets/landing-page-imgs/trumpet.png";
 import violin from "../../assets/landing-page-imgs/violin.png";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import btnStyles from "../../styles/Button.module.css";
+
 
 const LandingPage = () => {
   return (

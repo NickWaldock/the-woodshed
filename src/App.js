@@ -16,12 +16,13 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import LandingPage from "./pages/general/LandingPage";
 import Footer from "./components/Footer";
+import NotFound from "./components/NotFound";
 
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import NotFound from "./components/NotFound";
+
 
 // Success Alert
 export const toastAlert = () => toast("Success!")

@@ -1,7 +1,7 @@
 import React from "react";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PopularProfiles.module.css"
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
 import { useProfileData } from "../../contexts/ProfileDataContext";
