@@ -43,7 +43,13 @@
         - [Axios](#axios)
         - [Router](#router)
     - 3.2 [Bootstrap](#bootstrap)
-    - 3.3 [Tools](#tools)
+    - 3.3 [API](#api)
+        - [Django Rest Framework](#django-rest-framework)
+        - [Django Rest Auth](#django-rest-auth)
+        - [Django All Auth](#django-all-auth)
+        - [Simple JWT](#simple-jwt)
+    - 3.4 [Cloudinary](#cloudinary-1)
+    - 3.5 [Additional Tools](#additional-tools)
 
 4. [Main Features](#main-features)
     - 4.1 [Logo](#logo)
@@ -508,7 +514,6 @@ During the development process the main logo design and colour scheme was adapte
 ## React
 [REACT](https://react.dev/) is a popular JavaScript library that creates interfaces out of individualised components that combine to create the users screen experience.
 
-
 ### Toastify
 [Toastify](https://www.npmjs.com/package/react-toastify) is s React library for creating custom pop-up alerts. In this project I wanted to utilise a custom alert that wasn't the typical bootstrap alert style. This alert has a progress bar that indicated to the user when it will dissapear, it also has an animation effect when entering the screen and leaving the screen. The alert is shown when a user changes data in the database such as a post or profile update or submits a form.
 <br>
@@ -547,16 +552,40 @@ Here the routes for component to allow the user to sign in, sign up, create a po
 ## Bootstrap
 This project utilises [React Bootstrap](https://react-bootstrap.netlify.app) for general page and component layout and organisation. Similar to traditional [Bootstrap](https://getbootstrap.com), this library is built specificially for use with React.
 
-## Tools
-The following tools were used in development:
+## API
 
-- PNGs
-  - https://pngtree.com/
-  - https://webcode.tools/generators/css/keyframe-animation
-- Font Awesome
-- Box shadow generator
-  https://www.cssmatic.com/box-shadow
-  http://colormind.io/bootstrap/#
+### [Django Rest Framework](https://www.django-rest-framework.org/)
+The custom API was constructed using DRF, a [Django](https://www.djangoproject.com/) framework built using the [Python](https://www.python.org/) programming language. DRF is a popular framework for developing web application APIs and includes features such as [serialization](https://www.django-rest-framework.org/api-guide/serializers/) which <em>"allow complex data such as querysets and model instances to be converted to native Python datatypes that can then be easily rendered into JSON, XML or other content types. Serializers also provide deserialization, allowing parsed data to be converted back into complex types after first validating the incoming data."</em>
+
+### [Django Rest Auth](https://django-rest-auth.readthedocs.io/en/latest/)
+Creates DRF API endpoints for handling user registration, essentially givig a user site credentials to that can be validated by Django Allauth (below)
+
+### [Django All Auth](https://django-rest-auth.readthedocs.io/en/latest/index.html)
+A [DRF](https://www.django-rest-framework.org/) library that handles user registration and authentication tasks and additional user management requirements
+
+### [Simple JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/) 
+A [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) authentication plugin for [DRF](https://www.django-rest-framework.org/). It provides user authentication communication between the client in the front-end and server in the back-end so the user can be validated to access the features of the application
+
+## Cloudinary
+[Cloudinary](https://cloudinary.com/) is a cloud-based image and file hosting site. In this project all profile images and PDF files are stored on this platform. URLs for files are saved to the relevant database instances 
+
+For steps on using Cloudinary for your version of this project click [here](#deployment)
+<br><br>
+
+## Additional Tools
+The following additional tools were used in development:
+- [Balsamiq](https://balsamiq.com/): for wireframe mock-up
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
+- [Chrome React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [Colormind](http://colormind.io/bootstrap/#): an AI Color Pallete Generator
+- [CSS Matic](https://www.cssmatic.com/box-shadow): for shadow effects on some elements
+- [Font Awesome](https://fontawesome.com/): for icons
+- [Github Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects): for project management
+- [GitPod](https://gitpod.io/): online IDE
+- [Lucid Charts](https://lucidchart.com/): for database planning and diagram
+- [PNGs](https://pngtree.com/): for creating/converting PNG files
+- [Unsplash](https://unsplash.com/): stock images
+- [Webcode](https://webcode.tools/generators/css/keyframe-animation): for CSS animation
 
 <br/><hr>
 
@@ -1189,10 +1218,6 @@ CSS created by REACT
 <image src="/workspace/the-woodshed/readme-files/testing/css/profile.png" width=49%>
 <image src="/workspace/the-woodshed/readme-files/testing/css/signin.png" width=49%>
 </details>
-
-
-
-
 
 <br><hr>
 
