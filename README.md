@@ -70,6 +70,7 @@
     - 4.16 [Change Username](#change-username)
     - 4.17 [Change Password](#change-password)
     - 4.18 [Alert](#alert)
+    - 4.19 [Component Tree](#component-tree)
 
 5. [Future Development](#future-developments)
 
@@ -986,6 +987,16 @@ The following is a list of all of the current main features with descriptions of
   </tr>
 </table>
 <br/>
+
+## Component Tree
+<image src="readme-files/components/component-tree.png"><br>
+The above diagram (created with [LucidCharts](https://lucidchart.com/)), demonstrates the component heirachy used in this project. 
+
+- <span style="color: red;">Red</span> indicate pages the user can navigate to;
+- <span style="color: orange;">Orange</span> indicates major components. These are components that occur in multiple instances and relate to database models, such as Profile (owner or user), or Post;
+- <span style="color: green;">Green</span> detail more minor components, or componenets that have no additional components within them
+
+
 <hr/>
 <br/>
 
