@@ -21,6 +21,7 @@ import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import NotFound from "./components/NotFound";
 
 // Success Alert
 export const toastAlert = () => toast("Success!")
@@ -98,7 +99,7 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          <Route render={() => <h1>Page not found!</h1>} />
+          <Route render={() => <NotFound />} />
         </Switch>
         <Footer />
       </Container>

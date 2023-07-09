@@ -133,12 +133,9 @@ Built using: [React](https://react.dev/), [Django Rest Framework](https://www.dj
 - Create a interactive front-end application that consumes custom API data and has CRUD functionality<br><br>
 - Create a back-end API to allow users to store and manipulate data records<br><br>
 - Demonstrate the key role that specialist front-end developers perform in modern software development teams<br><br>
-- Maintain a consistient and simple user interface design aesthetic
-- Create an application designed for musicians and music teachers to act as a platorm for sharing musically educational and/or music-related file content
-- Create an application designed for musicians and music teachers to interact with one another through likes, comments, and follow; where they can share ideas and gain new students via their presence on the site
-<br />
-<br />
-<hr />
+- Maintain a consistient and simple user interface design aesthetic<br><br>
+- Create an application designed for musicians and music teachers to act as a platorm for sharing musically educational and/or music-related file content<br><br>
+- Create an application designed for musicians and music teachers to interact with one another through likes, comments, and follow; where they can share ideas and gain new students via their presence on the site<br /><br /><hr />
 
 ## Database
 [Django REST Framework](https://www.django-rest-framework.org/) was utilised for building a custom API in a seperate repository which can be viewed here: <br> --> <strong><ins>[The Woodshed API](https://github.com/NickWaldock/the-woodshed-api)</strong>
@@ -149,11 +146,10 @@ Built using: [React](https://react.dev/), [Django Rest Framework](https://www.dj
 ### Database Schema
 The following database design was decided upon during development to facilitate reaching the project's purpose and [aims](#aims)<br>
 <image src="readme-files/backend/database.png" width=70%><br>
-
 <em>*Database schema created using [LucidChart](https://www.lucidchart.come)</em><br><br>
 
 ### Models
-In order to fulfil the requirements of the project database [models](https://docs.djangoproject.com/en/4.2/topics/db/models/) would be required to store data. The following are the models created and used by the API to allow the users to interact with and manipulate data on the site.<br><br>
+In order to fulfil the requirements of the project, database [models](https://docs.djangoproject.com/en/4.2/topics/db/models/) would be required to store data. The following are the models created and used by the API to allow the users to interact with and manipulate data on the site.<br><br>
 
 #### <ins>***User Model***
 [Django Auth](https://docs.djangoproject.com/en/4.2/topics/auth/) is a built in Django library that automatically manages all user creation, authorisation and authentication. This was utilised to handle the heavy lifting of user management. Features include password checking, permissions, and user management through the admin panel.<br><br>
@@ -380,19 +376,15 @@ When a user clicks on the gear icon in their profile a drop down menu appears to
 
 <ins>***Update Password / Update Username***</ins><br/>
 Wireframes were not included for this feature as the forms are a single field. For more info see [Change Password](#change-password) in [Main Features](#main-features)
-<br />
-<br />
-<hr />
-
-
+<br /><br /><hr />
 
 ## Agile Methodology
 
-A [Agile](https://agilemanifesto.org/) development approach was undertaken in the conception of the project. Specifically in this project, relating to the use of user stories, milestones, and sprints to dictate the development process and responding to change in design as the project progressed with the ultimate aims in mind.
+An [Agile](https://agilemanifesto.org/) development approach was undertaken during this project. Specifically relating to the use of user stories, milestones, and sprints to dictate the development process and responding to change in design as the project progressed with the ultimate aims in mind.
 
 The following sections in this readme will detail the development process undertaken. 
 
-[Github Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) was used to manage the project tasks. Each task was listed within a [Milestone](#milestones) and a [User Story](#user-stories), and was finally assigned proiritisation under the [MoSCoW](#moscow) system. Tasks were loaded into the Backlog and tackled during [sprints](#sprints). Sprints were not strictly defined to within certain timeframes as they would be in a professional team development environment, this was due to the nature of my current working practices which are unpredictable making it difficult to plan when development work on the project would occur. The sprints therefore were flexible in terms of time frame and are instead better arranged by sections/features of development.
+[Github Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) was used to manage the project tasks. Each task was listed within a [Milestone](#milestones) and a [User Story](#user-stories), and was finally assigned proiritisation under the [MoSCoW](#moscow) system. Tasks were loaded into the Backlog and tackled during [sprints](#sprints). Sprints were not strictly defined to within certain timeframes as they would be in a professional team development environment scenario, this was due to the nature of my current working practices which are unpredictable and make it difficult to plan when development work on the project could occur. The sprints therefore were flexible in terms of time frame and are instead better arranged by sections/features of development.
 
 
 The project management board for the front-end can be viewed here: --> [GitHub Projects](https://github.com/users/NickWaldock/projects/7)
@@ -407,42 +399,43 @@ Additinoally, the project board for the back-end can be viewed here: --> [Back-E
 
 With initial conceptual design complete though [wireframes](#wireframes) development was organised into key [Milestones](https://github.com/NickWaldock/the-woodshed/milestones)
 
-- Authentication & Registration
+- <strong>Authentication & Registration</strong>
     - Sign in, account registration, page authentication
-
-- CRUD Posts & Profiles
+<br><br>
+- <strong>CRUD Posts & Profiles</strong>
     - Functionality within components to create, edit profiles, comments and posts, and delete comments and posts
-
-- Navigation
+<br><br>
+- <strong>Navigation</strong>
     - Navigating the site through the navigation bar or buttons
-
-- Interactions
+<br><br>
+- <strong>Interactions</strong>
     - Any actions a user takes in interacting with other users of the site: i.e. Likes, followers, followed by, comments
-
-- UX Design
+<br><br>
+- <strong>UX Design</strong>
     - Aesthetic and cosmetic design
-
-- Bugs
+<br><br>
+- <strong>Bugs</strong>
     - Issues documented in [GitHub Issues](https://github.com/NickWaldock/the-woodshed/issues)
-
-- Documentation & Testing
+<br><br>
+- <strong>Documentation & Testing</strong>
     - Tests, planning, readme, and other documentation
+<br><br>
 
 #### Back-End Project Development Milestones
 The [milestones](https://github.com/NickWaldock/the-woodshed-api/milestones) for the back-end development were managed seperately but were similar in scope to the front-end.
-- Authentication & Profiles
-- CRUD Functionality
-- User Interactivity
-- Forms
-- Deployment
-- Bugs
-- Documentation
-
+- <strong>Authentication & Profiles</strong>
+- <strong>CRUD Functionality</strong>
+- <strong>User Interactivity</strong>
+- <strong>Forms</strong>
+- <strong>Deployment</strong>
+- <strong>Bugs</strong>
+- <strong>Documentation</strong>
+<br><br><hr>
 
 ### User Stories
 
 ### Sprints
-The following screen shots demonstrate the various sprints undertaken during the project's development. The project [kanban board](https://github.com/users/NickWaldock/projects/7/views/2) was used exclusivly to keep track of tasks.
+The following screenshots demonstrate examples of the various sprints undertaken during the project's development. Each example sprint here shows the tasks that were in progress at the time of that particular section. The project [kanban board](https://github.com/users/NickWaldock/projects/7/views/2) was used exclusivly to keep track of tasks.<br><br>
 <table>
   <tr>
    <td><image src="readme-files/sprints/1.png" width=100%></td>
@@ -473,7 +466,7 @@ The following screen shots demonstrate the various sprints undertaken during the
 
 ### MoSCoW
 
-The [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) method was used to determine the priority of certain tasks and to maintain sprints within the project's scope. These were added as labels to each individual task.
+The [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) method was used to determine the priority of certain tasks and to maintain sprints within the project's scope. These were added as [labels](https://github.com/NickWaldock/the-woodshed/labels) to each individual task.
 
 Tasks were assigned a status in the project [kanban board](https://github.com/users/NickWaldock/projects/7/views/2) of either:
 - <strong>Must Have</strong> : Essential for the project
@@ -489,9 +482,9 @@ Tasks were assigned a status in the project [kanban board](https://github.com/us
 - [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed?preview.text=The%20Woodshed&preview.text_type=custom&category=Sans+Serif,Display&query=barlow+condense) : As a primary body text and occasional title or subtitle text <br>
 - [Roboto](https://fonts.google.com/specimen/Roboto?preview.text=The%20Woodshed&preview.text_type=custom&category=Sans+Serif,Display&query=roboto) : as a secondary body text
 <br>
-<image src="readme-files/site-screenshots/utilities/fonts.png" width=70%>
+<image src="readme-files/site-screenshots/utilities/fonts.png" width=50%>
 
-With sans-serif as back-up fonts
+<em>*Sans-serif is used as back-up fonts in all cases</em>
 <br/><br>
 
 ### Colors
@@ -502,11 +495,10 @@ The following colour pallete was used in the develpment of this project. With th
 
 
 ### General Styling
-<br/><hr>
-
+Generally, the style of the site was to be as simple as possible whilst still being clear to the user what is occuring, the purpose of components, and what is interactable. The use of strong styling such as bold component outlines, underlining/overlining links, hover effects on buttons, etc were all in keeping with these simple design principles.<br/><br>
 
 ### Change of Style
-During the development process the main logo design and colour scheme was adapted. The original logo, font, and colours (below) were deemed to give the wrong impression, relating more to a literal tool workshop or tool supplier site rather than a more creativly-based project. The original logo, fonts and colors were created by [Looka](https://www.looka.com) which was also responsible for the current logo and logo fonts <br>
+During the development process the main logo design and colour scheme was adapted. The original logo, font, and colours (below) were deemed to give the wrong impression, relating more to a literal tool workshop or tool supplier site rather than a more creativly-based project. The logo and color scheme was adapted shortly after the beginning of developemnt. The original logo, fonts and colors were created by [Looka](https://www.looka.com) which was also utilised for the current logo and logo fonts <br><br>
 <image src="readme-files/site-screenshots/old-style/old-logo.png" width=50%>
 <br><hr>
 
