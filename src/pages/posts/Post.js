@@ -52,7 +52,7 @@ export const Post = (props) => {
       await axiosRes.delete(`/posts/${id}/`);
       history.push('/');
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -69,7 +69,7 @@ export const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -86,7 +86,7 @@ export const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

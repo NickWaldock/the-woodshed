@@ -41,13 +41,12 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
   // Funtion to manange a user unfollowing another user
   const handleUnfollow = async (clickedProfile) => {
-		console.log(clickedProfile)
     try {
       await axiosRes.delete(`/followers/${clickedProfile.following_id}`);
 
@@ -66,7 +65,7 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -82,7 +81,7 @@ export const ProfileDataProvider = ({ children }) => {
           popularProfiles: data,
         }));
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

@@ -35,7 +35,7 @@ const NavBar = () => {
       removeTokenTimestamp();
       history.push("/welcome");
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

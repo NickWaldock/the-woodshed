@@ -20,7 +20,7 @@ const PdfPreview = ({ data, postId }) => {
         ]);
         setPost({ results: [post] });
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     handleMount();

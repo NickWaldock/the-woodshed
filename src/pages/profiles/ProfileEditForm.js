@@ -78,7 +78,7 @@ const ProfileEditForm = () => {
             image
            });
         } catch (err) {
-          console.log(err);
+          // console.log(err);
           history.push("/");
         }
       } else {
@@ -121,7 +121,7 @@ const ProfileEditForm = () => {
       history.goBack();
       toastAlert();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

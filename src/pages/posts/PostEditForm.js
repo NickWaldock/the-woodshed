@@ -105,7 +105,7 @@ function PostEditForm() {
       history.push(`/posts/${id}`);
       toastAlert();
     } catch(err){
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401){
         setErrors(err.response?.data);
       }
