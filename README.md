@@ -994,7 +994,9 @@ The above diagram (created with [LucidCharts](https://lucidchart.com/)), demonst
 
 - <span style="color: red;">Red</span> indicate pages the user can navigate to;
 - <span style="color: orange;">Orange</span> indicates major components. These are components that occur in multiple instances and relate to database models, such as Profile (owner or user), or Post;
-- <span style="color: green;">Green</span> detail more minor components, or componenets that have no additional components within them
+- <span style="color: green;">Green</span> detail more minor components, or components that have no additional components within them<br>
+
+
 
 
 <hr/>
@@ -1038,7 +1040,7 @@ Manual testing has been carried out on the application to determine the outcome 
 
 A detailed list of all manual testing under-taken can be found here: <br/> 
 [>> Manual Testing](/readme-files/testing/manual-testing.md)
-<br/><br/><hr>
+<br/><br/>
 
 ## Automated Testing
 
@@ -1145,29 +1147,6 @@ At time of deployment, only one file consists of a warning for an unused variabl
 
 No other issues with the [React JavaScript](https://react.dev/) code are present.
 
-## HTML Validation
-[W3C Markup Validation Service](https://validator.w3.org/) was used to validate application HTML
-<br>
-<details open>
-<summary><ins><strong>HTML Validation Results</strong></summary>
-<image src="readme-files/testing/html/root.png" width=49%>
-<image src="readme-files/testing/html/signin.png" width=49%>
-<image src="readme-files/testing/html/signup.png" width=49%>
-<image src="readme-files/testing/html/home.png" width=49%>
-<image src="readme-files/testing/html/landing-page.png" width=49%>
-<image src="readme-files/testing/html/add-post.png" width=49%>
-<image src="readme-files/testing/html/post.png" width=49%>
-<image src="readme-files/testing/html/post-edit.png" width=49%>
-<image src="readme-files/testing/html/profile-edit.png" width=49%>
-<image src="readme-files/testing/html/profile.png" width=49%>
-<image src="readme-files/testing/html/password.png" width=49%>
-<image src="readme-files/testing/html/username.png" width=49%>
-</details>
-<br/>
-The following info markers suggested removing trailing slashes for JSX elements and were ignored.<br>
-
-<image src="readme-files/testing/html/info.png" width=49%>
-
 ## CSS Validation
 [W3C Markup Validation Service](https://validator.w3.org/) was used to validate application CSS via uploading the individual CSS module files. All CSS files pass the W3C Validator with no errors. Some warnings show (detailed below) but these are only due to W3C not validating vender extensions.<p>
     <a href="http://jigsaw.w3.org/css-validator/check/referer">
@@ -1177,7 +1156,7 @@ The following info markers suggested removing trailing slashes for JSX elements 
     </a>
 </p><br>
 
-Only one error was found during validation: <strong>LandingPage.module.css</strong>
+Only one error was found during CSS validation: <strong>LandingPage.module.css</strong>
 <table>
 <tr>
   <td><image src="/workspace/the-woodshed/readme-files/testing/css/landing-fail.png" width=100%></td>
@@ -1324,13 +1303,22 @@ To clone the repository procees with the following steps:
 
 # References & Acknowledgements
 ## General Reference
+### Troubleshooting
+- [StackOverflow](https://stackoverflow.com/)
+- [W3 Schools](https://www.w3schools.com/react/default.asp)
+- [Developer Way](https://www.developerway.com/)
+- [CodePen](https://codepen.io/)
+
+
 ## Code Reference
 
-Using validators for file type (pdf)
-https://stackoverflow.com/questions/69054680/safe-way-to-validate-file-extension-in-serializer-django
+- [Moments (Code Institute Project)](https://codeinstitute.net/): this demo project was heavily consulted in the creation of this project and expanded upon in various aspects such as the back-end models, front-end components, and styling.
 
-- For adding PDF file types to the add post form
-  https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-accept-only-pdf-and-xls
+- [Using validators for file type (PDF)](https://stackoverflow.com/questions/69054680/safe-way-to-validate-file-extension-in-serializer-django): this page was consulted to help create the file validation in the Django back-end
+
+- [For adding PDF file types to the add post form](https://stackoverflow.com/questions/12142536/how-to-make-input-type-file-should-accept-only-pdf-and-xls): this page was consulted to assist making the react input forms in the add post page only accept PDF filetypes
+  
 
 ## Acknowledgements
 
+I would like to thank my Code Institute Mentor Jubril Akolade for his time and expertise in guiding me through this project; the Code Institute tutors for thier continued support; and [Code Institute](https://codeinstitute.net/) for the Full Stack Software Developement Program that has taught me an inordinate amount about the world of software from scratch. I hope this project has been interesting and fun to engage with, if you would like to get in touch for collaborations you can reach me through my website [www.nicholasjameswaldock.uk](https://www.nicholasjameswaldock.uk) or through my [LinkedIn profile](https://www.linkedin.com/in/nicholas-waldock-05237071/). <br><br>Thanks for stopping by!
