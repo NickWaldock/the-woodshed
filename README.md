@@ -81,9 +81,7 @@
 
 7. [Code Validation](#code-validation)
     - 7.1 [React Validation](#react-validation)
-    - 7.2 [HTML Validation](#html-validation)
-    - 7.3 [CSS Validation](#css-validation)
-    - 7.4 [Lighthouse Report](#lighthouse-report)
+    - 7.2 [CSS Validation](#css-validation)
 
 8. [Deployment](#deployment)
     - 8.1 [Cloudinary](#cloudinary)
@@ -1201,9 +1199,6 @@ CSS created by REACT
 <image src="/workspace/the-woodshed/readme-files/testing/css/signin.png" width=49%>
 </details>
 
-<br><hr>
-
-## Lighthouse Report
 
 <br/><hr><br/>
 # Deployment

@@ -10,7 +10,7 @@ import Row from "react-bootstrap/Row";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/ProfileEditForm.module.css";
-import { toastAlert } from "../../App";
+import { toastAlert, toastAlertFail } from "../../App";
 
 import { useHistory, useParams } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -55,6 +55,7 @@ const UsernameForm = () => {
       toastAlert();
     } catch (err) {
       // console.log(err);
+      toastAlertFail();
       setErrors(err.response?.data);
     }
   };

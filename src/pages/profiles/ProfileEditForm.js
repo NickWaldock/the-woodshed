@@ -18,7 +18,7 @@ import appStyles from "../../App.module.css";
 import styles from "../../styles/ProfileEditForm.module.css";
 
 import Alert from "react-bootstrap/Alert";
-import { toastAlert } from "../../App";
+import { toastAlert, toastAlertFail } from "../../App";
 
 
 const ProfileEditForm = () => {
@@ -121,6 +121,7 @@ const ProfileEditForm = () => {
       history.goBack();
       toastAlert();
     } catch (err) {
+      toastAlertFail();
       // console.log(err);
       setErrors(err.response?.data);
     }

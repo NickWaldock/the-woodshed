@@ -9,7 +9,7 @@ import Alert from "react-bootstrap/Alert";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import { toastAlert } from "../../App";
+import { toastAlert, toastAlertFail } from "../../App";
 import Asset from "../../components/Asset";
 import Upload from "../../assets/upload.png";
 
@@ -74,6 +74,7 @@ function PostCreateForm() {
       toastAlert();
     } catch(err){
       // console.log(err);
+      toastAlertFail();
       if (err.response?.status !== 401){
         setErrors(err.response?.data);
       }

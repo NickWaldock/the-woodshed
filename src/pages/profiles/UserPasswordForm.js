@@ -10,7 +10,7 @@ import Form from "react-bootstrap/Form";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/ProfileEditForm.module.css";
-import { toastAlert } from "../../App";
+import { toastAlert, toastAlertFail } from "../../App";
 
 import { useHistory, useParams } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -53,6 +53,7 @@ const UserPasswordForm = () => {
       history.goBack();
       toastAlert();
     } catch (err) {
+      toastAlertFail();
       // console.log(err);
       setErrors(err.response?.data);
     }

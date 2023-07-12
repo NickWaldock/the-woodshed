@@ -26,6 +26,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 // Success Alert
 export const toastAlert = () => toast("Success!")
+export const toastAlertFail = () => toast("Sorry! Something went wrong... Please try again later")
 
 // Main Application
 function App() {

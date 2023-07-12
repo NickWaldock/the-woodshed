@@ -14,7 +14,7 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import { Alert } from "react-bootstrap";
-import { toastAlert } from "../../App";
+import { toastAlert, toastAlertFail } from "../../App";
 
 
 function PostEditForm() {
@@ -105,6 +105,7 @@ function PostEditForm() {
       history.push(`/posts/${id}`);
       toastAlert();
     } catch(err){
+      toastAlertFail();
       // console.log(err);
       if (err.response?.status !== 401){
         setErrors(err.response?.data);
