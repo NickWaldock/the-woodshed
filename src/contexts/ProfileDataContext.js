@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import { followHelper, unfollowHelper } from "../utils/utils";
+import { toastAlertFail } from "../App";
 
 // Create Context objects for passing profile data to components
 const ProfileDataContext = createContext();
@@ -42,6 +43,7 @@ export const ProfileDataProvider = ({ children }) => {
       }));
     } catch (err) {
       // console.log(err);
+      toastAlertFail();
     }
   };
 
@@ -66,6 +68,7 @@ export const ProfileDataProvider = ({ children }) => {
       }));
     } catch (err) {
       // console.log(err);
+      toastAlertFail();
     }
   };
 
@@ -82,6 +85,7 @@ export const ProfileDataProvider = ({ children }) => {
         }));
       } catch (err) {
         // console.log(err);
+        toastAlertFail();
       }
     };
 

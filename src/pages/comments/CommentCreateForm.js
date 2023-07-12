@@ -7,6 +7,7 @@ import styles from "../../styles/CommentCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import { toastAlertFail } from "../../App";
 
 // Function for the comment form
 function CommentCreateForm(props) {
@@ -41,6 +42,7 @@ function CommentCreateForm(props) {
       setContent("");
     } catch (err) {
       // console.log(err);
+      toastAlertFail();
     }
   };
 

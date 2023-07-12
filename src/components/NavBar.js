@@ -15,6 +15,7 @@ import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import { removeTokenTimestamp } from "../utils/utils";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { toastAlertFail } from "../App";
 
 
 const NavBar = () => {
@@ -36,6 +37,7 @@ const NavBar = () => {
       history.push("/welcome");
     } catch (err) {
       // console.log(err);
+      toastAlertFail();
     }
   };
 

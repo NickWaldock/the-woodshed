@@ -79,6 +79,7 @@ const ProfileEditForm = () => {
            });
         } catch (err) {
           // console.log(err);
+          toastAlertFail();
           history.push("/");
         }
       } else {

@@ -24,6 +24,7 @@ import { ProfileEditDropdown } from "../../components/MoreDropdown";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Post } from "../posts/Post";
 import NoResults from "../../assets/no-results.png";
+import { toastAlertFail } from "../../App";
 
 
 function ProfilePage() {
@@ -58,6 +59,7 @@ function ProfilePage() {
         setHasLoaded(true);
       } catch (err) {
         // console.log(err);
+        toastAlertFail();
       }
     };
     fetchData();

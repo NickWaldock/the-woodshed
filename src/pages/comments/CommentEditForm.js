@@ -5,6 +5,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import { toastAlertFail } from "../../App";
 
 // Functino to manage editing a comment
 function CommentEditForm(props) {
@@ -39,6 +40,7 @@ function CommentEditForm(props) {
       setShowEditForm(false);
     } catch (err) {
       // console.log(err);
+      toastAlertFail();
     }
   };
 

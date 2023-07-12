@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import styles from "../../styles/PdfPreview.module.css";
+import { toastAlertFail } from "../../App";
 
 const PdfPreview = ({ data, postId }) => {
   // Find post id from url for component in detail view
@@ -21,6 +22,7 @@ const PdfPreview = ({ data, postId }) => {
         setPost({ results: [post] });
       } catch (err) {
         // console.log(err);
+        toastAlertFail();
       }
     };
     handleMount();

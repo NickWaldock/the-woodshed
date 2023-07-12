@@ -17,6 +17,7 @@ import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import { useRedirect } from "../../hooks/useRedirect";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { toastAlertFail } from "../../App";
 
 
 function PostsPage({message, filter=''}) {
@@ -39,6 +40,7 @@ function PostsPage({message, filter=''}) {
             setHasLoaded(true)
         } catch(err){
             // console.log(err)
+            toastAlertFail();
         }
     }
     setHasLoaded(false);

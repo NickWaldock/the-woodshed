@@ -16,6 +16,7 @@ import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import { useRedirect } from "../../hooks/useRedirect";
+import { toastAlertFail } from "../../App";
 
 function PostPage() {
   // Redirect non-authenticated users to sign in page
@@ -41,6 +42,7 @@ function PostPage() {
 				setComments(comments);
       } catch (err) {
         // console.log(err);
+        toastAlertFail();
       }
     };
 		handleMount();

@@ -73,6 +73,7 @@ export const Post = (props) => {
       }));
     } catch (err) {
       // console.log(err);
+      toastAlertFail();
     }
   };
 
@@ -90,6 +91,7 @@ export const Post = (props) => {
       }));
     } catch (err) {
       // console.log(err);
+      toastAlertFail();
     }
   };
 

@@ -3,6 +3,7 @@ import axios from "axios";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { removeTokenTimestamp, shouldRefreshToken } from "../utils/utils";
+import { toastAlertFail } from "../App";
 
 // Create Context objects for passing current logged-in user details to app components
 export const CurrentUserContext = createContext();
@@ -23,6 +24,7 @@ export const CurrentUserProvider = ({ children }) => {
       setCurrentUser(data);
     } catch (err) {
       // console.log(err);
+      toastAlertFail();
     }
   };
   useEffect(() => {
