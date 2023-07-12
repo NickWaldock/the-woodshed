@@ -15,6 +15,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
+import { toastAlertFail, toastAlertSignUp } from "../../App";
 
 
 const SignUpForm = () => {  
@@ -47,8 +48,13 @@ const SignUpForm = () => {
     try {
       await axios.post("dj-rest-auth/registration/", signUpData);
       history.push("/signin");
+      toastAlertSignUp();
     } catch (err) {
-      setErrors(err.response?.data);
+      if (err.response?.status === 400) {
+        setErrors(err.response.data)
+      }
+      else {
+        toastAlertFail()}
     }
   };
 

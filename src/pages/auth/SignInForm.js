@@ -17,6 +17,7 @@ import Alert from "react-bootstrap/Alert";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimeStamp } from "../../utils/utils";
+import { toastAlertFail } from "../../App";
 
 const SignInForm = () => {
   const setCurrentUser = useSetCurrentUser();
@@ -51,7 +52,11 @@ const SignInForm = () => {
       setTokenTimeStamp(data);
       history.push("/");
     } catch (err) {
-      setErrors(err.response?.data);
+        if (err.response?.status === 400) {
+          setErrors(err.response.data)
+        }
+        else {
+          toastAlertFail()}
     }
   };
 
