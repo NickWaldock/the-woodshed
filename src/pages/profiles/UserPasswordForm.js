@@ -53,9 +53,13 @@ const UserPasswordForm = () => {
       history.goBack();
       toastAlert();
     } catch (err) {
-      toastAlertFail();
       // console.log(err);
-      setErrors(err.response?.data);
+      if (err.response?.status === 400) {
+        setErrors(err.response.data)
+      }
+      else {
+        toastAlertFail()
+      }
     }
   };
 

@@ -40,7 +40,7 @@ const UsernameForm = () => {
     }
   }, [currentUser, history, id]);
 
-  // Manages submission for hte username form
+  // Manages submission for the username form
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -55,8 +55,12 @@ const UsernameForm = () => {
       toastAlert();
     } catch (err) {
       // console.log(err);
-      toastAlertFail();
-      setErrors(err.response?.data);
+      if (err.response?.status === 400) {
+        setErrors(err.response.data)
+      }
+      else {
+        toastAlertFail()
+      }
     }
   };
 

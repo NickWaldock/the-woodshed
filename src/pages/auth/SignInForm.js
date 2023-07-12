@@ -56,7 +56,8 @@ const SignInForm = () => {
           setErrors(err.response.data)
         }
         else {
-          toastAlertFail()}
+          toastAlertFail()
+        }
     }
   };
 

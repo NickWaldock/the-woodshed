@@ -54,7 +54,8 @@ const SignUpForm = () => {
         setErrors(err.response.data)
       }
       else {
-        toastAlertFail()}
+        toastAlertFail()
+      }
     }
   };
 

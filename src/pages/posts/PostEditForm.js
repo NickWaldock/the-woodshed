@@ -107,8 +107,11 @@ function PostEditForm() {
     } catch(err){
       toastAlertFail();
       // console.log(err);
-      if (err.response?.status !== 401){
-        setErrors(err.response?.data);
+      if (err.response?.status === 400) {
+        setErrors(err.response.data)
+      }
+      else {
+        toastAlertFail()
       }
     }
   }
