@@ -242,7 +242,7 @@ class Meta:
 class Meta:
    ordering = ['-created_at']
 ```
-<br><br>
+<br>
 
 #### <ins>***Like Model***
 <image src="readme-files/backend/models/like-model.png" width=70%><br>
@@ -422,8 +422,8 @@ With initial conceptual design complete though [wireframes](#wireframes) develop
 ### User Stories
 User Stories were sorted into the relevant over-arching [Milestone](#milestones), tasks related to each user story were added as [Issues](https://github.com/NickWaldock/the-woodshed/issues), linked to the project [Repository](https://github.com/NickWaldock/the-woodshed) and project [Kanban Board](https://github.com/users/NickWaldock/projects/7/views/2)
 <br><br>
+
 <strong>Authentication & Registration</strong>
-<br><br>
 - As a user, I can register for an account
 - As a registered user, I can safely log in and out of the site
 - As a logged-in user, I can see my logged-in status in the nav bar
@@ -431,6 +431,7 @@ User Stories were sorted into the relevant over-arching [Milestone](#milestones)
 - As a user, I can easily update my username and password so that I can change my display name and keep my account secure
 - As a site owner / admin, users should only be able to access relevant parts of the site depending on their authentication status, otherwise they should be redirected to an appropriate page
 <br><br>
+
 <strong>CRUD Posts & Profiles</strong>
 - As a user, I can update my profile information
 - As a logged-in user, I can view the most recent posts
@@ -450,12 +451,14 @@ User Stories were sorted into the relevant over-arching [Milestone](#milestones)
 - As a user, I can view the PDFs in a new window in full screen or download them so they are easier to read
 - As a user, I can manage my posts by editing or deleting them
 <br><br>
+
 <strong>Navigation</strong>
 - As a logged-in user, I can view a navbar on every page so that I can easily navigate between pages
 - As a logged-in user, I can navigate through pages seamlessly without page refresh
 - As a user, I can easily see site details, and social links as a footer so I can find information about the site owner
 - As a first-time user, I can understand the site's purpose when first navigating to the site 
 <br><br>
+
 <strong>Interactions</strong>
 - As a logged-in user, I can 'Like' a post
 - As a logged-in user, I want to be able to 'unlike' a post
@@ -465,12 +468,13 @@ User Stories were sorted into the relevant over-arching [Milestone](#milestones)
 - As a user, I can see feedback that my post has been updated or submitted
 - As a user, I can see an error message if there is an error with the server when interacting with the site
 <br><br>
+
 <strong>UX Design</strong>
 - As a first-time user, I can understand the site's purpose when first navigating to the site
 - As a user, I can experience consistient site design on all pages
 - As a user, I can view on mobile as well as desktop with no difference in experince 
 - As a user, I can experience first page I see as user friendly, engaging, and aesthetically pleasing
-
+<br><br>
 
 ### Sprints
 The following screenshots demonstrate examples of the various sprints undertaken during the project's development. Each example sprint here shows the tasks that were in progress at the time of that particular section. The project [kanban board](https://github.com/users/NickWaldock/projects/7/views/2) was used exclusivly to keep track of tasks.<br><br>
@@ -511,7 +515,7 @@ Tasks were assigned a status in the project [kanban board](https://github.com/us
 - <strong>Should Have</strong> : Important but not essential
 - <strong>Could Have</strong> : An idea for consideration but not a priority
 - <strong>Won't Have</strong> : Not currently in the project's scope
-<br/><hr>
+<br/><br><hr>
 
 ## UX Design
 ### Typograpgy
@@ -545,9 +549,17 @@ During the development process the main logo design and colour scheme was adapte
 [REACT](https://react.dev/) is a popular JavaScript library that creates interfaces out of individualised components that combine to create the users screen experience.
 
 ### Toastify
-[Toastify](https://www.npmjs.com/package/react-toastify) is s React library for creating custom pop-up alerts. In this project I wanted to utilise a custom alert that wasn't the typical bootstrap alert style. This alert has a progress bar that indicated to the user when it will dissapear, it also has an animation effect when entering the screen and leaving the screen. The alert is shown when a user changes data in the database such as a post or profile update or submits a form.
+[Toastify](https://www.npmjs.com/package/react-toastify) is s React library for creating custom pop-up alerts. In this project I wanted to utilise a custom alert that wasn't the typical bootstrap alert style. This alert has a progress bar that indicated to the user when it will dissapear, it also has an animation effect when entering the screen and leaving the screen. 
 <br>
-<image src="readme-files/site-screenshots/utilities/alert.png" width=50%>
+Three alerts exist:
+- A Success alert to show an action has been successful, such as creating a post, or updating a profile;
+- When a post is deleted;
+- When an error occurs in an action that is not due to user error, such as a the server being unavailable
+<br><br>
+<image src="readme-files/site-screenshots/utilities/alert.png" width=35%>
+<image src="readme-files/site-screenshots/utilities/alert-delete.png" width=30%>
+<image src="readme-files/site-screenshots/utilities/alert-try-again.png" width=21%>
+<br><br>
 
 ### Infinite Scroll
 The [Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) component for React is a feature that adds data when a user scrolls down the page, saving data loading times by avoiding the requirement to load all list post data at once.
@@ -561,8 +573,7 @@ It also utilies [Interceptors](https://lightrains.com/blogs/axios-intercepetors-
 
 - <strong>Request:</strong> Intercepts any request the React application makes to the 
 [API](https://github.com/NickWaldock/the-woodshed-api) that requires the user to be logged-in to retrieve (such as retireving a single post instance), refreshes the user's [access token](https://jwt.io) before the request is made
-
-<br><br>
+<br>
 
 [PostPage.js](https://github.com/NickWaldock/the-woodshed/blob/main/src/pages/posts/PostPage.js):<br>
 <image src="readme-files/code-screenshots/axios.png">
@@ -1014,7 +1025,7 @@ The following is a list of all of the current main features with descriptions of
 <table>
   <tr>
     <td>
-      The <a href="https://www.npmjs.com/package/react-toastify"><em>Toastify</em></a> package is used to display a simple success message on major crud operation such as: creating a post and updating a post or profile. The post is styled with custom css to maintain design aesthetics with the rest of the site.
+      The <a href="https://www.npmjs.com/package/react-toastify"><em>Toastify</em></a> package is used to display a simple success message on major crud operation such as: creating a post and updating a post or profile. The post is styled with custom css to maintain design aesthetics with the rest of the site. Other alerts exist for deleting a post and when a server error occurs.
     </td>
   </tr>
   <tr>
@@ -1032,16 +1043,10 @@ The above diagram (created with [LucidCharts](https://lucidchart.com/)), demonst
 - <span style="color: red;">Red</span> indicate pages the user can navigate to;
 - <span style="color: orange;">Orange</span> indicates major components. These are components that occur in multiple instances and relate to database models, such as Profile (owner or user), or Post;
 - <span style="color: green;">Green</span> detail more minor components, or components that have no additional components within them<br>
-
-
-
-
-<hr/>
-<br/>
+<hr/><br/>
 
 # Future Developments
 This project inherently holds a great deal of potential developmental possibilities both in terms of file sharing, and as a musicians practice companion. Below is a list of possible future developments that are currently out of scope but could be considered for further iterations of the project.
-
 
 ### General Improvements
 - In the post list views the post component descriptions could preview a few lines if the content with a 'show more' button, if the content is over a certain length
@@ -1060,7 +1065,6 @@ This project inherently holds a great deal of potential developmental possibilit
 - User Since: Profiles contain a 'user since' data display allowing users to know how long a profile has been active on the site and how recently they have been active
 - Instrument Specific Pages: allowing users to search profiles or posts that are instrument specific
 
-
 ### Extended Scope
 - Users could apply to admins for a verified Tutor status to add to their profile. Users could add a status of Tutor, Student, or Professional to their profile
 - Practice Companion: The app could contain a component dedicated as a practice companion and include tools for users to work with the PDF content immediately. Tools such as: a metric-meter adjustable and customisable metronome, pitch tuner,
@@ -1069,7 +1073,7 @@ This project inherently holds a great deal of potential developmental possibilit
 - Location can be developed to utilise a google maps API for generalised location display, or an ability for users to search for profiles in a generalised and localised area
 - More robust file validation for PDFs or abiltiy to upload different filetypes that can be previewed and renderes and that behave similarly to the current PDFs. Protection agains users attempting to circumvent basic PDF validation by changing filetype suffix to ".pdf"
 
-<br/><hr><br/>
+<br/><hr>
 # Testing
 ## Manual Testing
 
@@ -1103,7 +1107,7 @@ Here is a summary of known bugs and issues discovered from the testing procedure
   <tr>
     <td>
     <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31576277">
-    Deleting a post redirects the user to tsignin page and then to homepage</a>
+    Deleting a post redirects the user to the signin page and then to homepage</a>
     </td>
   <td>SOLVED</td>
   </tr>
@@ -1115,13 +1119,13 @@ Here is a summary of known bugs and issues discovered from the testing procedure
   </tr>
   <tr>
     <td>
-    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31649372">Possible to navigat to pages when unauthenticaed via the url bar</a>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31649372">Possible to navigate to pages when unauthenticaed via the url bar</a>
     </td>
   <td>SOLVED</td>
   </tr>
   <tr>
     <td>
-    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31839935">404 Not FOund errors when pdfs are rendering on two particualr profiles, even though the files are rendering ok in the DOM</a>
+    <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31839935">404 Not Found errors when pdfs are rendering on two particular profiles, even though the files are rendering ok in the DOM</a>
     </td>
   <td>SOLVED</td>
   </tr>
@@ -1129,7 +1133,7 @@ Here is a summary of known bugs and issues discovered from the testing procedure
     <td>
     <a href="https://github.com/users/NickWaldock/projects/7/views/1?filterQuery=BUG&pane=issue&itemId=31586557">Toastify alert won't display on the delete post function</a>
     </td>
-  <td>UNRESOLVED</td>
+  <td>SOLVED</td>
   </tr>
   <tr>
     <td>
@@ -1163,10 +1167,10 @@ Here is a summary of known bugs and issues discovered from the testing procedure
 <br/><br/>
 The following bugs persist and are permissible as part of the submission of this project:
 <br/><br/>
-<strong>400 - Bad Request</strong>: Occurs when submitting incorrect form data
+<strong>400 - Bad Request</strong>: Occurs when submitting incorrect form data<br>
 <image src="readme-files/testing/400.png" width=50%>
 <br/><br/>
-<strong>401 - Unauthorised</strong>: Occurs when an accesses token has expired and is refreshed in the background
+<strong>401 - Unauthorised</strong>: Occurs when an accesses token has expired and is refreshed in the background<br>
 <image src="readme-files/testing/401-1.png" width=50%>
 <br/><br/>
 <strong>401 - Unauthorised</strong>: Occurs when navigating to the sign in or sign up page when not logged in, this console error occurs when checking if the logged in user needs to be redirected from this page<br>
@@ -1207,7 +1211,7 @@ The warning in this file and the are relating to the use of vendor extensions in
 <br>
 For creating an outline in the thumb 'like' icon<br>
 <image src="/workspace/the-woodshed/readme-files/testing/css/post-warning.png" width=49%><br><br>
-For use of a box shadow in the upload image container in the 'Add Post' page
+For use of a box shadow in the upload image container in the 'Add Post' page<br>
 <image src="/workspace/the-woodshed/readme-files/testing/css/post-create-warning.png" width=49%><br><br>
 CSS created by REACT
 <image src="/workspace/the-woodshed/readme-files/testing/css/index-warnings.png" width=100%>
@@ -1237,7 +1241,6 @@ CSS created by REACT
 <image src="/workspace/the-woodshed/readme-files/testing/css/profile.png" width=49%>
 <image src="/workspace/the-woodshed/readme-files/testing/css/signin.png" width=49%>
 </details>
-
 
 <br/><hr><br/>
 # Deployment
