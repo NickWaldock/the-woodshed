@@ -244,8 +244,6 @@ class Meta:
 ```
 <br><br>
 
-
-
 #### <ins>***Like Model***
 <image src="readme-files/backend/models/like-model.png" width=70%><br>
 
@@ -420,18 +418,59 @@ With initial conceptual design complete though [wireframes](#wireframes) develop
     - Tests, planning, readme, and other documentation
 <br><br>
 
-#### Back-End Project Development Milestones
-The [milestones](https://github.com/NickWaldock/the-woodshed-api/milestones) for the back-end development were managed seperately but were similar in scope to the front-end.
-- <strong>Authentication & Profiles</strong>
-- <strong>CRUD Functionality</strong>
-- <strong>User Interactivity</strong>
-- <strong>Forms</strong>
-- <strong>Deployment</strong>
-- <strong>Bugs</strong>
-- <strong>Documentation</strong>
-<br><br><hr>
 
 ### User Stories
+User Stories were sorted into the relevant over-arching [Milestone](#milestones), tasks related to each user story were added as [Issues](https://github.com/NickWaldock/the-woodshed/issues), linked to the project [Repository](https://github.com/NickWaldock/the-woodshed) and project [Kanban Board](https://github.com/users/NickWaldock/projects/7/views/2)
+<br><br>
+<strong>Authentication & Registration</strong>
+<br><br>
+- As a user, I can register for an account
+- As a registered user, I can safely log in and out of the site
+- As a logged-in user, I can see my logged-in status in the nav bar
+- As a logged-in user, I can maintain my logged in status until I choose to log out
+- As a user, I can easily update my username and password so that I can change my display name and keep my account secure
+- As a site owner / admin, users should only be able to access relevant parts of the site depending on their authentication status, otherwise they should be redirected to an appropriate page
+<br><br>
+<strong>CRUD Posts & Profiles</strong>
+- As a user, I can update my profile information
+- As a logged-in user, I can view the most recent posts
+- As a logged-in user, I can keep scrolling through posts on the site, posts are loaded automatically so I don't have to click on a 'next page' button
+- As a user, I want to have a public profile on the site, with only relevant information about me available for other users to see, and including a profile picture
+- As a user, I can view all of the posts of the users I follow
+- As a user, I can view any post in the feed with a full page with all the details of post and author
+- As a user, I can see a list of popular profiles so that I can see which are most popular and choose whether to follow them
+- As a user, I can view user's profile avatars on posts and view their main profile details, data, and authored posts
+- As a logged-in user, I can see a list of the most followed profiles so that I can see which profiles are popular
+- As a user, I can create a post with a PDF and additional details
+- As a user, I can edit any of my previously submitted posts
+- As a logged-in user, I can view all of the posts I have 'liked'
+- As a logged-in user, I want to be able to search posts
+- As a user, I want to be able to edit my public profile
+- As a user, I can view posts with a certain tag
+- As a user, I can view the PDFs in a new window in full screen or download them so they are easier to read
+- As a user, I can manage my posts by editing or deleting them
+<br><br>
+<strong>Navigation</strong>
+- As a logged-in user, I can view a navbar on every page so that I can easily navigate between pages
+- As a logged-in user, I can navigate through pages seamlessly without page refresh
+- As a user, I can easily see site details, and social links as a footer so I can find information about the site owner
+- As a first-time user, I can understand the site's purpose when first navigating to the site 
+<br><br>
+<strong>Interactions</strong>
+- As a logged-in user, I can 'Like' a post
+- As a logged-in user, I want to be able to 'unlike' a post
+- As a logges-in user, I can add, edit, or delete my own comments on a post, and see when they were made
+- As a logged-in user, I can view the comments on a post
+- As a logged-in user, I can comment on a post and read other user's comments on a post
+- As a user, I can see feedback that my post has been updated or submitted
+- As a user, I can see an error message if there is an error with the server when interacting with the site
+<br><br>
+<strong>UX Design</strong>
+- As a first-time user, I can understand the site's purpose when first navigating to the site
+- As a user, I can experience consistient site design on all pages
+- As a user, I can view on mobile as well as desktop with no difference in experince 
+- As a user, I can experience first page I see as user friendly, engaging, and aesthetically pleasing
+
 
 ### Sprints
 The following screenshots demonstrate examples of the various sprints undertaken during the project's development. Each example sprint here shows the tasks that were in progress at the time of that particular section. The project [kanban board](https://github.com/users/NickWaldock/projects/7/views/2) was used exclusivly to keep track of tasks.<br><br>
