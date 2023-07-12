@@ -61,7 +61,10 @@ function PostEditForm() {
               file,
             })
           : history.push("/");
-      } catch (err) {console.log(err)}
+      } catch (err) {
+        // console.log(err)
+        toastAlertFail();
+      }
     };
 		handleMount();
   }, [history, id]);
@@ -101,11 +104,10 @@ function PostEditForm() {
 		}
 
     try {
-      await axiosReq.put(`/posts/${id}/`, formData);
+      await axiosReq.put(`/postss/${id}/`, formData);
       history.push(`/posts/${id}`);
       toastAlert();
     } catch(err){
-      toastAlertFail();
       // console.log(err);
       if (err.response?.status === 400) {
         setErrors(err.response.data)

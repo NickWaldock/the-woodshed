@@ -22,12 +22,13 @@ import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { Alert } from "react-bootstrap";
 
 // Success Alert
 export const toastAlert = () => toast("Success!")
 export const toastAlertFail = () => toast("Sorry! Something went wrong... Please try again later")
 export const toastAlertSignUp = () => toast("Sign Up Successful! Please log in")
+export const toastAlertDelete = () => toast("Deleted!")
 
 // Main Application
 function App() {
@@ -51,6 +52,8 @@ function App() {
         progressClassName={styles.ToastProgress}
         bodyClassName={styles.ToastBody}
       />
+      <Container>
+      </Container>
         {/* Routing for navigation */}
         <Switch>
           <Route exact path="/welcome" render={() => <LandingPage />} />

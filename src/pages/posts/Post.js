@@ -14,6 +14,7 @@ import { Avatar } from "../../components/Avatar";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import PdfPreview from "./PdfPreview";
+import { toastAlertDelete, toastAlertFail } from "../../App";
 
 export const Post = (props) => {
   const {
@@ -51,8 +52,10 @@ export const Post = (props) => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
       history.push('/');
+      toastAlertDelete();
     } catch (err) {
       // console.log(err);
+      toastAlertFail();
     }
   };
 
