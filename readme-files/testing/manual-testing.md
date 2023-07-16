@@ -384,24 +384,42 @@ Below is the account of all manual testing that has taken place on the project.
   </tr>
 <tr>
     <td>Search Bar</td>
-    <td>Type text of known existing profile or post title, type text of known non-existing profile or post title</td>
+    <td>Type text of known existing profile, post title, instrument, or tag type text of known non-existing profile or post title</td>
     <td>Known existing title or profile will render related posts in the list. Known non-existing search will render no posts and a message</td>
     <td>PASS</td>
     <td></td>
     <td></td>
   </tr>
 <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Alert - Delete Post</td>
+    <td>After creating a post, clicking through to the full post page, clicking the gear icon and selecting 'delete post'</td>
+    <td>The user is redirected to the list view page, the post is unavailable in this view, and an Alert displays to confirm the post is deleted</td>
+    <td>PASS</td>
     <td></td>
     <td></td>
   </tr>
-
-
-
-To test
-
-
-URLS when not logged in
+  <tr>
+    <td>Alert - Success</td>
+    <td>Creating a post from the add post page. Adding dummy PDF and test data into fields, clicking submit</td>
+    <td>After clicking submit the user is redirected to the post and the Success alert displays</td>
+    <td>PASS</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Alert - Try Again</td>
+    <td>Changing the server url in the code to simulate a server-side error for when the user submits a form</td>
+    <td>An alert will display and auto-close that asks the user to try again later </td>
+    <td>PASS</td>
+    <td></td>
+    <td></td>
+  </tr>
+<tr>
+    <td>Alert - Sign-In</td>
+    <td>Navigate to the sign-in page, and fill in the form fields to create a new account, click submit</td>
+    <td>When the user is redirected to the sign in page after clicking the submit button, an alert is show in teh sign in page to confirm the account has been created and instructs the user to now login</td>
+    <td>PASS</td>
+    <td></td>
+    <td></td>
+  </tr>
+  </table>

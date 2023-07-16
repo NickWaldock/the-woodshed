@@ -549,7 +549,7 @@ During the development process the main logo design and colour scheme was adapte
 [REACT](https://react.dev/) is a popular JavaScript library that creates interfaces out of individualised components that combine to create the users screen experience.
 
 ### Toastify
-[Toastify](https://www.npmjs.com/package/react-toastify) is s React library for creating custom pop-up alerts. In this project I wanted to utilise a custom alert that wasn't the typical bootstrap alert style. This alert has a progress bar that indicated to the user when it will dissapear, it also has an animation effect when entering the screen and leaving the screen. 
+[Toastify](https://www.npmjs.com/package/react-toastify) is s React library for creating custom pop-up alerts. In this project I wanted to utilise a custom alert to replace the typical bootstrap alert style. This alert has a progress bar that indicated to the user when it will automatically dissapear, it also has an animation effect when entering the screen and leaving the screen. 
 <br>
 Three alerts exist:
 - A Success alert to show an action has been successful, such as creating a post, or updating a profile;
@@ -1025,13 +1025,32 @@ The following is a list of all of the current main features with descriptions of
 <table>
   <tr>
     <td>
-      The <a href="https://www.npmjs.com/package/react-toastify"><em>Toastify</em></a> package is used to display a simple success message on major crud operation such as: creating a post and updating a post or profile. The post is styled with custom css to maintain design aesthetics with the rest of the site. Other alerts exist for deleting a post and when a server error occurs.
+      The <a href="https://www.npmjs.com/package/react-toastify"><em>Toastify</em></a> package is used to display a simple success message on major crud operations such as: creating a post and updating a post or profile. The post is styled with custom css to maintain design aesthetics with the rest of the site.
     </td>
   </tr>
   <tr>
     <td>
       <image src="readme-files/site-screenshots/utilities/alert.png" width=70%>
     </td>
+    <td>This alert displays when a form has been submitted (with the exception of logging in), such as creating a post, updating a post, updating a profile</td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/utilities/alert-delete.png" width=70%>
+    </td>
+    <td>This alert displays when a user deletes a post</td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/utilities/alert-try-again.png" width=70%>
+    </td>
+    <td>This alert displays when there is a server-side error to indicate that the user is aware the error is not on the client-side</td>
+  </tr>
+  <tr>
+    <td>
+      <image src="readme-files/site-screenshots/utilities/alert-sign-in.png" width=70%>
+    </td>
+    <td>This alert displays when the user has first created and account and is redirected to the home page</td>
   </tr>
 </table>
 <br/>
