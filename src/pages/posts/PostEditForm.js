@@ -104,7 +104,7 @@ function PostEditForm() {
 		}
 
     try {
-      await axiosReq.put(`/postss/${id}/`, formData);
+      await axiosReq.put(`/posts/${id}/`, formData);
       history.push(`/posts/${id}`);
       toastAlert();
     } catch(err){
