@@ -9,7 +9,7 @@
 
 # Table of Contents
 
-1. [Introduction](#introduction)
+1. [Introduction](#introduction)<br><br>
 
 2. [Project Development](#project-development)
     - 2.1 [Repos & Projects](#repos--project-links)
@@ -23,7 +23,7 @@
           - [Post Model](#post-model)
           - [Comment Model](#comment-model)
           - [Like Model](#like-model)
-          - [Follower Model](#follower-model)
+          - [Follower Model](#follower-model)<br><br>
       
     - 2.5 [CRUD](#crud)
     - 2.6 [Agile Methodology](#agile-methodology)
@@ -34,7 +34,7 @@
     - 2.7. [UX Design](#ux-desgin)
         - [Typography](#typography)
         - [Colour](#colour)
-        - [General Styling](#bootstrap)
+        - [General Styling](#bootstrap)<br><br>
 
 3. [Technologies](#technologies)
     - 3.1 [React](#react)
@@ -49,7 +49,7 @@
         - [Django All Auth](#django-all-auth)
         - [Simple JWT](#simple-jwt)
     - 3.4 [Cloudinary](#cloudinary-1)
-    - 3.5 [Additional Tools](#additional-tools)
+    - 3.5 [Additional Tools](#additional-tools)<br><br>
 
 4. [Main Features](#main-features)
     - 4.1 [Logo](#logo)
@@ -70,18 +70,18 @@
     - 4.16 [Change Username](#change-username)
     - 4.17 [Change Password](#change-password)
     - 4.18 [Alert](#alert)
-    - 4.19 [Component Tree](#component-tree)
+    - 4.19 [Component Tree](#component-tree)<br><br>
 
-5. [Future Development](#future-developments)
+5. [Future Development](#future-developments)<br><br>
 
 6. [Testing](#testing)
     - 6.1 [Manual Testing](#manual-testing)
     - 6.2 [Automated Testing](#automated-testing)
-    - 6.3 [Bugs](#bugs)
+    - 6.3 [Bugs](#bugs)<br><br>
 
 7. [Code Validation](#code-validation)
     - 7.1 [React Validation](#react-validation)
-    - 7.2 [CSS Validation](#css-validation)
+    - 7.2 [CSS Validation](#css-validation)<br><br>
 
 8. [Deployment](#deployment)
     - 8.1 [Cloudinary](#cloudinary)
@@ -90,7 +90,7 @@
         - [Back-End](#back-end)
         - [Front-End](#front-end)
     - 8.4 [Forking](#forking)
-    - 8.5 [Cloning](#cloning)
+    - 8.5 [Cloning](#cloning)<br><br>
 
 9. [References & Acknowledgements](#references--acknowledgements)
     - 9.1 [General Reference](#general-reference)
@@ -143,7 +143,7 @@ Built using: [React](https://react.dev/), [Django Rest Framework](https://www.dj
 <br/><br>
 
 ### Database Schema
-The following database design was decided upon during development to facilitate reaching the project's purpose and [aims](#aims)<br>
+The following database design was decided upon during development to facilitate reaching the project's purpose and [aims](#aims)<br><br>
 <image src="readme-files/backend/database.png" width=70%><br>
 <em>*Database schema created using [LucidChart](https://www.lucidchart.come)</em><br><br>
 
@@ -477,7 +477,7 @@ User Stories were sorted into the relevant over-arching [Milestone](#milestones)
 <br><br>
 
 ### Sprints
-The following screenshots demonstrate examples of the various sprints undertaken during the project's development. Each example sprint here shows the tasks that were in progress at the time of that particular section. The project [kanban board](https://github.com/users/NickWaldock/projects/7/views/2) was used exclusivly to keep track of tasks.<br><br>
+The following screenshots demonstrate examples of the various sprints undertaken during the project's development. Each example sprint here shows the tasks that were in progress at the time of that particular section. The project [kanban board](https://github.com/users/NickWaldock/projects/7/views/2) was used exclusivly to keep track of tasks<br><br>
 <table>
   <tr>
    <td><image src="readme-files/sprints/1.png" width=100%></td>
@@ -508,7 +508,7 @@ The following screenshots demonstrate examples of the various sprints undertaken
 
 ### MoSCoW
 
-The [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) method was used to determine the priority of certain tasks and to maintain sprints within the project's scope. These were added as [labels](https://github.com/NickWaldock/the-woodshed/labels) to each individual task.
+The [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) method was used to determine the priority of certain tasks and to maintain sprints within the project's scope. These were added as [labels](https://github.com/NickWaldock/the-woodshed/labels) to each individual taskour
 
 Tasks were assigned a status in the project [kanban board](https://github.com/users/NickWaldock/projects/7/views/2) of either:
 - <strong>Must Have</strong> : Essential for the project
@@ -551,14 +551,16 @@ During the development process the main logo design and colour scheme was adapte
 ### Toastify
 [Toastify](https://www.npmjs.com/package/react-toastify) is s React library for creating custom pop-up alerts. In this project I wanted to utilise a custom alert to replace the typical bootstrap alert style. This alert has a progress bar that indicated to the user when it will automatically dissapear, it also has an animation effect when entering the screen and leaving the screen. 
 <br>
-Three alerts exist:
+Four alerts exist:
 - A Success alert to show an action has been successful, such as creating a post, or updating a profile;
 - When a post is deleted;
-- When an error occurs in an action that is not due to user error, such as a the server being unavailable
+- When an error occurs in an action that is not due to user error, such as a the server being unavailable;
+- When a new user has signed up and is automatically redirected to the sign in page
 <br><br>
 <image src="readme-files/site-screenshots/utilities/alert.png" width=35%>
-<image src="readme-files/site-screenshots/utilities/alert-delete.png" width=30%>
-<image src="readme-files/site-screenshots/utilities/alert-try-again.png" width=21%>
+<image src="readme-files/site-screenshots/utilities/alert-delete.png" width=30%><br>
+<image src="readme-files/site-screenshots/utilities/alert-try-again.png" width=30%>
+<image src="readme-files/site-screenshots/utilities/alert-sign-in.png" width=40%>
 <br><br>
 
 ### Infinite Scroll

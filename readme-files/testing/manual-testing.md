@@ -202,7 +202,7 @@ Below is the account of all manual testing that has taken place on the project.
     <td>Footer Links</td>
     <td>Click footer social icon links ana text links</td>
     <td>Links should open in a new tab and direct to the relevant page</td>
-    <td>All links open in new tab and direct to the relevant page</td>
+    <td>PASS</td>
     <td>Icons still have bootstrap primary attributes on click - blue border and blue background on active status if the link is slow to open/load</td>
     <td><a href="https://github.com/users/NickWaldock/projects/7/views/1?pane=issue&itemId=32152470">View in Github Projects</a></td>
   </tr>
